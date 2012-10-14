@@ -31,3 +31,6 @@
 [submodule ".vim/bundle/rails"]
 	path = .vim/bundle/rails
 	url = https://github.com/tpope/vim-rails
+[submodule ".vim/bundle/slimux"]
+	path = .vim/bundle/slimux
+	url = https://github.com/epeli/slimux
