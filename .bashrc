@@ -17,10 +17,6 @@ shopt -s histappend
 # enable color support of ls and also add handy aliases
 eval `dircolors -b`
 alias ls='ls --color=auto'
-#alias dir='ls --color=auto --format=vertical'
-#alias vdir='ls --color=auto --format=long'
-
-# some more ls aliases
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
@@ -30,15 +26,6 @@ alias egrep='egrep --color=auto'
 
 # set a fancy prompt
 PS1='\u@\h:\w\$ '
-
-# If this is an xterm set the title to user@host:dir
-#case $TERM in
-#xterm*)
-#    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
-#    ;;
-#*)
-#    ;;
-#esac
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc).
