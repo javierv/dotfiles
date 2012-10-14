@@ -34,3 +34,6 @@
 [submodule ".vim/bundle/slimux"]
 	path = .vim/bundle/slimux
 	url = https://github.com/epeli/slimux
+[submodule ".vim/bundle/unimpaired"]
+	path = .vim/bundle/unimpaired
+	url = https://github.com/tpope/vim-unimpaired
