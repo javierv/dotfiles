@@ -215,11 +215,18 @@ xmap ]e <Plug>unimpairedMoveDown
 
 " Tabularize
 " (requiere tabular, pero si pongo esta condición, no funciona)
-" if exists(":Tabularize")
-nmap <Leader>a> :Tabularize /=><CR>
-vmap <Leader>a> :Tabularize /=><CR>
-nmap <Leader>a: :Tabularize /:\zs<CR>
-vmap <Leader>a: :Tabularize /:\zs<CR>
-nmap <Leader>a, :Tabularize /,\zs<CR>
-vmap <Leader>a, :Tabularize /,\zs<CR>
-" endif
+nmap <Leader>t> :Tabularize /=><CR>
+vmap <Leader>t> :Tabularize /=><CR>
+nmap <Leader>t: :Tabularize /:\zs<CR>
+vmap <Leader>t: :Tabularize /:\zs<CR>
+nmap <Leader>t, :Tabularize /,\zs<CR>
+vmap <Leader>t, :Tabularize /,\zs<CR>
+
+" Integración con tmux
+nmap <Leader>sl :SlimuxShellLast<CR>
+nmap <Leader>sp :SlimuxShellPrompt<CR>
+nmap <Leader>sc :SlimuxShellConfigure<CR>
+nmap <Leader>sr :SlimuxShellRun
+vmap <Leader>sr :SlimuxREPLSendSelection<CR>
+" nmap <Leader>srs :SlimuxREPLSendLine<CR>
+" nmap <Leader>src :SlimuxREPLConfigure<CR>
