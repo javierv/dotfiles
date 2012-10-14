@@ -56,7 +56,7 @@ hi LineNr       gui=NONE guifg=#8080a0 ctermfg=103 guibg=NONE
 hi NonText      gui=BOLD guifg=#4000ff ctermfg=57 guibg=#EFEFF7 ctermbg=255
 "hi SpecialKey   gui=NONE guifg=#A35B00 ctermfg=130 guibg=NONE
 hi Title        gui=BOLD guifg=#1014AD ctermfg=19 guibg=NONE
-hi Visual term=reverse ctermfg=yellow gui=NONE guifg=Black guibg=#BDDFFF ctermbg=153
+hi Visual term=reverse gui=NONE guifg=Black guibg=#BDDFFF ctermbg=229
 hi VisualNOS term=reverse ctermfg=yellow gui=UNDERLINE guifg=Black guibg=#BDDFFF ctermbg=153
 
 " Syntax group {{{1
