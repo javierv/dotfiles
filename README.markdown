@@ -6,7 +6,7 @@ Disclaimer: I'm not the author of any of the plugins included under my .vim/ fol
 
 TODO:
 
-* Configure vim + tmux integration.
-* Get rid of git-gui and gitk using vim + fugitive + command line. Maybe gitv?
-* Make tmux look nicer.
-* Try adding zsh to the mix.
+1. Get rid of git-gui and gitk using vim + fugitive + command line. Maybe gitv?
+1. Configure zsh.
+1. Improve vim + tmux integration.
+1. Make tmux look nicer.
