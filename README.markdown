@@ -1,6 +1,6 @@
 My configuration files for vim, tmux and shell.
 
-The .XCompose file allows me to use the "`" as the prefix for tmux on a Spanish keyboard without having to press it twice.
+The .Xmodmap file allows me to use the "`" as the prefix for tmux on a Spanish keyboard without having to press it twice.
 
 Disclaimer: I'm not the author of any of the plugins included under my .vim/ folder.
 
