@@ -2,3 +2,6 @@
 keycode 66 = Control_L NoSymbol Control_L
 clear Lock
 add Control = Control_L
+
+!"Menu" key as Composer
+keycode 135 = Multi_key
