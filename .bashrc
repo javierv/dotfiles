@@ -74,11 +74,4 @@ if [ -n "$DISPLAY" ] && [ -x /usr/bin/xclip ] ; then
 fi
 
 # 256 colors
-# export TERM=screen-256color
-
-# Load tmux on startup
-if [ "$TERM" != "screen-256color" ] && [ -x /usr/bin/tmux ]
-then
-  export TERM=screen-256color
-  tmux attach || tmux new
-fi
+export TERM=xterm-256color
