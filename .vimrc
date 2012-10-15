@@ -4,6 +4,10 @@ call pathogen#helptags()
 " Aumenta el poder del % para if-else-end y más cosas (activa por defecto).
 runtime macros/matchit.vim
 
+"Quita la línea extra al final del fichero que añadie vim
+set noeol
+set binary
+
 " Quita el modo compatible con vi
 set nocompatible
 "
