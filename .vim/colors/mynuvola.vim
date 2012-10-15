@@ -15,11 +15,11 @@ endif
 let g:colors_name = "mynuvola"
 
 " Normal {{{1
-hi Normal ctermfg=black guifg=black guibg=#F9F5F9 ctermbg=15
+hi Normal ctermfg=237 guifg=#222222 guibg=#F9F5F9 ctermbg=15
 
 " Search {{{1
-hi IncSearch cterm=UNDERLINE ctermfg=Black gui=UNDERLINE guifg=Black guibg=#FFE568 ctermbg=221
-hi Search term=reverse cterm=UNDERLINE ctermfg=Black gui=NONE guifg=Black guibg=#FFE568 ctermbg=221
+hi IncSearch cterm=UNDERLINE ctermfg=237 gui=UNDERLINE guifg=#222222 guibg=#FFE568 ctermbg=221
+hi Search term=reverse cterm=UNDERLINE ctermfg=237 gui=NONE guifg=#222222 guibg=#FFE568 ctermbg=221
 
 " Messages {{{1
 hi ErrorMsg gui=BOLD guifg=#EB1513 ctermfg=9 guibg=NONE
@@ -29,8 +29,8 @@ hi MoreMsg guibg=NONE guifg=seagreen
 hi! link Question MoreMsg
 
 " Split area {{{1
-hi StatusLine term=BOLD,reverse cterm=NONE ctermfg=Yellow gui=BOLD guibg=#56A0EE ctermbg=75 guifg=white
-hi StatusLineNC gui=NONE guibg=#56A0EE ctermbg=75 guifg=#E9E9F4 ctermfg=7
+hi StatusLine term=BOLD,reverse cterm=NONE ctermfg=58 gui=BOLD guibg=#56A0EE ctermbg=75 guifg=white
+hi StatusLineNC gui=NONE guibg=#56A0EE ctermbg=75 guifg=#E9E9F4 ctermfg=244
 hi! link VertSplit StatusLineNC
 hi WildMenu gui=UNDERLINE guifg=#56A0EE ctermfg=75 guibg=#E9E9F4 ctermbg=7
 
@@ -41,23 +41,21 @@ hi DiffDelete gui=NONE guifg=#2020ff ctermfg=21 guibg=#c8f2ea ctermbg=194
 hi! link DiffAdd DiffDelete
 
 " Cursor {{{1
-hi Cursor       gui=none guifg=black guibg=orange
+hi Cursor       gui=none guifg=#222222 guibg=orange
 "hi lCursor      gui=NONE guifg=#f8f8f8 ctermfg=15 guibg=#8000ff ctermbg=93
 hi CursorIM     gui=NONE guifg=#f8f8f8 ctermfg=15 guibg=#8000ff ctermbg=93
 
 " Fold {{{1
-hi Folded gui=NONE guibg=#B5EEB5 ctermbg=157 guifg=black
-"hi FoldColumn gui=NONE guibg=#9FD29F ctermbg=151 guifg=black
+hi Folded gui=NONE guibg=#B5EEB5 ctermbg=157 guifg=#222222
 hi! link FoldColumn Folded
 
 " Other {{{1
 hi Directory    gui=NONE guifg=#0000ff ctermfg=21 guibg=NONE
 hi LineNr       gui=NONE guifg=#8080a0 ctermfg=103 guibg=NONE
 hi NonText      gui=BOLD guifg=#4000ff ctermfg=57 guibg=#EFEFF7 ctermbg=255
-"hi SpecialKey   gui=NONE guifg=#A35B00 ctermfg=130 guibg=NONE
 hi Title        gui=BOLD guifg=#1014AD ctermfg=19 guibg=NONE
-hi Visual term=reverse gui=NONE guifg=Black guibg=#BDDFFF ctermbg=229
-hi VisualNOS term=reverse ctermfg=yellow gui=UNDERLINE guifg=Black guibg=#BDDFFF ctermbg=153
+hi Visual term=reverse gui=NONE guifg=#222222 guibg=#BDDFFF ctermbg=229
+hi VisualNOS term=reverse ctermfg=yellow gui=UNDERLINE guifg=#222222 guibg=#BDDFFF ctermbg=153
 
 " Syntax group {{{1
 hi Comment term=BOLD guifg=#3F6B5B ctermfg=240
@@ -68,7 +66,7 @@ hi Number   term=UNDERLINE gui=NONE guifg=#00C226 ctermfg=2
 hi PreProc term=UNDERLINE guifg=#1071CE ctermfg=26
 hi Special term=BOLD ctermfg=darkmagenta guifg=red2
 hi Statement term=BOLD gui=NONE guifg=#F06F00 ctermfg=202
-hi Tag term=BOLD guifg=DarkGreen ctermfg=36
+hi Tag term=BOLD guifg=DarkGreen ctermfg=130
 hi Todo term=STANDOUT ctermbg=Yellow ctermfg=blue guifg=Blue guibg=Yellow
 hi Type term=UNDERLINE ctermfg=Blue gui=NONE guifg=Blue
 hi String term=UNDERLINE guifg=#B91F49 ctermfg=22
@@ -97,10 +95,10 @@ hi! link Debug		Special
 hi! link rubyConstant Type
 hi rubyInstanceVariable guifg=#8A1909 ctermfg=160
 hi! link rubySymbol PreProc
-hi! link rubyRailsMethod PreProc
 hi! link rubyBlockParameter Normal
 hi! link rubyStringDelimiter String
 hi! link rubyFunction Tag
+hi! link rubyRailsMethod rubyFunction
 hi! link rubyGlobalVariable rubyInstanceVariable
 
 " HTML {{{1
