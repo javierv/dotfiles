@@ -226,11 +226,15 @@ vmap <Leader>t: :Tabularize /:\zs<CR>
 nmap <Leader>t, :Tabularize /,\zs<CR>
 vmap <Leader>t, :Tabularize /,\zs<CR>
 
-" Integración con tmux
-nmap <Leader>sl :SlimuxShellLast<CR>
-nmap <Leader>sp :SlimuxShellPrompt<CR>
-nmap <Leader>sc :SlimuxShellConfigure<CR>
+
+" ##### INTEGRACIÓN CON TMUX #####
+function! FileName()
+  return expand('%:p')
+endfunction
+
 nmap <Leader>sr :SlimuxShellRun
+nmap <Leader>sc :SlimuxShellConfigure<CR>
 vmap <Leader>sr :SlimuxREPLSendSelection<CR>
-" nmap <Leader>srs :SlimuxREPLSendLine<CR>
-" nmap <Leader>src :SlimuxREPLConfigure<CR>
+" Ejecutar test con spin
+nmap <Leader>ss :<C-U>exec "SlimuxShellRun spin push ".FileName()<CR>
+nmap <Leader>sl :<C-U>exec "SlimuxShellRun spin push ".FileName().":".line('.')<CR>
