@@ -15,7 +15,7 @@ endif
 let g:colors_name = "mynuvola"
 
 " Normal {{{1
-hi Normal ctermfg=237 guifg=#222222 guibg=#F9F5F9 ctermbg=15
+hi Normal ctermfg=235 guifg=#222222 guibg=#F9F5F9 ctermbg=15
 
 " Search {{{1
 hi IncSearch cterm=UNDERLINE ctermfg=237 gui=UNDERLINE guifg=#222222 guibg=#FFE568 ctermbg=221
