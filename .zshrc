@@ -21,6 +21,10 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
+
 # Use modern completion system
 autoload -Uz compinit; compinit
 zstyle ':completion:*' auto-description 'specify: %d'
