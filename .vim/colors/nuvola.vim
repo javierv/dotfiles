@@ -68,12 +68,13 @@ hi Number   term=UNDERLINE gui=NONE guifg=#00C226 ctermfg=2
 hi PreProc term=UNDERLINE guifg=#1071CE ctermfg=26
 hi Special term=BOLD ctermfg=darkmagenta guifg=red2
 hi Statement term=BOLD gui=NONE guifg=#F06F00 ctermfg=202
-hi Tag term=BOLD ctermfg=DarkGreen guifg=DarkGreen
+hi Tag term=BOLD guifg=DarkGreen ctermfg=36
 hi Todo term=STANDOUT ctermbg=Yellow ctermfg=blue guifg=Blue guibg=Yellow
 hi Type term=UNDERLINE ctermfg=Blue gui=NONE guifg=Blue
-hi! link String	Constant
-hi! link Character	Constant
+hi String term=UNDERLINE guifg=#B91F49 ctermfg=22
+hi! link Character	String
 hi! link Boolean	Constant
+hi! link rubyDefine Keyword
 hi! link Float		Number
 hi! link Function	Identifier
 hi! link Conditional	Statement
@@ -93,6 +94,14 @@ hi! link SpecialChar	Special
 hi! link Delimiter	Special
 hi! link SpecialComment Special
 hi! link Debug		Special
+hi! link rubyConstant Type
+hi rubyInstanceVariable guifg=#8A1909 ctermfg=160
+hi! link rubySymbol PreProc
+hi! link rubyRailsMethod PreProc
+hi! link rubyBlockParameter Normal
+hi! link rubyStringDelimiter String
+hi! link rubyFunction Tag
+hi! link rubyGlobalVariable rubyInstanceVariable
 
 " HTML {{{1
 hi htmlLink                 gui=UNDERLINE guifg=#0000ff ctermfg=21 guibg=NONE
