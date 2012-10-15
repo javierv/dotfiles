@@ -5,3 +5,6 @@ add Control = Control_L
 
 !"Menu" key as Composer
 keycode 135 = Multi_key
+
+!Deactivate Insert
+keycode 118 =
