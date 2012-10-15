@@ -8,3 +8,6 @@ keycode 135 = Multi_key
 
 !Deactivate Insert
 keycode 118 =
+
+!keycode 34 = dead_grave dead_circumflex dead_grave dead_circumflex bracketleft dead_abovering bracketleft
+keycode 34 = grave dead_circumflex grave dead_circumflex bracketleft dead_abovering bracketleft
