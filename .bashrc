@@ -39,9 +39,12 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# some more aliases
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
+alias q='exit'
+alias gg='git gui &'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
