@@ -37,6 +37,9 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
+# 256 colors
+export TERM=xterm-256color
+
 # Use modern completion system
 autoload -Uz compinit; compinit
 zstyle ':completion:*' auto-description 'specify: %d'
