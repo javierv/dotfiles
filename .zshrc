@@ -12,6 +12,16 @@ HISTFILE=~/.zsh_history
 # Use emacs keybindings even if our EDITOR is set to vi
 # bindkey -e
 
+# Make Home and End keys work.
+function zle-line-init () {
+  echoti smkx
+}
+function zle-line-finish () {
+  echoti rmkx
+}
+zle -N zle-line-init
+zle -N zle-line-finish
+
 # colors for ls and grep
 alias ls='ls --color=auto'
 alias ll='ls -l'
