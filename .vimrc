@@ -206,17 +206,6 @@ nnoremap <Leader>gc :Gcommit<cr>
 nnoremap <Leader>gw :Gwrite<cr>
 nnoremap <Leader>gr :Gread<cr>
 
-" ####### PLUGINS ÚTILES ######
-" Unimpaired by Tim Pope: mover líneas de posición
-nnoremap <silent> <Plug>unimpairedMoveUp :<C-U>exe 'norm m`'<Bar>exe 'move--'.v:count1<CR>``
-nnoremap <silent> <Plug>unimpairedMoveDown :<C-U>exe 'norm m`'<Bar>exe 'move+'.v:count1<CR>``
-xnoremap <silent> <Plug>unimpairedMoveUp :<C-U>exe 'norm m`'<Bar>exe '''<,''>move--'.v:count1<CR>``
-xnoremap <silent> <Plug>unimpairedMoveDown :<C-U>exe 'norm m`'<Bar>exe '''<,''>move''>+'.v:count1<CR>``
-nmap [e <Plug>unimpairedMoveUp
-nmap ]e <Plug>unimpairedMoveDown
-xmap [e <Plug>unimpairedMoveUp
-xmap ]e <Plug>unimpairedMoveDown
-
 " Tabularize
 " (requiere tabular, pero si pongo esta condición, no funciona)
 nmap <Leader>t> :Tabularize /=><CR>
