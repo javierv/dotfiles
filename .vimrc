@@ -40,6 +40,8 @@ set spelllang=es_es
 " Firma de amarok
 nmap <Leader>f G:r!amarok2-nowplaying<cr>O--<Esc>0k
 
+"refrescar vimdiff; se lía a menudo.
+nnoremap <Leader>d :diffupdate<cr>
 
 " ###### ABRIR, CERRAR Y GUARDAR
 " Salir del modo edición (la letra Esc está muy lejos)
