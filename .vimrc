@@ -218,6 +218,8 @@ vmap <Leader>t: :Tabularize /:\zs<CR>
 nmap <Leader>t, :Tabularize /,\zs<CR>
 vmap <Leader>t, :Tabularize /,\zs<CR>
 
+" Gundo
+nnoremap <Leader>h :GundoToggle<CR>
 
 " ##### INTEGRACIÓN CON TMUX #####
 function! FileName()
