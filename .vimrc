@@ -22,6 +22,9 @@ vmap <C-y> "+y
 nmap <C-y> "+gp 
 im <C-v> <Esc>"+gp a
 
+" Seleccionar el último texto copiado o pegado
+nmap gV `[v`]
+
 " Repetir la última orden
 nnoremap <Leader>ñ @:
 
