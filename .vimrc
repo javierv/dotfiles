@@ -215,7 +215,7 @@ nnoremap <Leader>gl :Glog<cr>
 nnoremap <Leader>gv :Gitv<cr>
 nnoremap <Leader>gV :Gitv!<cr>
 nnoremap <Leader>gh :Gitv -S
-nnoremap <Leader>ga :call Gitv_OpenGitCommand("diff", 'vnew')
+nnoremap <Leader>ga :call Gitv_OpenGitCommand("diff", 'vnew')<cr>
 
 " Tabularize
 " (requiere tabular, pero si pongo esta condición, no funciona)
