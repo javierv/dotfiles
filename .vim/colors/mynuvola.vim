@@ -36,7 +36,7 @@ hi WildMenu gui=UNDERLINE guifg=#56A0EE ctermfg=75 guibg=#E9E9F4 ctermbg=7
 
 " Diff {{{1
 hi DiffText   gui=NONE guifg=#f83010 ctermfg=202 guibg=#ffeae0 ctermbg=229
-hi DiffChange gui=NONE guifg=#006800 ctermfg=22 guibg=#d0ffd0 ctermbg=194
+hi DiffChange gui=NONE guifg=#006800 ctermfg=22 guibg=#d0ffd0 ctermbg=229
 hi DiffDelete gui=NONE guifg=#2020ff ctermfg=21 guibg=#c8f2ea ctermbg=223
 hi DiffAdd gui=NONE guifg=#2020ff ctermfg=21 guibg=#c8f2ea ctermbg=194
 
