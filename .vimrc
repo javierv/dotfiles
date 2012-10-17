@@ -210,6 +210,12 @@ nnoremap <Leader>gs :Gstatus<cr>
 nnoremap <Leader>gc :Gcommit<cr>
 nnoremap <Leader>gw :Gwrite<cr>
 nnoremap <Leader>gr :Gread<cr>
+nnoremap <Leader>ge :Gedit<cr>
+nnoremap <Leader>gl :Glog<cr>
+nnoremap <Leader>gv :Gitv<cr>
+nnoremap <Leader>gV :Gitv!<cr>
+nnoremap <Leader>gh :Gitv -S
+nnoremap <Leader>ga :call Gitv_OpenGitCommand("diff", 'vnew')
 
 " Tabularize
 " (requiere tabular, pero si pongo esta condición, no funciona)
