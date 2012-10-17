@@ -40,6 +40,15 @@ hi DiffChange gui=NONE guifg=#006800 ctermfg=22 guibg=#d0ffd0 ctermbg=194
 hi DiffDelete gui=NONE guifg=#2020ff ctermfg=21 guibg=#c8f2ea ctermbg=223
 hi DiffAdd gui=NONE guifg=#2020ff ctermfg=21 guibg=#c8f2ea ctermbg=194
 
+" Git styles {{{1
+hi diffAdded guifg=#00bf00 ctermfg=28
+hi diffRemoved guifg=#bf0000 ctermfg=124
+hi link gitcommitSelectedType diffAdded
+hi link gitcommitSelectedFile gitcommitSelectedType
+hi link gitcommitDiscardedType diffRemoved
+hi link gitcommitDiscardedFile gitcommitDiscardedType
+hi gitcommitUntrackedFile guifg=#6E79F1 guibg=#FFFFFF ctermfg=69 ctermbg=15
+
 " Cursor {{{1
 hi Cursor       gui=none guifg=#222222 guibg=orange
 "hi lCursor      gui=NONE guifg=#f8f8f8 ctermfg=15 guibg=#8000ff ctermbg=93
