@@ -11,6 +11,8 @@ Pry.commands.alias_command 'n', 'next'
 Pry.commands.alias_command 'f', 'finish'
 Pry.commands.alias_command 'b', 'break'
 
+Pry.commands.alias_command 'doc', 'show-doc'
+
 # Load rails environment if in a rails folder
 rails = File.join Dir.getwd, 'config', 'environment.rb'
 
