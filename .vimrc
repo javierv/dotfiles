@@ -20,6 +20,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'sjl/gundo.vim'
 Bundle 'gregsexton/gitv'
 Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
 
 " Aumenta el poder del % para if-else-end y más cosas (activa por defecto).
 runtime macros/matchit.vim
@@ -244,6 +245,9 @@ nmap <Leader>t: :Tabularize /:\zs<CR>
 vmap <Leader>t: :Tabularize /:\zs<CR>
 nmap <Leader>t, :Tabularize /,\zs<CR>
 vmap <Leader>t, :Tabularize /,\zs<CR>
+
+" Easymotion
+let g:EasyMotion_leader_key = '<Leader>m'
 
 " Gundo
 nnoremap <Leader>h :GundoToggle<CR>
