@@ -119,6 +119,8 @@ nm <C-N> :bn<CR>
 " Editar el buffer que se editaba justo antes de cambiar al actual
 nm <C-P> :e #<CR>
 
+" Navegación entre etiquetas
+nmap <CR> <C-]>
 
 " ###### BÚSQUEDAS ####
 " Resalta el primer resultado de la búsqueda según tecleas
