@@ -5,6 +5,7 @@ set nocompatible
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'gmarik/vundle'
 Bundle 'jgdavey/vim-blockle'
 Bundle 'tpope/vim-endwise'
 Bundle 'kchmck/vim-coffee-script'
