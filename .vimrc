@@ -31,7 +31,7 @@ nnoremap <Leader>ñ @:
 " No expandir a la primera coincidencia de orden automáticamente al dar
 " al tabulador, sino listar las posibles
 " las opciones que más me gustan son list:longest y list:full
-set wildmode=list:full
+set wildmode=list:longest,full
 
 " Idioma y corrección ortográfica
 nmap <silent> <leader>q :set spell!<CR>
