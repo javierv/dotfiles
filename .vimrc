@@ -1,6 +1,26 @@
-" Incluye los plugins en .vim/bundle/
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+" Quita el modo compatible con vi
+set nocompatible
+
+" Plugins con vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'jgdavey/vim-blockle'
+Bundle 'tpope/vim-endwise'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'thomd/vim-jasmine'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
+Bundle 'godlygeek/tabular'
+Bundle 'msanders/snipmate.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'tpope/vim-rails'
+Bundle 'epeli/slimux'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'sjl/gundo.vim'
+Bundle 'gregsexton/gitv'
+Bundle 'tpope/vim-fugitive'
+
 " Aumenta el poder del % para if-else-end y más cosas (activa por defecto).
 runtime macros/matchit.vim
 
@@ -8,9 +28,6 @@ runtime macros/matchit.vim
 set noeol
 set binary
 
-" Quita el modo compatible con vi
-set nocompatible
-"
 " La tecla leader por defecto es la \, que está muy lejos.
 let mapleader = ","
 
