@@ -22,6 +22,8 @@ Bundle 'sjl/gundo.vim'
 Bundle 'gregsexton/gitv'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
+" Mejor tcomment que NERDCommenter.
+Bundle 'tomtom/tcomment_vim'
 
 " Aumenta el poder del % para if-else-end y más cosas (activa por defecto).
 runtime macros/matchit.vim
@@ -249,6 +251,10 @@ vmap <Leader>t, :Tabularize /,\zs<CR>
 
 " Easymotion
 let g:EasyMotion_leader_key = '<Leader>m'
+
+" Tcomment
+nm <Leader>c gcc
+vm <Leader>c gc
 
 " Gundo
 nnoremap <Leader>h :GundoToggle<CR>
