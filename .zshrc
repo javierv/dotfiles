@@ -44,6 +44,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias q='exit'
 alias gg='git gui &'
+alias railspry='pry -r ./config/environment'
 
 if [ -f ~/.aliases ]; then
     . ~/.aliases
