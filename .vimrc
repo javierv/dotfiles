@@ -24,6 +24,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 " Mejor tcomment que NERDCommenter.
 Bundle 'tomtom/tcomment_vim'
+" Me gusta más syntastic que checksyntax
+Bundle 'scrooloose/syntastic'
 
 " Aumenta el poder del % para if-else-end y más cosas (activa por defecto).
 runtime macros/matchit.vim
