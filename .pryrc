@@ -1,3 +1,5 @@
+require 'methodfinder'
+
 Pry.config.editor = "vim"
 
 # requires pry-debugger TODO: add it explicitely.
