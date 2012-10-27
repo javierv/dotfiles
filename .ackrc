@@ -1,0 +1,10 @@
+# Use less to page results
+# --pager=less -r
+# Add file types
+--type-set=erb=.erb
+--type-set=haml=.haml
+--type-set=sass=.sass,.scss
+
+# Ignore simplecov
+--ignore-dir=coverage
+--ignore-dir=tmp
