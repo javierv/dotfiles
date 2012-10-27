@@ -260,6 +260,9 @@ let g:EasyMotion_leader_key = '<Leader>m'
 nm <Leader>c gcc
 vm <Leader>c gc
 
+" Syntastic
+let g:syntastic_auto_loc_list=1 " Abre automáticamente la lista de errores.
+
 " Gundo
 nnoremap <Leader>h :GundoToggle<CR>
 
