@@ -139,6 +139,8 @@ else
 endif
 " Incluye el título en la ventana (gvim lo hace automáticamente)
 set title
+" Incluye siempre la ruta del fichero que se edita
+set laststatus=2
 " Resaltados de sintaxis en función del tipo de fichero
 syntax on
 filetype off
