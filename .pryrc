@@ -39,7 +39,9 @@ require_if_available("awesome_print") do
 end
 
 # Reminder not to install coolline because it breaks readline's vi-mode.
-#require_if_available("pry-coolline") 
+# require_if_available("pry-coolline") 
+# Reminder I didn't manage to make the exception explorer work.
+# require_if_available("pry-exception_explorer")
 
 
 ##### Shortcuts #####
