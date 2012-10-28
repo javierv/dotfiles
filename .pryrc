@@ -37,6 +37,9 @@ require_if_available("awesome_print") do
   AwesomePrint.pry!
 end
 
+# Reminder not to install coolline because it breaks readline's vi-mode.
+#require_if_available("pry-coolline") 
+
 
 ##### Shortcuts #####
 
