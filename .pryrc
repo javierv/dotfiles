@@ -17,15 +17,19 @@ if File.exist?(rails) && ENV['SKIP_RAILS'].nil?
   end
 end
 
-def require_if_available(gem)
+def require_if_available(gem, &block)
   begin
     require gem
+    block.call if block_given?
   rescue LoadError
-    warn "#{gem} is missing; gem install #{gem}"
+    warn "Warning: #{gem} is missing; gem install #{gem}"
   end
 end
 
 require_if_available("methodfinder")
+require_if_available("awesome_print") do
+  AwesomePrint.pry!
+end
 
 Pry.config.editor = "vim"
 
