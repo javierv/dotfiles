@@ -1,0 +1,14 @@
+[gui]
+	fontui = -family \"bitstream vera sans\" -size 10 -weight bold -slant roman -underline 0 -overstrike 0
+	fontdiff = -family \"bitstream vera sans mono\" -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+[alias]
+  co = checkout
+  cm = commit
+  br = branch
+  st = status
+  d = diff
+  l = log
+[color]
+  branch = true
+  diff = true
+  status = true
