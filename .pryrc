@@ -1,5 +1,10 @@
 #!/usr/bin/env ruby
 
+Pry.config.editor = "vim"
+
+
+##### INTEGRATION WITH RAILS AND BUNDLER #####
+
 # Load rails environment if in a rails folder
 rails = File.join Dir.getwd, 'config', 'environment.rb'
 
@@ -17,6 +22,9 @@ if File.exist?(rails) && ENV['SKIP_RAILS'].nil?
   end
 end
 
+
+##### EXTRA LIBRARIES #####
+
 def require_if_available(gem, &block)
   begin
     require gem
@@ -27,11 +35,12 @@ def require_if_available(gem, &block)
 end
 
 require_if_available("methodfinder")
+
 require_if_available("awesome_print") do
   AwesomePrint.pry!
 end
 
-Pry.config.editor = "vim"
+##### Shortcuts #####
 
 # requires pry-debugger TODO: add it explicitely.
 Pry.commands.alias_command 'c', 'continue'
@@ -42,3 +51,5 @@ Pry.commands.alias_command 'b', 'break'
 
 Pry.commands.alias_command 'doc', 'show-doc'
 
+# TODO: better autocompletion (bond?)
+# TODO: use a "sandbox" like Rails console does.
