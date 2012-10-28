@@ -269,8 +269,9 @@ function! FileName()
   return expand('%:p')
 endfunction
 
-nmap <Leader>sr :SlimuxShellRun
-nmap <Leader>sc :SlimuxShellConfigure<CR>
+nmap <Leader>sc :SlimuxShellRun " 'c' de console.
+nmap <Leader>sp :SlimuxShellPrompt<CR>
+nmap <Leader>sr :SlimuxREPLSendLine<CR>
 vmap <Leader>sr :SlimuxREPLSendSelection<CR>
 " Ejecutar test con spin
 nmap <Leader>ss :<C-U>exec "SlimuxShellRun spin push ".FileName()<CR>
