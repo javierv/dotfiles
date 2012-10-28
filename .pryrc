@@ -17,7 +17,15 @@ if File.exist?(rails) && ENV['SKIP_RAILS'].nil?
   end
 end
 
-require 'methodfinder'
+def require_if_available(gem)
+  begin
+    require gem
+  rescue LoadError
+    warn "#{gem} is missing; gem install #{gem}"
+  end
+end
+
+require_if_available("methodfinder")
 
 Pry.config.editor = "vim"
 
