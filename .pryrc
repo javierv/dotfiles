@@ -18,6 +18,10 @@ end
 
 ##### EXTRA LIBRARIES #####
 
+# Although some of these libraries are automatically loaded when
+# starting pry, they aren't automatically loaded when starting
+# pry from irb (like I do for rails console).
+
 def require_if_available(gem, &block)
   begin
     require gem
