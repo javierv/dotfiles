@@ -71,6 +71,8 @@ nnoremap <Leader>d :diffupdate<cr>
 im Ñ <Esc>
 " Lo mismo para salir del modo visual
 vn Ñ <C-C>
+" Y lo mismo en la línea de órdenes
+cm Ñ <C-C> 
 " Grabar archivo tanto en modo normal como en edición
 nm ñ :w<CR>
 im <C-S> <Esc>:w<CR>a
