@@ -32,6 +32,7 @@ def require_if_available(gem, &block)
 end
 
 require_if_available("methodfinder")
+require_if_available("pry-stack_explorer")
 
 require_if_available("awesome_print") do
   AwesomePrint.pry!
