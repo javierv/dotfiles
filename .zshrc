@@ -42,8 +42,13 @@ alias l='ls -CF'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
+# aliases for frequently typed commands
 alias q='exit'
 alias gg='git gui &'
+alias apt-search='apt-cache search'
+alias apt-show='apt-cache show'
+alias apt-install='apt-get install'
 
 function sb() {
   rails c $1 --sandbox
