@@ -44,6 +44,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias q='exit'
 alias gg='git gui &'
+alias sb='rails c --sandbox'
 
 if [ -f ~/.aliases ]; then
     . ~/.aliases
