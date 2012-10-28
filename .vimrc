@@ -30,7 +30,7 @@ Bundle 'scrooloose/syntastic'
 " Aumenta el poder del % para if-else-end y más cosas (activa por defecto).
 runtime macros/matchit.vim
 
-"Quita la línea extra al final del fichero que añadie vim
+"Quita la línea extra al final del fichero que añade vim
 set noeol
 set binary
 
