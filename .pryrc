@@ -13,6 +13,8 @@ if File.exist?(rails) && ENV['SKIP_RAILS'].nil?
   require 'rails/console/app'
   require 'rails/console/helpers'
 
+  ActiveRecord::Base.logger = Logger.new(STDOUT)
+
   # Allow loading gems not inside Gemfile. Extracted from irbtools README.
   if defined?(Gem.post_reset_hooks)
     Gem.post_reset_hooks.reject!{ |hook| hook.source_location.first =~ %r{/bundler/} }
