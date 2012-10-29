@@ -273,7 +273,7 @@ function! FileName()
   return expand('%:p')
 endfunction
 
-nmap <Leader>sc :SlimuxShellRun " 'c' de console.
+nmap <Leader>sc :SlimuxShellRun
 nmap <Leader>sp :SlimuxShellPrompt<CR>
 nmap <Leader>sr :SlimuxREPLSendLine<CR>
 vmap <Leader>sr :SlimuxREPLSendSelection<CR>
