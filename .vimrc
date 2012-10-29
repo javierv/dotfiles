@@ -26,6 +26,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tomtom/tcomment_vim'
 " Me gusta más syntastic que checksyntax
 Bundle 'scrooloose/syntastic'
+Bundle 'vim-scripts/bufkill.vim'
 
 " Aumenta el poder del % para if-else-end y más cosas (activa por defecto).
 runtime macros/matchit.vim
@@ -78,8 +79,8 @@ cm ñ <C-C>
 " Grabar archivo tanto en modo normal como en edición
 nm ñ :w<CR>
 im <C-S> <Esc>:w<CR>a
-" Salir del buffer actual
-nnoremap <Leader>z :bd<CR> 
+" Salir del buffer actual, dejando la ventana usando bufkill
+nnoremap <Leader>z :BD<CR> 
 "Dejar sólo el buffer actual
 nnoremap <Leader>o :on<CR>
 "
