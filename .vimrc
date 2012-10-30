@@ -228,6 +228,7 @@ autocmd User Rails Rnavcommand factory spec/ -glob=**/* -suffix=actories.rb
 autocmd User Rails Rnavcommand decorator app/decorators -glob=**/* -suffix=_decorator.rb
 autocmd User Rails Rnavcommand cell app/cells -glob=**/* -suffix=_cell.rb
 autocmd User Rails Rnavcommand cview app/cells -glob=**/* -suffix=.haml
+autocmd User Rails Rnavcommand builder app/form_builders -glob=**/* -suffix=.rb
 
 
 " ######### GIT ##############
