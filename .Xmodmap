@@ -1,6 +1,11 @@
+!Bloque de mayúsculas como control y control izdo como escape.
 !keycode 66 = Caps_Lock NoSymbol Caps_Lock
-keycode 66 = Control_L NoSymbol Control_L
+!keycode 37 = Control_L NoSymbol Control_L NoSymbol Control_L
+!keycode  9 = Escape NoSymbol Escape NoSymbol Escape
 clear Lock
+remove Control = Control_L
+keysym Control_L = Escape
+keycode 66 = Control_L NoSymbol Control_L NoSymbol Control_L
 add Control = Control_L
 
 !"Menu" key as Composer
