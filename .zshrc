@@ -24,12 +24,20 @@ bindkey 'ñ'     vi-cmd-mode
 # Change cursor shape in different vi modes.
 zle-keymap-select () {
   if [ $KEYMAP = vicmd ]; then
-    echo -ne "\033]50;CursorShape=0\x7"
+    if [[ $TMUX = '' ]]; then
+      echo -ne "\033]50;CursorShape=0\x7"
+    else
+      # TODO: se lía y pone el cursor en otro sitio.
+      # echo -ne "\033Ptmux;\033\033]50;CursorShape=0\007\033\\"
+    fi
   else
-    echo -ne "\033]50;CursorShape=1\x7"
+    if [[ $TMUX = '' ]]; then
+      echo -ne "\033]50;CursorShape=1\x7"
+    else
+      # echo -ne "\033Ptmux;\033\033]50;CursorShape=1\007\033\\"
+    fi
   fi
 }
-zle -N zle-keymap-select
 
 # Mimic emacs while on insert mode
 bindkey "^P" vi-up-line-or-history
@@ -39,12 +47,18 @@ bindkey "^R" history-incremental-search-backward
 # Make Home and End keys work in insert mode.
 function zle-line-init () {
   echoti smkx
+  zle -K viins
   # Make default cursor as insert mode
-  echo -ne "\033]50;CursorShape=1\x7"
+  if [[ $TMUX = '' ]]; then
+    echo -ne "\033]50;CursorShape=1\x7"
+  else
+    # echo -ne "\033Ptmux;\033\033]50;CursorShape=1\007\033\\"
+  fi
 }
 function zle-line-finish () {
   echoti rmkx
 }
+zle -N zle-keymap-select
 zle -N zle-line-init
 zle -N zle-line-finish
 
