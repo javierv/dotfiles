@@ -174,6 +174,16 @@ set laststatus=2
 au InsertEnter * hi StatusLine ctermfg=58 ctermbg=77
 au InsertLeave * hi StatusLine ctermfg=58 ctermbg=75
 
+" Cambiar el cursor en Konsole, con o sin tmux.
+" TODO: hacer que se aplique por defecto al entrar en vim.
+if &term =~ "screen"
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\007\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\007\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+
 
 " Resaltados de sintaxis en función del tipo de fichero
 syntax on
