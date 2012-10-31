@@ -26,15 +26,10 @@ zle-keymap-select () {
   if [ $KEYMAP = vicmd ]; then
     if [[ $TMUX = '' ]]; then
       echo -ne "\033]50;CursorShape=0\x7"
-    else
-      # TODO: se lía y pone el cursor en otro sitio.
-      # echo -ne "\033Ptmux;\033\033]50;CursorShape=0\007\033\\"
     fi
   else
     if [[ $TMUX = '' ]]; then
       echo -ne "\033]50;CursorShape=1\x7"
-    else
-      # echo -ne "\033Ptmux;\033\033]50;CursorShape=1\007\033\\"
     fi
   fi
 }
@@ -51,8 +46,6 @@ function zle-line-init () {
   # Make default cursor as insert mode
   if [[ $TMUX = '' ]]; then
     echo -ne "\033]50;CursorShape=1\x7"
-  else
-    # echo -ne "\033Ptmux;\033\033]50;CursorShape=1\007\033\\"
   fi
 }
 function zle-line-finish () {
