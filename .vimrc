@@ -169,6 +169,12 @@ endif
 set title
 " Incluye siempre la ruta del fichero que se edita
 set laststatus=2
+
+" Indicar diferencias entre modo normal y edición
+au InsertEnter * hi StatusLine ctermfg=58 ctermbg=77
+au InsertLeave * hi StatusLine ctermfg=58 ctermbg=75
+
+
 " Resaltados de sintaxis en función del tipo de fichero
 syntax on
 filetype off
