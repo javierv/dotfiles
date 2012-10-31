@@ -242,6 +242,7 @@ nnoremap <Leader>gc :Gcommit<cr>
 nnoremap <Leader>gw :Gwrite<cr>
 nnoremap <Leader>gr :Gread<cr>
 nnoremap <Leader>ge :Gedit<cr>
+nnoremap <Leader>gb :Gblame<cr>
 nnoremap <Leader>gl :Glog<cr>
 nnoremap <Leader>gv :Gitv<cr>
 nnoremap <Leader>gV :Gitv!<cr>
