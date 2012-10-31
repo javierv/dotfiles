@@ -59,7 +59,11 @@ if [ -f ~/.aliases ]; then
 fi
 
 # 256 colors
-export TERM=xterm-256color
+if [[ $TMUX = '' ]]; then
+  export TERM=xterm-256color
+else
+  export TERM=screen-256color
+fi
 
 # Use modern completion system
 autoload -Uz compinit; compinit
