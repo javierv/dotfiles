@@ -1,4 +1,6 @@
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+CDPATH=:$HOME/dev
+# CDPATH=:$HOME/dev:$HOME/.rvm/gems/ruby-1.9.3/gems
 
 # Set up the prompt
 PROMPT='%n@%m:%~> '
@@ -19,6 +21,16 @@ bindkey '^[[5~' vi-backward-blank-word # Page Up
 bindkey '^[[6~' vi-forward-blank-word  # Page Down
 bindkey 'ñ'     vi-cmd-mode
 
+# Change cursor shape in different vi modes.
+zle-keymap-select () {
+  if [ $KEYMAP = vicmd ]; then
+    echo -ne "\033]50;CursorShape=0\x7"
+  else
+    echo -ne "\033]50;CursorShape=1\x7"
+  fi
+}
+zle -N zle-keymap-select
+
 # Mimic emacs while on insert mode
 bindkey "^P" vi-up-line-or-history
 bindkey "^N" vi-down-line-or-history
@@ -27,6 +39,8 @@ bindkey "^R" history-incremental-search-backward
 # Make Home and End keys work in insert mode.
 function zle-line-init () {
   echoti smkx
+  # Make default cursor as insert mode
+  echo -ne "\033]50;CursorShape=1\x7"
 }
 function zle-line-finish () {
   echoti rmkx
