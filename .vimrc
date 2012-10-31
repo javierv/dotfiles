@@ -172,7 +172,7 @@ set laststatus=2
 
 " Indicar diferencias entre modo normal y edición
 au InsertEnter * hi StatusLine ctermfg=58 ctermbg=77
-au InsertLeave * hi StatusLine ctermfg=58 ctermbg=75
+au VimEnter,InsertLeave * hi StatusLine ctermfg=58 ctermbg=75
 
 " Cambiar el cursor en Konsole, con o sin tmux.
 " TODO: hacer que se aplique por defecto al entrar en vim.
