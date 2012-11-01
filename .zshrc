@@ -86,6 +86,8 @@ else
   export TERM=screen-256color
 fi
 
+autoload -U zmv
+
 # Use modern completion system
 autoload -Uz compinit; compinit
 zstyle ':completion:*' auto-description 'specify: %d'
