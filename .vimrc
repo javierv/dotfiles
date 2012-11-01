@@ -177,7 +177,6 @@ au InsertEnter * hi StatusLine ctermfg=58 ctermbg=77
 au VimEnter,InsertLeave * hi StatusLine ctermfg=58 ctermbg=75
 
 " Cambiar el cursor en Konsole, con o sin tmux.
-" TODO: hacer que se aplique por defecto al entrar en vim.
 if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\007\<Esc>\\"
   let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\007\<Esc>\\"
