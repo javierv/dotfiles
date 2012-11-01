@@ -58,7 +58,7 @@ nnoremap <Leader>ñ @:
 set wildmode=list:longest,full
 
 " Idioma y corrección ortográfica
-nmap <silent> <leader>q :set spell!<CR>
+nmap <silent> <leader>k :set spell!<CR>
 set spelllang=es_es
 
 " Firma de amarok
@@ -81,6 +81,8 @@ nm ñ :w<CR>
 im <C-S> <Esc>:w<CR>a
 " Salir del buffer actual, dejando la ventana usando bufkill
 nnoremap <Leader>z :BD<CR> 
+" Cierra la ventana.
+nm <Leader>q :q<CR>
 "Dejar sólo el buffer actual
 nnoremap <Leader>o :on<CR>
 "
