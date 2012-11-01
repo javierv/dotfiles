@@ -62,16 +62,10 @@ zle -N zle-keymap-select
 zle -N zle-line-init
 zle -N zle-line-finish
 
-# colors for ls and grep
-alias ls='ls --color=auto'
+# aliases for frequently typed commands
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
-# aliases for frequently typed commands
 alias q='exit'
 alias gg='git gui &'
 alias apt-search='apt-cache search'
