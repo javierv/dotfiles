@@ -27,6 +27,7 @@ Bundle 'tomtom/tcomment_vim'
 " Me gusta más syntastic que checksyntax
 Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/bufkill.vim'
+Bundle 'Lokaltog/vim-powerline'
 
 " Aumenta el poder del % para if-else-end y más cosas (activa por defecto).
 runtime macros/matchit.vim
@@ -172,10 +173,6 @@ set title
 " Incluye siempre la ruta del fichero que se edita
 set laststatus=2
 
-" Indicar diferencias entre modo normal y edición
-au InsertEnter * hi StatusLine ctermfg=58 ctermbg=77
-au VimEnter,InsertLeave * hi StatusLine ctermfg=58 ctermbg=75
-
 " Cambiar el cursor en Konsole, con o sin tmux.
 if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\007\<Esc>\\"
@@ -185,6 +182,9 @@ else
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
+" Powerline
+set noshowmode
+let g:Powerline_stl_path_style = "short"
 
 " Resaltados de sintaxis en función del tipo de fichero
 syntax on
