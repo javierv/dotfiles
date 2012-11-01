@@ -4,10 +4,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-# Easier cd
 CDPATH=:$HOME/dev
-setopt auto_cd
 
 # Set up the prompt
 PROMPT='%n@%m:%~> '
