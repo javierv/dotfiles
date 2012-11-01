@@ -86,7 +86,7 @@ else
   export TERM=screen-256color
 fi
 
-autoload -U zmv
+autoload -U zmv zcalc
 
 # Use modern completion system
 autoload -Uz compinit; compinit
