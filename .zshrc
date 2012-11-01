@@ -1,5 +1,9 @@
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+# Easier cd
+CDPATH=:$HOME/dev
+setopt auto_cd
+
 # Set up the prompt
 PROMPT='%n@%m:%~> '
 
@@ -101,14 +105,6 @@ if [[ $TMUX = '' ]]; then
 else
   export TERM=screen-256color
 fi
-
-# Easier cd
-CDPATH=:$HOME/dev
-setopt auto_cd
-
-function chpwd() {
-  ls -a
-}
 
 autoload -U zmv zcalc
 
