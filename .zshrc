@@ -81,6 +81,24 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
+# aliases for file extensions
+for extension in jpg png jpeg gif; do
+	alias -s $extension=gwenview
+done
+
+for extension in avi mp4 webm; do
+  alias -s $extension=mplayer
+done
+
+for extension in rb txt erb haml markdown yml; do
+  alias -s $extension=vim
+done
+
+for extension in epub pdf; do
+  alias -s $extension=okular
+done
+
+
 # 256 colors
 if [[ $TMUX = '' ]]; then
   export TERM=xterm-256color
