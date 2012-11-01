@@ -29,6 +29,7 @@ alias gg='git gui &'
 alias apt-search='apt-cache search'
 alias apt-show='apt-cache show'
 alias apt-install='apt-get install'
+alias sudo='sudo '
 
 function sb() {
   rails c $1 --sandbox
