@@ -90,8 +90,8 @@ nm <Leader>q :q<CR>
 "Dejar sólo el buffer actual
 nnoremap <Leader>o :on<CR>
 " Abrir ficheros
-nm <Leader>e :e 
-nm <Leader>v :vsplit 
+nm <Leader>e :e<Space>
+nm <Leader>v :vsplit<Space>
 "
 " Recupera la línea del fichero en la que estaba la última vez que se editó
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
