@@ -1,6 +1,8 @@
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# Easier cd
 CDPATH=:$HOME/dev
-# CDPATH=:$HOME/dev:$HOME/.rvm/gems/ruby-1.9.3/gems
+setopt auto_cd
 
 # Set up the prompt
 PROMPT='%n@%m:%~> '
