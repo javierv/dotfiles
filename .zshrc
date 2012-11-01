@@ -6,9 +6,6 @@ fi
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 CDPATH=:$HOME/dev
 
-# Set up the prompt
-PROMPT='%n@%m:%~> '
-
 setopt histignorealldups sharehistory
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
