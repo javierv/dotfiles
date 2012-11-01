@@ -36,6 +36,9 @@ runtime macros/matchit.vim
 set noeol
 set binary
 
+" Muerte a los números octales.
+set nrformats=hex
+
 " La tecla leader por defecto es la \, que está muy lejos.
 let mapleader = ","
 
