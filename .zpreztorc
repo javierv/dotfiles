@@ -35,7 +35,8 @@ zstyle ':prezto:load' pmodule \
   'prompt' \
   'archive' \
   'command-not-found' \
-  'git'
+  'git' \
+  'syntax-highlighting' # Requiere git submodule init en prezto
 
 #
 # Editor
