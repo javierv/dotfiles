@@ -23,6 +23,7 @@ zstyle ':prezto:load' zfunction 'zmv' 'zcalc'
 
 # Set the Prezto modules to load (browse modules).
 # The order matters.
+# Some modules require git submodule init inside prezto.
 zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
@@ -36,7 +37,8 @@ zstyle ':prezto:load' pmodule \
   'archive' \
   'command-not-found' \
   'git' \
-  'syntax-highlighting' # Requiere git submodule init en prezto
+  'syntax-highlighting' \
+  'history-substring-search'
 
 #
 # Editor
