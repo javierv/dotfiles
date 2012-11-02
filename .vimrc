@@ -1,7 +1,8 @@
 " Quita el modo compatible con vi
 set nocompatible
 
-" Plugins con vundle
+
+" ######## PLUGINS ########
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -32,11 +33,12 @@ Bundle 'Lokaltog/vim-powerline'
 " Aumenta el poder del % para if-else-end y más cosas (activa por defecto).
 runtime macros/matchit.vim
 
+
+" ######## ENTORNO ########
+set shell=/bin/zsh
 "Quita la línea extra al final del fichero que añade vim
 set noeol
 set binary
-
-set shell=/bin/zsh
 
 " Muerte a los números octales.
 set nrformats=hex
@@ -47,17 +49,6 @@ let mapleader = ","
 " Por defecto sólo se recuerdan las últimas 20 órdenes. Subimos.
 set history=100
 
-" Pegar a y del sistema
-vmap <C-y> "+y
-nmap <C-y> "+gp 
-im <C-v> <Esc>"+gp a
-
-" Seleccionar el último texto copiado o pegado
-nmap gV `[v`]
-
-" Repetir la última orden
-nnoremap <Leader>ñ @:
-
 " No expandir a la primera coincidencia de orden automáticamente al dar
 " al tabulador, sino listar las posibles
 " las opciones que más me gustan son list:longest y list:full
@@ -67,13 +58,18 @@ set wildmode=list:longest,full
 nmap <silent> <leader>k :set spell!<CR>
 set spelllang=es_es
 
-" Firma de amarok
-nmap <Leader>f G:r!amarok2-nowplaying<cr>O--<Esc>0k
 
-"refrescar vimdiff; se lía a menudo.
-nnoremap <Leader>d :diffupdate<cr>
+" ####### COPIAR Y PEGAR ######
+" Pegar a y del sistema
+vmap <C-y> "+y
+nmap <C-y> "+gp 
+im <C-v> <Esc>"+gp a
 
-" ###### ABRIR, CERRAR Y GUARDAR
+" Seleccionar el último texto copiado o pegado
+nmap gV `[v`]
+
+
+" ###### ABRIR, CERRAR Y GUARDAR ######
 " Salir del modo edición (la letra Esc está muy lejos)
 im Ñ <Esc>
 " Lo mismo para salir del modo visual
@@ -138,7 +134,7 @@ nm <C-N> :bn<CR>
 nm <C-P> :e #<CR>
 
 
-" ###### BÚSQUEDAS ####
+" ###### BÚSQUEDAS ######
 " Resalta el primer resultado de la búsqueda según tecleas
 set incsearch
 " Resalta todas las coincidencias de la búsqueda
@@ -165,7 +161,7 @@ nm - maO<esc>`a
 nm + mao<esc>`a
 
 
-" ###### ASPECTO #######
+" ###### ASPECTO ######
 if has("gui_running")
   " Ajusta el tamaño de la ventana en gvim
   set lines=200 columns=200
@@ -211,7 +207,7 @@ set showbreak=...
 set nofoldenable
 
 
-" ######### RAILS ############
+" ######### RAILS #########
 nnoremap <Leader>rm :Rmodel 
 nnoremap <Leader>rc :Rcontroller 
 nnoremap <Leader>rV :Rview 
@@ -256,7 +252,7 @@ autocmd User Rails Rnavcommand cview app/cells -glob=**/* -suffix=.haml
 autocmd User Rails Rnavcommand builder app/form_builders -glob=**/* -suffix=.rb
 
 
-" ######### GIT ##############
+" ######## GIT ########
 "vimdiff current vs git head (fugitive extension)
 nnoremap <Leader>gd :Gdiff<cr>
 "switch back to current file and closes fugitive buffer
@@ -274,6 +270,21 @@ nnoremap <Leader>gV :Gitv!<cr>
 nnoremap <Leader>gh :Gitv -S
 nnoremap <Leader>ga :call Gitv_OpenGitCommand("diff", 'vnew')<cr>
 
+
+" ##### INTEGRACIÓN CON TMUX #####
+function! FileName()
+  return expand('%:p')
+endfunction
+
+nmap <Leader>sc :SlimuxShellRun
+nmap <Leader>sp :SlimuxShellPrompt<CR>
+nmap <Leader>sr :SlimuxREPLSendLine<CR>
+vmap <Leader>sr :SlimuxREPLSendSelection<CR>
+" Ejecutar test con spin
+nmap <Leader>ss :<C-U>exec "SlimuxShellRun spin push ".FileName()<CR>
+nmap <Leader>sl :<C-U>exec "SlimuxShellRun spin push ".FileName().":".line('.')<CR>
+
+" ###### OTROS PLUGINS ######
 " Tabularize
 " (requiere tabular, pero si pongo esta condición, no funciona)
 nmap <Leader>t> :Tabularize /=><CR>
@@ -296,15 +307,13 @@ let g:syntastic_auto_loc_list=1 " Abre automáticamente la lista de errores.
 " Gundo
 nnoremap <Leader>h :GundoToggle<CR>
 
-" ##### INTEGRACIÓN CON TMUX #####
-function! FileName()
-  return expand('%:p')
-endfunction
 
-nmap <Leader>sc :SlimuxShellRun
-nmap <Leader>sp :SlimuxShellPrompt<CR>
-nmap <Leader>sr :SlimuxREPLSendLine<CR>
-vmap <Leader>sr :SlimuxREPLSendSelection<CR>
-" Ejecutar test con spin
-nmap <Leader>ss :<C-U>exec "SlimuxShellRun spin push ".FileName()<CR>
-nmap <Leader>sl :<C-U>exec "SlimuxShellRun spin push ".FileName().":".line('.')<CR>
+" ####### VARIOS #######
+" Firma de amarok
+nmap <Leader>f G:r!amarok2-nowplaying<cr>O--<Esc>0k
+
+" Repetir la última orden
+nnoremap <Leader>ñ @:
+
+"refrescar vimdiff; se lía a menudo.
+nnoremap <Leader>d :diffupdate<cr>
