@@ -36,6 +36,8 @@ runtime macros/matchit.vim
 set noeol
 set binary
 
+set shell=/bin/zsh
+
 " Muerte a los números octales.
 set nrformats=hex
 
