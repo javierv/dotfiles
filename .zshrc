@@ -62,3 +62,7 @@ if [[ $TMUX = '' ]]; then
 else
   export TERM=screen-256color
 fi
+
+if [ -f ~/.zsh.local ]; then
+	source ~/.zsh.local
+fi

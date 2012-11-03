@@ -317,3 +317,9 @@ nnoremap <Leader>ñ @:
 
 "refrescar vimdiff; se lía a menudo.
 nnoremap <Leader>d :diffupdate<cr>
+
+" Configuración local
+let fichero_configuracion_local='~/.vimrc.local'
+if filereadable(expand(fichero_configuracion_local))
+	exec 'source ' . fichero_configuracion_local
+endif
