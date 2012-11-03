@@ -271,6 +271,8 @@ nm <Leader>gv :Gitv<cr>
 nm <Leader>gV :Gitv!<cr>
 nm <Leader>gh :Gitv -S
 nm <Leader>ga :call Gitv_OpenGitCommand("diff", 'vnew')<cr>
+" Cierra los buffers de fugitive automáticamente.
+autocmd BufReadPost fugitive://* set bufhidden=delete
 
 
 " ##### INTEGRACIÓN CON TMUX #####
