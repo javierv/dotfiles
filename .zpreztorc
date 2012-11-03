@@ -36,6 +36,7 @@ zstyle ':prezto:load' pmodule \
   'archive' \
   'command-not-found' \
   'git' \
+  'ssh-agent' \
   'syntax-highlighting' \
   'history-substring-search' \
   'prompt'
