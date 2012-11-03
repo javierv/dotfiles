@@ -37,7 +37,7 @@ for extension in jpg png jpeg gif; do
 	alias -s $extension=gwenview
 done
 
-for extension in avi mp4 webm; do
+for extension in avi mp4 webm ogv; do
   alias -s $extension=mplayer
 done
 
