@@ -257,15 +257,13 @@ autocmd User Rails Rnavcommand builder app/form_builders -glob=**/* -suffix=.rb
 
 
 " ######## GIT ########
-"vimdiff current vs git head (fugitive extension)
-nm <Leader>gd :Gdiff<cr>
-"switch back to current file and closes fugitive buffer
-nm <Leader>gD :diffoff!<cr><c-w>h:bd<cr>
 " atajos para Git
 nm <Leader>gs :Gstatus<cr>
 nm <Leader>gc :Gcommit<cr>
 nm <Leader>gw :Gwrite<cr>
 nm <Leader>gr :Gread<cr>
+nm <Leader>gd :Gdiff<cr>
+nm <Leader>gD :diffoff!<cr><c-w>h:bd<cr>
 nm <Leader>ge :Gedit<cr>
 nm <Leader>gb :Gblame<cr>
 nm <Leader>gl :Glog<cr>
