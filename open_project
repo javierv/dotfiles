@@ -1,0 +1,24 @@
+#!/bin/sh
+project=$1
+
+if ! tmux has-session -t "$project" 2> /dev/null; then
+  cd "$HOME/dev/$project"
+  tmux new-session -d -s "$project" -n 'editor'
+
+  tmux send-keys 'vim' C-m
+  tmux split-window -v -p 30
+  tmux send-keys 'spin serve' C-m
+  tmux split-window -h
+  tmux send-keys 'rails c' C-m
+
+  tmux new-window -t "$project":2 -n 'servers'
+  tmux split-window -h
+  tmux send-keys 'rails s' C-m
+  tmux split-window -v # Receive slimux commands
+  tmux select-pane -t 1
+   
+  tmux select-window -t 1
+  tmux select-pane -t 1
+  tmux send-keys ':Gstatus' C-m 
+fi
+tmux attach-session -t "$project"
