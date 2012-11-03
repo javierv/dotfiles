@@ -147,6 +147,10 @@ nm ç :nohlsearch<CR>
 set ignorecase
 set smartcase
 
+" Buscar el historial de forma incremental sin las flechas
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
 
 " #### INTRODUCIR CARACTERES Y LÍNEAS EN MODO NORMAL ####
 " Introducir un carácter antes/después del cursor y volver a modo normal
