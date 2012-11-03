@@ -82,11 +82,11 @@ cm ñ <C-C>
 nm ñ :w<CR>
 im <C-S> <Esc>:w<CR>a
 " Salir del buffer actual, dejando la ventana usando bufkill
-nnoremap <Leader>z :BD<CR> 
+nm <Leader>z :BD<CR> 
 " Cierra la ventana.
 nm <Leader>q :q<CR>
 "Dejar sólo el buffer actual
-nnoremap <Leader>o :on<CR>
+nm <Leader>o :on<CR>
 " Abrir ficheros
 nm <Leader>e :e<Space>
 nm <Leader>v :vsplit<Space>
@@ -208,37 +208,37 @@ set nofoldenable
 
 
 " ######### RAILS #########
-nnoremap <Leader>rm :Rmodel 
-nnoremap <Leader>rc :Rcontroller 
-nnoremap <Leader>rV :Rview 
-nnoremap <Leader>rh :Rhelper 
-nnoremap <Leader>rj :Rjavascript 
-nnoremap <Leader>rd :Rdecorator
-nnoremap <Leader>rvm :RVmodel 
-nnoremap <Leader>rvc :RVcontroller 
-nnoremap <Leader>rvv :RVview 
-nnoremap <Leader>rvh :RVhelper 
-nnoremap <Leader>rvj :RVjavascript 
-nnoremap <Leader>rvd :RVdecorator
-nnoremap <Leader>ra :A<cr>
-nnoremap <Leader>rva :AV<cr>
-nnoremap <Leader>rr :R<cr>
-nnoremap <Leader>rvr :RV<cr>
-nnoremap <Leader>rl :Rlayout<cr>
-nnoremap <Leader>rS :Rspec 
-nnoremap <Leader>rsh :Rspec helpers/
-nnoremap <Leader>rsm :Rspec models/
-nnoremap <Leader>rsc :Rspec controllers/
-nnoremap <Leader>rvS :RVspec 
-nnoremap <Leader>rvsh :RVspec helpers/
-nnoremap <Leader>rvsm :RVspec models/
-nnoremap <Leader>rvsc :RVspec controllers/
-nnoremap <Leader>rsr :Rspec requests/
-nnoremap <Leader>rvsr :RVspec requests/
-nnoremap <Leader>rsu :Rsupport 
-nnoremap <Leader>rvsu :RVsupport 
-nnoremap <Leader>rsd :Rspec decorators/
-nnoremap <Leader>rvsd :RVspec decorators/
+nm <Leader>rm :Rmodel 
+nm <Leader>rc :Rcontroller 
+nm <Leader>rV :Rview 
+nm <Leader>rh :Rhelper 
+nm <Leader>rj :Rjavascript 
+nm <Leader>rd :Rdecorator
+nm <Leader>rvm :RVmodel 
+nm <Leader>rvc :RVcontroller 
+nm <Leader>rvv :RVview 
+nm <Leader>rvh :RVhelper 
+nm <Leader>rvj :RVjavascript 
+nm <Leader>rvd :RVdecorator
+nm <Leader>ra :A<cr>
+nm <Leader>rva :AV<cr>
+nm <Leader>rr :R<cr>
+nm <Leader>rvr :RV<cr>
+nm <Leader>rl :Rlayout<cr>
+nm <Leader>rS :Rspec 
+nm <Leader>rsh :Rspec helpers/
+nm <Leader>rsm :Rspec models/
+nm <Leader>rsc :Rspec controllers/
+nm <Leader>rvS :RVspec 
+nm <Leader>rvsh :RVspec helpers/
+nm <Leader>rvsm :RVspec models/
+nm <Leader>rvsc :RVspec controllers/
+nm <Leader>rsr :Rspec requests/
+nm <Leader>rvsr :RVspec requests/
+nm <Leader>rsu :Rsupport 
+nm <Leader>rvsu :RVsupport 
+nm <Leader>rsd :Rspec decorators/
+nm <Leader>rvsd :RVspec decorators/
 " Atajos para tipos de ficheros.
 autocmd User Rails Rnavcommand sass app/assets/stylesheets -suffix=.sass
 autocmd User Rails Rnavcommand coffee app/assets/javascripts -suffix=.coffee
@@ -254,21 +254,21 @@ autocmd User Rails Rnavcommand builder app/form_builders -glob=**/* -suffix=.rb
 
 " ######## GIT ########
 "vimdiff current vs git head (fugitive extension)
-nnoremap <Leader>gd :Gdiff<cr>
+nm <Leader>gd :Gdiff<cr>
 "switch back to current file and closes fugitive buffer
-nnoremap <Leader>gD :diffoff!<cr><c-w>h:bd<cr>
+nm <Leader>gD :diffoff!<cr><c-w>h:bd<cr>
 " atajos para Git
-nnoremap <Leader>gs :Gstatus<cr>
-nnoremap <Leader>gc :Gcommit<cr>
-nnoremap <Leader>gw :Gwrite<cr>
-nnoremap <Leader>gr :Gread<cr>
-nnoremap <Leader>ge :Gedit<cr>
-nnoremap <Leader>gb :Gblame<cr>
-nnoremap <Leader>gl :Glog<cr>
-nnoremap <Leader>gv :Gitv<cr>
-nnoremap <Leader>gV :Gitv!<cr>
-nnoremap <Leader>gh :Gitv -S
-nnoremap <Leader>ga :call Gitv_OpenGitCommand("diff", 'vnew')<cr>
+nm <Leader>gs :Gstatus<cr>
+nm <Leader>gc :Gcommit<cr>
+nm <Leader>gw :Gwrite<cr>
+nm <Leader>gr :Gread<cr>
+nm <Leader>ge :Gedit<cr>
+nm <Leader>gb :Gblame<cr>
+nm <Leader>gl :Glog<cr>
+nm <Leader>gv :Gitv<cr>
+nm <Leader>gV :Gitv!<cr>
+nm <Leader>gh :Gitv -S
+nm <Leader>ga :call Gitv_OpenGitCommand("diff", 'vnew')<cr>
 
 
 " ##### INTEGRACIÓN CON TMUX #####
@@ -305,7 +305,7 @@ vm <Leader>c gc
 let g:syntastic_auto_loc_list=1 " Abre automáticamente la lista de errores.
 
 " Gundo
-nnoremap <Leader>h :GundoToggle<CR>
+nm <Leader>h :GundoToggle<CR>
 
 
 " ####### VARIOS #######
@@ -313,10 +313,10 @@ nnoremap <Leader>h :GundoToggle<CR>
 nmap <Leader>f G:r!amarok2-nowplaying<cr>O--<Esc>0k
 
 " Repetir la última orden
-nnoremap <Leader>ñ @:
+nm <Leader>ñ @:
 
 "refrescar vimdiff; se lía a menudo.
-nnoremap <Leader>d :diffupdate<cr>
+nm <Leader>d :diffupdate<cr>
 
 " Configuración local
 let fichero_configuracion_local='~/.vimrc.local'
