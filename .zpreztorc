@@ -36,7 +36,6 @@ zstyle ':prezto:load' pmodule \
   'archive' \
   'command-not-found' \
   'git' \
-  'ssh-agent' \
   'syntax-highlighting' \
   'history-substring-search' \
   'prompt'
@@ -67,16 +66,6 @@ zstyle ':prezto:module:editor' keymap 'vi'
 zstyle ':prezto:module:prompt' theme 'sorin'
 
 #
-# SSH-Agent
-#
-
-# Enable ssh-agent forwarding.
-zstyle ':prezto:module:ssh-agent' forwarding 'yes'
-
-# Set ssh-agent identities to load.
-# zstyle ':prezto:module:ssh-agent' identities 'id_rsa' 'id_rsa2' 'id_github'
-
-#
 # Syntax Highlighting
 #
 
@@ -103,3 +92,7 @@ zstyle ':prezto:module:terminal' auto-title 'yes'
 # Auto start a session when Zsh is launched.
 # zstyle ':prezto:module:tmux' auto-start 'yes'
 
+# Load local configuration for different machines.
+if [ -f ~/.zpreztorc.local ]; then
+  source ~/.zpreztorc.local
+fi

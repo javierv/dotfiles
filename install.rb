@@ -41,7 +41,7 @@ class DotfilesInstaller
   end
 
   def create_local_configurations
-    %w[.vimrc.local .zshrc.local .aliases].each do |file|
+    %w[.vimrc.local .zshrc.local .zpreztorc.local .aliases].each do |file|
       %x[touch #{destination_path(file)}]
       puts "Created #{file}"
     end
