@@ -63,6 +63,6 @@ else
   export TERM=screen-256color
 fi
 
-if [ -f ~/.zsh.local ]; then
-	source ~/.zsh.local
+if [ -f ~/.zshrc.local ]; then
+  source ~/.zshrc.local
 fi
