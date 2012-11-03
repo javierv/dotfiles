@@ -196,8 +196,8 @@ filetype off
 filetype plugin indent on
 " Sintaxis con espacios
 autocmd FileType * setlocal ts=2 sts=2 sw=2 tw=0 expandtab
-" No muestra el número de línea
-set nonumber
+" Muestra el número de línea
+set number
 " Muestra el número de línea al final de la pantalla (ya estaba activo por
 " defecto)
 set ruler
