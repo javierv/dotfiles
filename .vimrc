@@ -276,17 +276,18 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 
 
 " ##### INTEGRACIÓN CON TMUX #####
-function! FileName()
-  return expand('%:p')
-endfunction
+" Simplifica localizar el directorio del fichero actual.
+cnoremap %% <C-R>=expand('%:h').'/'<CR>
+cnoremap %<Tab> <C-R>=expand('%:p')<CR>
+cnoremap %l<Tab> <C-R>=expand('%:p').':'.line('.')<CR>
 
 nm <Leader>sc :SlimuxShellRun
 nm <Leader>sp :SlimuxShellPrompt<CR>
 nm <Leader>sr :SlimuxREPLSendLine<CR>
 vm <Leader>sr :SlimuxREPLSendSelection<CR>
 " Ejecutar test con spin
-nm <Leader>ss :<C-U>exec "SlimuxShellRun spin push ".FileName()<CR>
-nm <Leader>sl :<C-U>exec "SlimuxShellRun spin push ".FileName().":".line('.')<CR>
+nm <Leader>ss :SlimuxShellRun spin push %<Tab><CR>
+nm <Leader>sl :SlimuxShellRun spin push %l<Tab><CR>
 
 " ###### OTROS PLUGINS ######
 " Tabularize
