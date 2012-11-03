@@ -55,10 +55,15 @@ manpath=(
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
-  /usr/{bin,sbin}
+  /usr/{bin,sbin,games}
+  /usr/bin/X11
   /{bin,sbin}
   $path
 )
+
+if [ -d "$HOME/bin" ] ; then
+  path+=("$HOME/bin")
+fi
 
 #
 # Temporary Files
@@ -72,6 +77,6 @@ if [[ -d "$TMPDIR" ]]; then
 fi
 
 if [[ -s "$HOME/.rbenv/bin/rbenv" ]]; then
-  export PATH=$HOME/.rbenv/bin:$PATH
+  path+=("$HOME/.rbenv/bin")
   eval "$(rbenv init - zsh)"
 fi
