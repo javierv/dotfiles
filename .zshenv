@@ -71,5 +71,7 @@ if [[ -d "$TMPDIR" ]]; then
   fi
 fi
 
-export PATH=$HOME/.rbenv/bin:$PATH
-eval "$(rbenv init - zsh)"
+if [[ -s "$HOME/.rbenv/bin/rbenv" ]]; then
+  export PATH=$HOME/.rbenv/bin:$PATH
+  eval "$(rbenv init - zsh)"
+fi
