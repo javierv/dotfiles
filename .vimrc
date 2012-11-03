@@ -55,26 +55,26 @@ set history=100
 set wildmode=list:longest,full
 
 " Idioma y corrección ortográfica
-nmap <silent> <leader>k :set spell!<CR>
+nm <silent> <leader>k :set spell!<CR>
 set spelllang=es_es
 
 
 " ####### COPIAR Y PEGAR ######
 " Pegar a y del sistema
-vmap <C-y> "+y
-nmap <C-y> "+gp 
+vm <C-y> "+y
+nm <C-y> "+gp 
 im <C-v> <Esc>"+gp a
 
 " Seleccionar el último texto copiado o pegado
-nmap gV `[v`]
+nm gV `[v`]
 
 
 " ###### ABRIR, CERRAR Y GUARDAR ######
 " Salir del modo edición (la letra Esc está muy lejos)
 im Ñ <Esc>
 " Lo mismo para salir del modo visual
-vn Ñ <C-C>
-vn ñ <C-C>
+vm Ñ <C-C>
+vm ñ <C-C>
 " Y lo mismo en la línea de órdenes
 cm Ñ <C-C> 
 cm ñ <C-C> 
@@ -103,16 +103,16 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 " ###### NAVEGACIÓN ######
 " Navegación por líneas.
 " Atajos para navegar cuando las líneas están cortadas
-vn <C-j> gj
-vn <C-k> gk
-nmap <C-j> gj
-nmap <C-k> gk
+vnoremap <C-j> gj
+vnoremap <C-k> gk
+nnoremap <C-j> gj
+nnoremap <C-k> gk
 " 0 es más fácil de teclear que ^ en teclado español, así que intercambio sus
 " funciones
 nnoremap 0 ^
 nnoremap ^ 0
-vn 0 ^
-vn ^ 0
+vnoremap 0 ^
+vnoremap ^ 0
 
 " Marcas
 " ' es más útil que ` porque te lleva también a la columna, no sólo a la línea
@@ -276,23 +276,23 @@ function! FileName()
   return expand('%:p')
 endfunction
 
-nmap <Leader>sc :SlimuxShellRun
-nmap <Leader>sp :SlimuxShellPrompt<CR>
-nmap <Leader>sr :SlimuxREPLSendLine<CR>
-vmap <Leader>sr :SlimuxREPLSendSelection<CR>
+nm <Leader>sc :SlimuxShellRun
+nm <Leader>sp :SlimuxShellPrompt<CR>
+nm <Leader>sr :SlimuxREPLSendLine<CR>
+vm <Leader>sr :SlimuxREPLSendSelection<CR>
 " Ejecutar test con spin
-nmap <Leader>ss :<C-U>exec "SlimuxShellRun spin push ".FileName()<CR>
-nmap <Leader>sl :<C-U>exec "SlimuxShellRun spin push ".FileName().":".line('.')<CR>
+nm <Leader>ss :<C-U>exec "SlimuxShellRun spin push ".FileName()<CR>
+nm <Leader>sl :<C-U>exec "SlimuxShellRun spin push ".FileName().":".line('.')<CR>
 
 " ###### OTROS PLUGINS ######
 " Tabularize
 " (requiere tabular, pero si pongo esta condición, no funciona)
-nmap <Leader>t> :Tabularize /=><CR>
-vmap <Leader>t> :Tabularize /=><CR>
-nmap <Leader>t: :Tabularize /:\zs<CR>
-vmap <Leader>t: :Tabularize /:\zs<CR>
-nmap <Leader>t, :Tabularize /,\zs<CR>
-vmap <Leader>t, :Tabularize /,\zs<CR>
+nm <Leader>t> :Tabularize /=><CR>
+vm <Leader>t> :Tabularize /=><CR>
+nm <Leader>t: :Tabularize /:\zs<CR>
+vm <Leader>t: :Tabularize /:\zs<CR>
+nm <Leader>t, :Tabularize /,\zs<CR>
+vm <Leader>t, :Tabularize /,\zs<CR>
 
 " Easymotion
 let g:EasyMotion_leader_key = '<Leader>m'
@@ -310,7 +310,7 @@ nm <Leader>h :GundoToggle<CR>
 
 " ####### VARIOS #######
 " Firma de amarok
-nmap <Leader>f G:r!amarok2-nowplaying<cr>O--<Esc>0k
+nm <Leader>f G:r!amarok2-nowplaying<cr>O--<Esc>0k
 
 " Repetir la última orden
 nm <Leader>ñ @:
