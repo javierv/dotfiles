@@ -13,6 +13,21 @@ bindkey "^P" vi-up-line-or-history
 bindkey "^N" vi-down-line-or-history
 bindkey "^R" history-incremental-search-backward
 
+# Colors. Copied from prezto's utility module.
+alias ls='ls --group-directories-first'
+
+if zstyle -t ':prezto:module:utility:ls' color; then
+  if [[ -s "$HOME/.dir_colors" ]]; then
+    eval "$(dircolors "$HOME/.dir_colors")"
+  else
+    eval "$(dircolors)"
+  fi
+
+  alias ls="$aliases[ls] --color=auto"
+else
+  alias ls="$aliases[ls] -F"
+fi
+
 # aliases for frequently typed commands
 alias ll='ls -l'
 alias la='ls -A'
