@@ -74,7 +74,7 @@ im <C-v> <Esc>"+gp a
 nm gV `[v`]
 
 
-" ###### ABRIR, CERRAR Y GUARDAR ######
+" ###### PASAR DE UN MODO A OTRO ######
 " Salir del modo edición (la letra Esc está muy lejos)
 im Ñ <Esc>
 " Lo mismo para salir del modo visual
@@ -83,6 +83,11 @@ vm ñ <C-C>
 " Y lo mismo en la línea de órdenes
 cm Ñ <C-C> 
 cm ñ <C-C> 
+" La tecla : es muy común y en español requiere dos pulsaciones.
+noremap - :
+
+
+" ###### ABRIR, CERRAR Y GUARDAR ######
 " Grabar archivo tanto en modo normal como en edición
 nm ñ :w<CR>
 im <C-S> <Esc>:w<CR>a
