@@ -95,6 +95,7 @@ im <C-S> <Esc>:w<CR>a
 nm <Leader>z :BD<CR> 
 " Cierra la ventana.
 nm <Leader>q :q<CR>
+nm <Leader>x :x<CR>
 "Dejar sólo el buffer actual
 nm <Leader>o :on<CR>
 " Abrir ficheros
