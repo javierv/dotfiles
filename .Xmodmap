@@ -22,6 +22,10 @@ keycode 34 = grave dead_circumflex grave dead_circumflex bracketleft dead_abover
 ! keycode  41 = f F f F dstroke ordfeminine dstroke ordfeminine f F dstroke ordfeminine
 keycode  41 = f F f F slash ordfeminine slash ordfeminine f F slash ordfeminine
 
+! Altgr+G genera \.
+! keycode  42 = g G g G eng ENG eng ENG g G eng ENG
+keycode  42 = g G g G backslash ENG backslash ENG g G backslash ENG
+
 ! Altgr+D genera $.
 ! keycode  40 = d D d D eth ETH eth ETH d D eth ETH
 keycode  40 = d D d D dollar ETH dollar ETH d D dollar ETH
