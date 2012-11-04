@@ -164,8 +164,8 @@ nm s :<C-U>exec "normal i".RepeatChar(nr2char(getchar()), v:count1)<CR>
 nm S :<C-U>exec "normal a".RepeatChar(nr2char(getchar()), v:count1)<CR>
 
 " Introducir líneas en blanco antes y después de la actual en modo normal
-nm - maO<esc>`a
-nm + mao<esc>`a
+nm æ maO<esc>`a
+nm ß mao<esc>`a
 
 
 " ###### ASPECTO ######
