@@ -14,5 +14,9 @@ keycode 135 = Multi_key
 !Deactivate Insert
 keycode 118 =
 
+! Tecla ` solo requiere una pulsación, y ponemos la / donde el ^.
 !keycode 34 = dead_grave dead_circumflex dead_grave dead_circumflex bracketleft dead_abovering bracketleft
-keycode 34 = grave dead_circumflex grave dead_circumflex bracketleft dead_abovering bracketleft
+keycode 34 = grave slash grave slash bracketleft dead_abovering bracketleft
+! Ponemos el ^ como altgr+7, para compensar.
+! keycode  16 = 7 slash 7 slash braceleft seveneighths braceleft seveneighths 7 slash braceleft seveneighths
+keycode  16 = 7 slash 7 slash dead_circumflex seveneighths dead_circumflex seveneighths 7 slash dead_circumflex seveneighths
