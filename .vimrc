@@ -45,6 +45,7 @@ set nrformats=hex
 
 " La tecla leader por defecto es la \, que está muy lejos.
 let mapleader = ","
+noremap \ ,
 
 " Por defecto sólo se recuerdan las últimas 20 órdenes. Subimos.
 set history=100
