@@ -36,7 +36,11 @@ runtime macros/matchit.vim
 
 " ######## ENTORNO ########
 set shell=/bin/zsh
-"Quita la línea extra al final del fichero que añade vim
+
+" Guarda la configuración de netrw donde debe
+let g:netrw_home = '~/.vim'
+
+" Quita la línea extra al final del fichero que añade vim
 set noeol
 set binary
 
