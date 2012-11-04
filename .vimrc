@@ -214,8 +214,6 @@ set number
 " Muestra el número de línea al final de la pantalla (ya estaba activo por
 " defecto)
 set ruler
-" Indica que una línea es continuación de la anterior
-set showbreak=...
 " Por defecto, no contrae las líneas cuando carga un nuevo buffer
 set nofoldenable
 
