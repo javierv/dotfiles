@@ -38,6 +38,10 @@ keycode  25 = w W w W quotedbl Lstroke quotedbl Lstroke w W quotedbl Lstroke
 ! keycode  27 = r R r R paragraph registered paragraph registered r R paragraph registered
 keycode  27 = r R r R apostrophe registered apostrophe registered r R apostrophe registered
 
+! Altgr+N genera =
+! keycode  57 = n N n N n N n N n N n N
+keycode  57 = n N n N equal N equal N n N equal N
+
 ! Los paréntesis se generan con altgr+j y altgr+k
 !keycode  44 = j J j J dead_hook dead_horn dead_hook dead_horn j J dead_hook dead_horn
 keycode  44 = j J j J parenleft dead_horn parenleft dead_horn j J parenleft dead_horn
