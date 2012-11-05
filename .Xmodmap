@@ -43,3 +43,15 @@ keycode  27 = r R r R apostrophe registered apostrophe registered r R apostrophe
 keycode  44 = j J j J parenleft dead_horn parenleft dead_horn j J parenleft dead_horn
 ! keycode  45 = k K k K kra ampersand kra ampersand k K kra ampersand
 keycode  45 = k K k K parenright ampersand parenright ampersand k K parenright ampersand
+
+! Las exclamaciones se generan con altgr+c y altgr+v
+! keycode  54 = c C c C cent copyright cent copyright c C cent copyright
+keycode  54 = c C c C exclamdown copyright exclamdown copyright c C exclamdown copyright
+! keycode  55 = v V v V leftdoublequotemark leftsinglequotemark leftdoublequotemark leftsinglequotemark v V leftdoublequotemark leftsinglequotemark
+keycode  55 = v V v V exclam leftsinglequotemark exclam leftsinglequotemark v V exclam leftsinglequotemark
+
+! Los interrogantes se generan con altgr+m y altgr+,
+! keycode  58 = m M m M mu masculine mu masculine m M mu masculine
+keycode  58 = m M m M questiondown masculine questiondown masculine m M questiondown masculine
+! keycode  59 = comma semicolon comma semicolon horizconnector multiply horizconnector multiply comma semicolon horizconnector multiply
+keycode  59 = comma semicolon comma semicolon question multiply question multiply comma semicolon question multiply
