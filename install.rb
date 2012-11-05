@@ -36,22 +36,34 @@ class DotfilesInstaller
   end
 
   def copy_gitconfig
-    %x[cp #{absolute_path('.gitconfig')} #{destination_folder}]
-    puts "Copied gitconfig file"
+    unless File.exist?(destination_path('.gitconfig'))
+      %x[cp #{absolute_path('.gitconfig')} #{destination_folder}]
+      puts "Copied gitconfig file"
+    end 
   end
 
   def create_local_configurations
-    %w[.vimrc.local .zshrc.local .zpreztorc.local .aliases].each do |file|
-      %x[touch #{destination_path(file)}]
-      puts "Created #{file}"
+    create_local_zshrc
+
+    %w[.vimrc.local .zpreztorc.local .aliases].each do |file|
+      unless File.exist?(destination_path(file))
+        %x[touch #{destination_path(file)}]
+        puts "Created #{file}"
+      end
     end
-    # Make a different prompt, so I know it's a different machine.
-    %x[echo "PROMPT='%n@%m:%~> '" >> .zshrc.local]
   end
 
   def install_vim_plugins
     puts "Installing vim plugins"
     %x[vim +BundleInstall +qall]
+  end
+
+  def create_local_zshrc
+    unless File.exist?(destination_path('.zshrc.local'))
+      # Make a different prompt, so I know it's a different machine.
+      %x[echo "PROMPT='%n@%m:%~> '" > #{destination_path('.zshrc.local')}]
+      puts "Created .zshrc.local"
+    end 
   end
 
 private
