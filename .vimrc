@@ -77,6 +77,7 @@ nm gV `[v`]
 " ###### PASAR DE UN MODO A OTRO ######
 " Salir del modo edición (la letra Esc está muy lejos)
 im Ñ <Esc>
+im ł <Esc>
 " Lo mismo para salir del modo visual
 vm Ñ <C-C>
 vm ñ <C-C>
