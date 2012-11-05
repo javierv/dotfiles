@@ -59,3 +59,9 @@ keycode  55 = v V v V exclam leftsinglequotemark exclam leftsinglequotemark v V 
 keycode  58 = m M m M questiondown masculine questiondown masculine m M questiondown masculine
 ! keycode  59 = comma semicolon comma semicolon horizconnector multiply horizconnector multiply comma semicolon horizconnector multiply
 keycode  59 = comma semicolon comma semicolon question multiply question multiply comma semicolon question multiply
+
+! Intercambiamos mayúsculas izquierdo con <>.
+! keycode  50 = Shift_L NoSymbol Shift_L NoSymbol Shift_L
+! keycode  94 = less greater less greater bar brokenbar bar brokenbar less greater bar brokenbar
+keycode  50 = less greater less greater bar brokenbar bar brokenbar less greater bar brokenbar
+keycode  94 = Shift_L NoSymbol Shift_L NoSymbol Shift_L
