@@ -30,6 +30,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/bufkill.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'nelstrom/vim-visual-star-search'
+Bundle 'vim-ruby/vim-ruby'
 
 " Aumenta el poder del % para if-else-end y más cosas (activa por defecto).
 runtime macros/matchit.vim
