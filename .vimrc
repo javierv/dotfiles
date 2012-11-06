@@ -318,7 +318,7 @@ vm <Leader>c gc
 let g:syntastic_auto_loc_list=1 " Abre automáticamente la lista de errores.
 
 " Gundo
-nm <Leader>h :GundoToggle<CR>
+nm <Leader>u :GundoToggle<CR>
 
 
 " ####### VARIOS #######
