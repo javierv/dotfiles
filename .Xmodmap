@@ -34,10 +34,6 @@ keycode  40 = d D d D dollar ETH dollar ETH d D dollar ETH
 ! keycode  25 = w W w W lstroke Lstroke lstroke Lstroke w W lstroke Lstroke
 keycode  25 = w W w W quotedbl Lstroke quotedbl Lstroke w W quotedbl Lstroke
 
-! Altgr+R genera '.
-! keycode  27 = r R r R paragraph registered paragraph registered r R paragraph registered
-keycode  27 = r R r R apostrophe registered apostrophe registered r R apostrophe registered
-
 ! Altgr+N genera =
 ! keycode  57 = n N n N n N n N n N n N
 keycode  57 = n N n N equal N equal N n N equal N
