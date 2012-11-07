@@ -8,11 +8,6 @@ CDPATH=:$HOME/dev
 # Use vi keybindings
 bindkey 'ñ'     vi-cmd-mode
 
-# Mimic emacs while on insert mode
-bindkey "^P" vi-up-line-or-history
-bindkey "^N" vi-down-line-or-history
-bindkey "^R" history-incremental-search-backward
-
 # Colors. Copied from prezto's utility module.
 alias ls='ls --group-directories-first'
 
