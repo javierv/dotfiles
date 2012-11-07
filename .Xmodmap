@@ -1,12 +1,12 @@
-!Bloque de mayúsculas como control y control izdo como escape.
+!Bloque de mayúsculas como control
 !keycode 66 = Caps_Lock NoSymbol Caps_Lock
-!keycode 37 = Control_L NoSymbol Control_L NoSymbol Control_L
-!keycode  9 = Escape NoSymbol Escape NoSymbol Escape
 clear Lock
-remove Control = Control_L
-keysym Control_L = Escape
 keycode 66 = Control_L NoSymbol Control_L NoSymbol Control_L
 add Control = Control_L
+
+! eñe mayúscula como Esc.
+! keycode  47 = ntilde Ntilde ntilde Ntilde asciitilde dead_doubleacute asciitilde dead_doubleacute ntilde Ntilde asciitilde dead_doubleacute ntilde Ntilde asciitilde dead_doubleacute
+keycode  47 = ntilde Escape ntilde Escape asciitilde dead_doubleacute asciitilde dead_doubleacute ntilde Escape asciitilde dead_doubleacute ntilde Escape asciitilde dead_doubleacute
 
 !"Menu" key as Composer
 keycode 135 = Multi_key
