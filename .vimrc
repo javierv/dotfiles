@@ -79,15 +79,12 @@ nm gV `[v`]
 " ###### PASAR DE UN MODO A OTRO ######
 " Salir del modo edición (la letra Esc está muy lejos)
 im Ñ <Esc>
-im ł <Esc>
 " Lo mismo para salir del modo visual
 vm Ñ <C-C>
 vm ñ <C-C>
 " Y lo mismo en la línea de órdenes
 cm Ñ <C-C> 
 cm ñ <C-C> 
-" La tecla : es muy común y en español requiere dos pulsaciones.
-noremap - :
 
 
 " ###### ABRIR, CERRAR Y GUARDAR ######
