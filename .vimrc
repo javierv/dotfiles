@@ -31,6 +31,8 @@ Bundle 'vim-scripts/bufkill.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'kana/vim-textobj-user'
+Bundle 'kana/vim-textobj-lastpat'
 
 " Aumenta el poder del % para if-else-end y más cosas (activa por defecto).
 runtime macros/matchit.vim
