@@ -33,6 +33,7 @@ Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'kana/vim-textobj-user'
 Bundle 'kana/vim-textobj-lastpat'
+Bundle 'nelstrom/vim-textobj-rubyblock'
 
 " Aumenta el poder del % para if-else-end y más cosas (activa por defecto).
 runtime macros/matchit.vim
@@ -253,7 +254,7 @@ nm <Leader>rvsu :RVsupport
 nm <Leader>rsd :Rspec decorators/
 nm <Leader>rvsd :RVspec decorators/
 " Atajos para tipos de ficheros.
-autocmd User Rails Rnavcommand sass app/assets/stylesheets -suffix=.sass
+autocmd user Rails Rnavcommand sass app/assets/stylesheets -suffix=.sass
 autocmd User Rails Rnavcommand coffee app/assets/javascripts -suffix=.coffee
 autocmd User Rails Rnavcommand casmine spec/javascripts/ -glob=**/* -suffix=.coffee
 autocmd User Rails Rnavcommand jfixtures spec/javascripts/fixtures -glob=**/* -suffix=.html
