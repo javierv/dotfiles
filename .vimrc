@@ -34,6 +34,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'kana/vim-textobj-user'
 Bundle 'kana/vim-textobj-lastpat'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'lucapette/vim-textobj-underscore'
 
 " Aumenta el poder del % para if-else-end y más cosas (activa por defecto).
 runtime macros/matchit.vim
