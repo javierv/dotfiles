@@ -335,6 +335,9 @@ vmap b  <Plug>(smartword-b)
 vmap e  <Plug>(smartword-e)
 vmap ge <Plug>(smartword-ge)
 
+" Ack
+nmap <Leader>a :Ack!<Space>
+
 
 " ####### VARIOS #######
 " Firma de amarok
