@@ -38,6 +38,10 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'lucapette/vim-textobj-underscore'
 Bundle 'kana/vim-smartword'
 
+" Plugins no controlados por Vundle
+let extra_paths=substitute(glob('~/.vim/bundle-custom/*'), '\n', ',', 'g')
+exec 'set runtimepath+=' . extra_paths
+
 " Aumenta el poder del % para if-else-end y más cosas (activa por defecto).
 runtime macros/matchit.vim
 
