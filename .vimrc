@@ -336,7 +336,7 @@ vmap e  <Plug>(smartword-e)
 vmap ge <Plug>(smartword-ge)
 
 " Ack
-nmap <Leader>a :Ack!<Space>
+nmap <Leader>a :Ack! -i<Space>
 
 
 " ####### VARIOS #######
