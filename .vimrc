@@ -23,9 +23,7 @@ Bundle 'sjl/gundo.vim'
 Bundle 'gregsexton/gitv'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
-" Mejor tcomment que NERDCommenter.
 Bundle 'tomtom/tcomment_vim'
-" Me gusta más syntastic que checksyntax
 Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/bufkill.vim'
 Bundle 'Lokaltog/vim-powerline'
