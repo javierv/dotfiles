@@ -7,34 +7,52 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'jgdavey/vim-blockle'
-Bundle 'tpope/vim-endwise'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'thomd/vim-jasmine'
+
+" Edición de texto.
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'godlygeek/tabular'
-Bundle 'msanders/snipmate.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'tpope/vim-rails'
-Bundle 'epeli/slimux'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'sjl/gundo.vim'
-Bundle 'gregsexton/gitv'
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'vim-scripts/bufkill.vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'nelstrom/vim-visual-star-search'
-Bundle 'vim-ruby/vim-ruby'
+
+" Navegación por conjuntos de texto.
 Bundle 'kana/vim-textobj-user'
 Bundle 'kana/vim-textobj-lastpat'
 Bundle 'kana/vim-textobj-indent'
-Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'lucapette/vim-textobj-underscore'
 Bundle 'kana/vim-smartword'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'nelstrom/vim-visual-star-search'
+
+" Ruby.
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'jgdavey/vim-blockle'
+Bundle 'tpope/vim-endwise'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'tpope/vim-rails'
+
+" Git.
+Bundle 'gregsexton/gitv'
+Bundle 'tpope/vim-fugitive'
+
+" Otros lenguages.
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'thomd/vim-jasmine'
+
+" Apoyo a varios lenguajes.
+Bundle 'tomtom/tcomment_vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'msanders/snipmate.vim'
+
+" Integración con la shell
+Bundle 'mileszs/ack.vim'
+Bundle 'epeli/slimux'
+
+" Aspecto.
+Bundle 'Lokaltog/vim-powerline'
+
+" Varios.
+Bundle 'sjl/gundo.vim'
+Bundle 'vim-scripts/bufkill.vim'
 
 " Plugins no controlados por Vundle
 let extra_paths=substitute(glob('~/.vim/bundle-custom/*'), '\n', ',', 'g')
