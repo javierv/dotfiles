@@ -31,6 +31,7 @@ Bundle 'jgdavey/vim-blockle'
 Bundle 'tpope/vim-endwise'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'tpope/vim-rails'
+Bundle 'skwp/vim-rspec'
 
 " Git.
 Bundle 'gregsexton/gitv'
@@ -356,6 +357,9 @@ vmap ge <Plug>(smartword-ge)
 
 " Ack
 nmap <Leader>a :Ack! -i<Space>
+
+" Rspec.
+let g:RspecBin = 'zeus rspec'
 
 
 " ####### VARIOS #######
