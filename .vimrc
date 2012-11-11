@@ -98,6 +98,7 @@ set spelllang=es_es
 vm <C-y> "+y
 nm <C-y> "+gp 
 im <C-v> <Esc>"+gp a
+inoremap <C-r> <C-r><C-p>
 
 " Seleccionar el último texto copiado o pegado
 nm gV `[v`]
