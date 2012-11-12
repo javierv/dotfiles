@@ -318,9 +318,9 @@ nm <Leader>sc :SlimuxShellRun
 nm <Leader>sp :SlimuxShellPrompt<CR>
 nm <Leader>sr :SlimuxREPLSendLine<CR>
 vm <Leader>sr :SlimuxREPLSendSelection<CR>
-" Ejecutar test con rspec
-nm <Leader>ss :SlimuxShellRun zeus rspec %<Tab><CR>
-nm <Leader>sl :SlimuxShellRun zeus rspec %l<Tab><CR>
+" Ejecutar test con spin
+nm <Leader>ss :SlimuxShellRun spin push %<Tab><CR>
+nm <Leader>sl :SlimuxShellRun spin push %l<Tab><CR>
 
 " ###### OTROS PLUGINS ######
 " Tabularize
@@ -359,7 +359,7 @@ vmap ge <Plug>(smartword-ge)
 nmap <Leader>a :Ack! -i<Space>
 
 " Rspec.
-let g:RspecBin = 'zeus rspec'
+let g:RspecBin = 'rspec'
 
 
 " ####### VARIOS #######
