@@ -54,6 +54,9 @@ Bundle 'epeli/slimux'
 " Aspecto.
 Bundle 'Lokaltog/vim-powerline'
 
+" Sustituciones.
+Bundle 'tpope/vim-abolish'
+
 " Varios.
 Bundle 'sjl/gundo.vim'
 Bundle 'vim-scripts/bufkill.vim'
