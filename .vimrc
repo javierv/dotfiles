@@ -33,6 +33,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'tpope/vim-rails'
 Bundle 'skwp/vim-rspec'
+Bundle 'tpope/vim-bundler'
 
 " Git.
 Bundle 'gregsexton/gitv'
