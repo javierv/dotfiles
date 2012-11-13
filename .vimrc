@@ -13,6 +13,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'vim-scripts/ReplaceWithRegister'
 
 " Navegación por conjuntos de texto.
 Bundle 'kana/vim-textobj-user'
