@@ -11,4 +11,3 @@ TODO:
 
 1. Experiment improving keyboard layout.
 1. Configure zsh.
-1. Make tmux look nicer.
