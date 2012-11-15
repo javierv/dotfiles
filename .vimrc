@@ -238,6 +238,8 @@ endif
 " Powerline
 set noshowmode
 let g:Powerline_stl_path_style = "short"
+" Requiere parchear una tipografía con powerline fontpatcher
+let g:Powerline_symbols = "fancy"
 
 " Resaltados de sintaxis en función del tipo de fichero
 syntax on
