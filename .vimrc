@@ -88,7 +88,7 @@ let mapleader = ","
 noremap \ ,
 
 " Por defecto sólo se recuerdan las últimas 20 órdenes. Subimos.
-set history=100
+set history=10000
 
 " No expandir a la primera coincidencia de orden automáticamente al dar
 " al tabulador, sino listar las posibles
