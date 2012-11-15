@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+battery_path=/sys/class/power_supply/BAT1
+current_charge=$(cat $battery_path/charge_now)
+full_charge=$(cat $battery_path/charge_full)
+echo "♥ $((100 * $current_charge / $full_charge ))%"
