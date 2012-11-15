@@ -187,9 +187,14 @@ nm ç :nohlsearch<CR>
 set ignorecase
 set smartcase
 
+
+" ##### LÍNEA DE ÓRDENES #####
 " Buscar el historial de forma incremental sin las flechas
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+" Ir al principio de línea como en la shell (<C-a> por defecto hace un
+" autocompletado inútil).
+cnoremap <C-a> <C-b>
 
 
 " #### INTRODUCIR CARACTERES Y LÍNEAS EN MODO NORMAL ####
