@@ -16,7 +16,7 @@ keycode 118 =
 
 ! Una sola pulsación para `.
 !keycode 34 = dead_grave dead_circumflex dead_grave dead_circumflex bracketleft dead_abovering bracketleft
-keycode 34 = grave dead_circumflex grave dead_circumflex bracketleft dead_abovering bracketleft
+keycode 34 = grave asciicircum grave asciicircum bracketleft dead_abovering bracketleft
 
 ! Altgr+F genera /.
 ! keycode  41 = f F f F dstroke ordfeminine dstroke ordfeminine f F dstroke ordfeminine
