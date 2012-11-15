@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+
+def dbus_metadata
+  `qdbus org.mpris.amarok /Player GetMetadata 2> /dev/null`.chomp.split("\n")
+end
+
+def metadata
+  Hash[dbus_metadata.map { |line| line.split(": ") }]
+end
+
+puts "♫ #{metadata['artist']} - #{metadata['title']}"
