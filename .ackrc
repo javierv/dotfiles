@@ -8,3 +8,4 @@
 # Ignore simplecov
 --ignore-dir=coverage
 --ignore-dir=tmp
+--no-sql
