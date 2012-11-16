@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 
-batteries_path=/sys/class/power_supply/
-if [-d $batteries_path/BAT1]; then
-  battery_path=$batteries_paht/BAT1
+batteries_path=/sys/class/power_supply
+if [ -d $batteries_path/BAT1 ]; then
+  battery_path=$batteries_path/BAT1
 else
   battery_path=$batteries_path/BAT0
 fi
