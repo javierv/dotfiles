@@ -77,13 +77,6 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 #   'cursor' \
 #   'root'
 
-#
-# Tmux
-#
-
-# Auto start a session when Zsh is launched.
-# zstyle ':prezto:module:tmux' auto-start 'yes'
-
 # Load local configuration for different machines.
 if [ -f ~/.zpreztorc.local ]; then
   source ~/.zpreztorc.local
