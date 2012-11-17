@@ -189,6 +189,11 @@ set smartcase
 " Busca literal por defecto.
 nnoremap / /\V
 
+" ##### SUSTITUCIONES #####
+" Repetir la última sustutición conserva los modificadores (:help &)
+nnoremap & :&&<CR>
+vnoremap & :&&<CR>
+
 
 " ##### LÍNEA DE ÓRDENES #####
 " Buscar el historial de forma incremental sin las flechas
