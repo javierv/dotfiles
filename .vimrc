@@ -186,6 +186,8 @@ nm ç :nohlsearch<CR>
 " mayúscula set ignorecase
 set ignorecase
 set smartcase
+" Busca literal por defecto.
+nnoremap / /\V
 
 
 " ##### LÍNEA DE ÓRDENES #####
