@@ -174,6 +174,11 @@ nm <C-N> :bn<CR>
 " Editar el buffer que se editaba justo antes de cambiar al actual
 nm <C-P> :e #<CR>
 
+" Saltos
+" Vim no distinque entre Ctrl-i y TAB, uso tab para cambiar de ventana
+" y Ctrl-l en cambio no lo uso nunca.
+nnoremap <C-L> <C-I>
+
 
 " ###### BÚSQUEDAS ######
 " Resalta el primer resultado de la búsqueda según tecleas
