@@ -59,6 +59,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-abolish'
 
 " Varios.
+" Undotree es otra opción, que no he probado.
 Bundle 'sjl/gundo.vim'
 Bundle 'vim-scripts/bufkill.vim'
 
