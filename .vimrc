@@ -58,6 +58,9 @@ Bundle 'Lokaltog/vim-powerline'
 " Sustituciones.
 Bundle 'tpope/vim-abolish'
 
+" Autocompletado
+Bundle 'ervandew/supertab'
+
 " Varios.
 " Undotree es otra opción, que no he probado.
 Bundle 'sjl/gundo.vim'
@@ -391,6 +394,10 @@ let g:RspecBin = 'rspec'
 let g:ctrlp_map = '<Leader>p'
 let g:ctrlp_custom_ignore = '\v(tmp|\.git)'
 let g:ctrlp_show_hidden = 1
+
+" Autocompletado
+let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
+let g:SuperTabDefaultCompletionType = 'context'
 
 " ####### VARIOS #######
 " Firma de amarok
