@@ -61,7 +61,6 @@ class DotfilesInstaller
 
   def install_gems
     puts "Installing gems"
-    require 'pry'; binding.pry
     %x[gem install #{development_gems.join(' ')}]
   end
 
