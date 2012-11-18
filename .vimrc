@@ -62,6 +62,7 @@ Bundle 'tpope/vim-abolish'
 " Undotree es otra opción, que no he probado.
 Bundle 'sjl/gundo.vim'
 Bundle 'vim-scripts/bufkill.vim'
+Bundle 'kien/ctrlp.vim'
 
 " Plugins no controlados por Vundle
 let extra_paths=substitute(glob('~/.vim/bundle-custom/*'), '\n', ',', 'g')
@@ -386,6 +387,10 @@ nmap <Leader>a :Ack! -i<Space>
 " Rspec.
 let g:RspecBin = 'rspec'
 
+" CtrlP
+let g:ctrlp_map = '<Leader>p'
+let g:ctrlp_custom_ignore = '\v(tmp|\.git)'
+let g:ctrlp_show_hidden = 1
 
 " ####### VARIOS #######
 " Firma de amarok
