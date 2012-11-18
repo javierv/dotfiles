@@ -7,6 +7,7 @@ class DotfilesInstaller
     copy_gitconfig
     create_local_configurations
     install_vim_plugins
+    install_gems
     switch_to_zsh
   end
 
@@ -58,6 +59,12 @@ class DotfilesInstaller
     %x[vim +BundleInstall +qall]
   end
 
+  def install_gems
+    puts "Installing gems"
+    require 'pry'; binding.pry
+    %x[gem install #{development_gems.join(' ')}]
+  end
+
   def create_local_zshrc
     unless File.exist?(destination_path('.zshrc.local'))
       # Make a different prompt, so I know it's a different machine.
@@ -89,6 +96,10 @@ private
 
   def absolute_path(file)
     File.join original_folder, file
+  end
+
+  def development_gems
+    %w[spin gem-ctags pry hookup]
   end
 end
 
