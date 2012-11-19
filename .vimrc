@@ -399,6 +399,11 @@ let g:ctrlp_show_hidden = 1
 let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 let g:SuperTabDefaultCompletionType = 'context'
 
+autocmd FileType *
+ \ if &omnifunc != '' |
+ \   call SuperTabChain(&omnifunc, "<C-P>") |
+ \ endif
+
 " ####### VARIOS #######
 " Firma de amarok
 nm <Leader>f G:r!amarok2-nowplaying<cr>O--<Esc>0k
