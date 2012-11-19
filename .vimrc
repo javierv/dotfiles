@@ -236,7 +236,7 @@ if has("gui_running")
   set guioptions-=T
   colorscheme railscasts " railscasts, nuvola, los summerfruit y mac_classic son candidatos.
 else
-  colorscheme mynuvola " nuvola, summerfruit256 y mac_classic son los candidatos.
+  colorscheme autumnriver " nuvola, summerfruit256 y mac_classic son los candidatos.
 endif
 " Incluye el título en la ventana (gvim lo hace automáticamente)
 set title
