@@ -419,7 +419,3 @@ let fichero_configuracion_local='~/.vimrc.local'
 if filereadable(expand(fichero_configuracion_local))
 	exec 'source ' . fichero_configuracion_local
 endif
-
-" Sintaxis para rspec
-autocmd FileType ruby syntax keyword rspecKeywords context describe it its let subject pending before scenario feature background
-autocmd FileType ruby syntax keyword rspecMatchers should should_not expect
