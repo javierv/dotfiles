@@ -109,6 +109,8 @@ hi! link rubyStringDelimiter String
 hi! link rubyFunction Tag
 hi! link rubyRailsMethod rubyFunction
 hi! link rubyGlobalVariable rubyInstanceVariable
+hi! link rspecKeywords rubyDefine
+hi! link rspecMatchers rubyFunction
 
 " HTML {{{1
 hi htmlLink                 gui=UNDERLINE guifg=#0000ff ctermfg=21 guibg=NONE
