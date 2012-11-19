@@ -1,10 +1,4 @@
-" local syntax file - set colors on a per-machine basis:
-" vim: tw=0 ts=4 sw=4
-" Vim color file
-" Maintainer:	Dr. J. Pfefferl <johann.pfefferl@agfa.com>
-" Source:	$Source: /MISC/projects/cvsroot/user/pfefferl/vim/colors/nuvola.vim,v $
-" Id:	$Id: nuvola.vim,v 1.14 2003/08/11 14:03:28 pfefferl Exp $
-" Last Change:	$Date: 2003/08/11 14:03:28 $
+" Vim color file -- based on the nuvola theme, by J. Pfefferl
 
 " Intro {{{1
 set background=light
@@ -12,7 +6,7 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let g:colors_name = "mynuvola"
+let g:colors_name = "autumnriver"
 
 " Normal {{{1
 hi Normal ctermfg=235 guifg=#222222 guibg=#F9F5F9 ctermbg=15
@@ -121,5 +115,3 @@ hi htmlBoldUnderlineItalic  gui=BOLD,UNDERLINE,ITALIC
 hi htmlItalic               gui=ITALIC
 hi htmlUnderline            gui=UNDERLINE
 hi htmlUnderlineItalic      gui=UNDERLINE,ITALIC
-
-" vim600:foldmethod=marker
