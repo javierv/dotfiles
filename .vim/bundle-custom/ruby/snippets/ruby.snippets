@@ -1,0 +1,18 @@
+snippet des
+	describe "${1}" do
+	  ${2}
+	end
+snippet it
+	it "${1}" do
+	  ${2}
+	end
+snippet bef
+	before(:each) do
+	  ${1}
+	end
+snippet its
+	its(:${1}) { should ${2} }
+snippet con
+	context "${1}" do
+		${2}
+	end
