@@ -35,9 +35,8 @@ require_if_available("methodfinder")
 require_if_available("pry-stack_explorer")
 require_if_available("pry-vterm_aliases")
 
-require_if_available("awesome_print") do
-  AwesomePrint.pry!
-end
+require_if_available("awesome_print") { AwesomePrint.pry!  }
+require_if_available('pry-doc') { Pry.commands.alias_command 'doc', 'show-doc' }
 
 # Reminder not to install coolline because it breaks readline's vi-mode.
 # require_if_available("pry-coolline") 
@@ -54,7 +53,5 @@ require_if_available('pry-debugger') do
   Pry.commands.alias_command 'f', 'finish'
   Pry.commands.alias_command 'b', 'break'
 end
-
-require_if_available('pry-doc') { Pry.commands.alias_command 'doc', 'show-doc' }
 
 # TODO: better autocompletion (bond?)
