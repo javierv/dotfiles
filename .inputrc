@@ -1,6 +1,5 @@
 set editing-mode vi
 $if mode=vi
   set keymap vi-insert
-  ñ: vi-movement-mode
   "\C-p": history-search-backward
 $endif
