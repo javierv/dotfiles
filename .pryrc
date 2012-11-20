@@ -55,6 +55,6 @@ require_if_available('pry-debugger') do
   Pry.commands.alias_command 'b', 'break'
 end
 
-Pry.commands.alias_command 'doc', 'show-doc'
+require_if_available('pry-doc') { Pry.commands.alias_command 'doc', 'show-doc' }
 
 # TODO: better autocompletion (bond?)
