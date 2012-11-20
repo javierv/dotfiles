@@ -34,6 +34,7 @@ end
 require_if_available("methodfinder")
 require_if_available("pry-stack_explorer")
 require_if_available("pry-vterm_aliases")
+require_if_available("bond")
 
 require_if_available("awesome_print") { AwesomePrint.pry!  }
 require_if_available('pry-doc') { Pry.commands.alias_command 'doc', 'show-doc' }
@@ -42,7 +43,6 @@ require_if_available('pry-doc') { Pry.commands.alias_command 'doc', 'show-doc' }
 # require_if_available("pry-coolline") 
 # Reminder I didn't manage to make the exception explorer work.
 # require_if_available("pry-exception_explorer")
-
 
 ##### Shortcuts #####
 
@@ -53,5 +53,3 @@ require_if_available('pry-debugger') do
   Pry.commands.alias_command 'f', 'finish'
   Pry.commands.alias_command 'b', 'break'
 end
-
-# TODO: better autocompletion (bond?)
