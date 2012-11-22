@@ -4,6 +4,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 CDPATH=:$HOME/dev
+setopt nonomatch # Avoid "no matches found" with scp, sudo, and probably others.
 
 # Use vi keybindings
 bindkey 'ñ'     vi-cmd-mode
