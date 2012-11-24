@@ -322,6 +322,7 @@ autocmd User Rails Rnavcommand builder app/form_builders -glob=**/* -suffix=.rb
 " atajos para Git
 nm <Leader>gs :Gstatus<cr>
 nm <Leader>gc :Gcommit<cr>
+nm <Leader>ga :Gcommit --amend<cr>
 nm <Leader>gw :Gwrite<cr>
 nm <Leader>gr :Gread<cr>
 nm <Leader>gd :Gdiff<cr>
@@ -332,7 +333,7 @@ nm <Leader>gl :Glog<cr>
 nm <Leader>gv :Gitv --all<cr>
 nm <Leader>gV :Gitv! --all<cr>
 nm <Leader>gh :Gitv -S
-nm <Leader>ga :call Gitv_OpenGitCommand("diff", 'vnew')<cr>
+nm <Leader>gS :call Gitv_OpenGitCommand("diff", 'vnew')<cr>
 " Cierra los buffers de fugitive automáticamente.
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
