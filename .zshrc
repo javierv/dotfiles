@@ -3,7 +3,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-CDPATH=:$HOME/dev
 setopt nonomatch # Avoid "no matches found" with scp, sudo, and probably others.
 
 # Use vi keybindings
