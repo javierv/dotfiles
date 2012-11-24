@@ -12,6 +12,19 @@ zstyle ':prezto:load' zfunction 'zmv' 'zcalc'
 
 # Set the Prezto modules to load; the order matters.
 # Some modules require git submodule init inside prezto.
+#
+# editor                    Several shortcuts for vi and emacs modes.
+# history                   Sets history options like ignore dups.
+# directory                 Sets directory options like autocd.
+# completion                Several command completions and options
+# archive                   Provides `extract` and `ls-archive`
+# command-not-found         Suggest packages to install.
+# git                       Shows branch and icons; adds useless aliases.
+# ssh-agent                 Allows using ssh-add automatically.
+# syntax-highlighting       Live color syntax for commands.
+# history-substring-search  Filters history for current command-line text.
+# prompt                    Prompt themes.
+#
 zstyle ':prezto:load' pmodule \
   'editor' \
   'history' \
