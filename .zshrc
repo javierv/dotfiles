@@ -4,6 +4,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 setopt nonomatch # Avoid "no matches found" with scp, sudo, and probably others.
+setopt clobber # Overwrite existing files with > and >>.
 
 # Use vi keybindings
 bindkey 'ñ'     vi-cmd-mode
