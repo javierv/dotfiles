@@ -1,18 +1,7 @@
-#
-# Sets Prezto options.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
-#
-# General
-#
-
-# Set case-sensitivity for completion, history lookup, etc.
+# Set case-sensitivity for completion, etc.
 zstyle ':prezto:*:*' case-sensitive 'no'
 
-# Color output (auto set to 'no' on dumb terminals).
+# Color output
 zstyle ':prezto:*:*' color 'yes'
 
 # Set the Zsh modules to load (man zshmodules).
@@ -21,8 +10,7 @@ zstyle ':prezto:*:*' color 'yes'
 # Set the Zsh functions to load (man zshcontrib).
 zstyle ':prezto:load' zfunction 'zmv' 'zcalc'
 
-# Set the Prezto modules to load (browse modules).
-# The order matters.
+# Set the Prezto modules to load; the order matters.
 # Some modules require git submodule init inside prezto.
 zstyle ':prezto:load' pmodule \
   'environment' \
@@ -42,32 +30,18 @@ zstyle ':prezto:load' pmodule \
 #
 # Editor
 #
-
 # Set the key mapping style to 'emacs' or 'vi'.
 zstyle ':prezto:module:editor' keymap 'emacs'
 
-# Auto convert .... to ../..
-# zstyle ':prezto:module:editor' dot-expansion 'yes'
-
-#
-# Git
-#
-
-# Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
-# zstyle ':prezto:module:git:status:ignore' submodules 'all'
 #
 # Prompt
 #
-
 # Set the prompt theme to load.
-# Setting it to 'random' loads a random theme.
-# Auto set to 'off' on dumb terminals.
 zstyle ':prezto:module:prompt' theme 'sorin'
 
 #
 # Syntax Highlighting
 #
-
 # Set syntax highlighters.
 # By default main, brackets, and cursor are enabled.
 zstyle ':prezto:module:syntax-highlighting' highlighters \
