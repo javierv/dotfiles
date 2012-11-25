@@ -305,13 +305,13 @@ nm <Leader>rsu :Rsupport
 nm <Leader>rvsu :RVsupport 
 nm <Leader>rsd :Rspec decorators/
 nm <Leader>rvsd :RVspec decorators/
+nm <Leader>rf :e spec/factories.rb<cr>
 " Atajos para tipos de ficheros.
 autocmd user Rails Rnavcommand sass app/assets/stylesheets -suffix=.sass
 autocmd User Rails Rnavcommand coffee app/assets/javascripts -suffix=.coffee
 autocmd User Rails Rnavcommand casmine spec/javascripts/ -glob=**/* -suffix=.coffee
 autocmd User Rails Rnavcommand jfixtures spec/javascripts/fixtures -glob=**/* -suffix=.html
 autocmd User Rails Rnavcommand support spec/requests/support -glob=**/* -suffix=.rb
-autocmd User Rails Rnavcommand factory spec/ -glob=**/* -suffix=actories.rb 
 autocmd User Rails Rnavcommand decorator app/decorators -glob=**/* -suffix=_decorator.rb
 autocmd User Rails Rnavcommand cell app/cells -glob=**/* -suffix=_cell.rb
 autocmd User Rails Rnavcommand cview app/cells -glob=**/* -suffix=.haml
