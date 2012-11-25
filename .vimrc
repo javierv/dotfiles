@@ -274,35 +274,35 @@ set nofoldenable
 
 
 " ######### RAILS #########
-nm <Leader>rm :Rmodel 
-nm <Leader>rc :Rcontroller 
-nm <Leader>rV :Rview 
-nm <Leader>rh :Rhelper 
-nm <Leader>rj :Rjavascript 
-nm <Leader>rd :Rdecorator
-nm <Leader>rvm :RVmodel 
-nm <Leader>rvc :RVcontroller 
-nm <Leader>rvv :RVview 
-nm <Leader>rvh :RVhelper 
-nm <Leader>rvj :RVjavascript 
-nm <Leader>rvd :RVdecorator
+nm <Leader>rm :Rmodel<Space>
+nm <Leader>rc :Rcontroller<Space>
+nm <Leader>rV :Rview<Space>
+nm <Leader>rh :Rhelper<Space>
+nm <Leader>rj :Rjavascript<Space>
+nm <Leader>rd :Rdecorator<Space>
+nm <Leader>rvm :RVmodel<Space>
+nm <Leader>rvc :RVcontroller<Space>
+nm <Leader>rvv :RVview<Space>
+nm <Leader>rvh :RVhelper<Space>
+nm <Leader>rvj :RVjavascript<Space>
+nm <Leader>rvd :RVdecorator<Space>
 nm <Leader>ra :A<cr>
 nm <Leader>rva :AV<cr>
 nm <Leader>rr :R<cr>
 nm <Leader>rvr :RV<cr>
 nm <Leader>rl :Rlayout<cr>
-nm <Leader>rS :Rspec 
+nm <Leader>rS :Rspec<Space>
 nm <Leader>rsh :Rspec helpers/
 nm <Leader>rsm :Rspec models/
 nm <Leader>rsc :Rspec controllers/
-nm <Leader>rvS :RVspec 
+nm <Leader>rvS :RVspec<Space>
 nm <Leader>rvsh :RVspec helpers/
 nm <Leader>rvsm :RVspec models/
 nm <Leader>rvsc :RVspec controllers/
 nm <Leader>rsr :Rspec requests/
 nm <Leader>rvsr :RVspec requests/
-nm <Leader>rsu :Rsupport 
-nm <Leader>rvsu :RVsupport 
+nm <Leader>rsu :Rsupport<Space>
+nm <Leader>rvsu :RVsupport<Space>
 nm <Leader>rsd :Rspec decorators/
 nm <Leader>rvsd :RVspec decorators/
 nm <Leader>rf :e spec/factories.rb<cr>
