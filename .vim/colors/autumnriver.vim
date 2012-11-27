@@ -120,3 +120,6 @@ hi htmlUnderlineItalic      gui=UNDERLINE,ITALIC
 
 " Autocomplete menu
 hi Pmenu ctermbg=153 gui=bold
+
+" Trailing whitespace
+hi TrailingWhitespace ctermbg=red guibg=red

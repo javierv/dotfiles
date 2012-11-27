@@ -415,6 +415,9 @@ nm <Leader>ñ @:
 "refrescar vimdiff; se lía a menudo.
 nm <Leader>d :diffupdate<cr>
 
+" Identificar espacios al final de la línea
+match TrailingWhitespace /\s\+$/
+
 " Configuración local
 let fichero_configuracion_local='~/.vimrc.local'
 if filereadable(expand(fichero_configuracion_local))
