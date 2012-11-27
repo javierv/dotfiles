@@ -1,6 +1,6 @@
 " Vim color file -- based on the nuvola theme, by J. Pfefferl
 
-" Intro {{{1
+" Intro
 set background=light
 hi clear
 if exists("syntax_on")
@@ -8,33 +8,33 @@ if exists("syntax_on")
 endif
 let g:colors_name = "autumnriver"
 
-" Normal {{{1
+" Normal
 hi Normal ctermfg=235 guifg=#222222 guibg=#F9F5F9 ctermbg=15
 
-" Search {{{1
+" Search
 hi IncSearch cterm=UNDERLINE ctermfg=237 gui=UNDERLINE guifg=#222222 guibg=#FFE568 ctermbg=221
 hi Search term=reverse cterm=UNDERLINE ctermfg=237 gui=NONE guifg=#222222 guibg=#FFE568 ctermbg=221
 
-" Messages {{{1
+" Messages
 hi ErrorMsg gui=BOLD guifg=#EB1513 ctermfg=9 guibg=NONE
 hi! link WarningMsg ErrorMsg
 hi ModeMsg gui=BOLD guifg=#0070ff ctermfg=27 guibg=NONE
 hi MoreMsg guibg=NONE guifg=seagreen
 hi! link Question MoreMsg
 
-" Split area {{{1
+" Split area
 hi StatusLine term=BOLD,reverse cterm=NONE ctermfg=58 gui=BOLD guibg=#56A0EE ctermbg=75 guifg=white
 hi StatusLineNC gui=NONE guibg=#56A0EE ctermbg=75 guifg=#E9E9F4 ctermfg=244
 hi! link VertSplit StatusLineNC
 hi WildMenu gui=UNDERLINE guifg=#56A0EE ctermfg=75 guibg=#E9E9F4 ctermbg=7
 
-" Diff {{{1
+" Diff
 hi DiffText   gui=NONE guifg=#f83010 ctermfg=202 guibg=#ffeae0 ctermbg=229
 hi DiffChange gui=NONE guifg=#006800 ctermfg=22 guibg=#d0ffd0 ctermbg=229
 hi DiffDelete gui=NONE guifg=#2020ff ctermfg=21 guibg=#c8f2ea ctermbg=223
 hi DiffAdd gui=NONE guifg=#2020ff ctermfg=21 guibg=#c8f2ea ctermbg=194
 
-" Git styles {{{1
+" Git styles
 hi diffAdded guifg=#00bf00 ctermfg=28
 hi diffRemoved guifg=#bf0000 ctermfg=124
 hi link gitcommitSelectedType diffAdded
@@ -43,16 +43,16 @@ hi link gitcommitDiscardedType diffRemoved
 hi link gitcommitDiscardedFile gitcommitDiscardedType
 hi gitcommitUntrackedFile guifg=#6E79F1 guibg=#FFFFFF ctermfg=69 ctermbg=15
 
-" Cursor {{{1
+" Cursor
 hi Cursor       gui=none guifg=#222222 guibg=orange
 "hi lCursor      gui=NONE guifg=#f8f8f8 ctermfg=15 guibg=#8000ff ctermbg=93
 hi CursorIM     gui=NONE guifg=#f8f8f8 ctermfg=15 guibg=#8000ff ctermbg=93
 
-" Fold {{{1
+" Fold
 hi Folded gui=NONE guibg=#B5EEB5 ctermbg=157 guifg=#222222
 hi! link FoldColumn Folded
 
-" Other {{{1
+" Other
 hi Directory    gui=NONE guifg=#0000ff ctermfg=21 guibg=NONE
 hi LineNr       gui=NONE guifg=#8080a0 ctermfg=103 guibg=NONE
 hi NonText      gui=BOLD guifg=#4000ff ctermfg=57 guibg=#EFEFF7 ctermbg=255
@@ -60,7 +60,7 @@ hi Title        gui=BOLD guifg=#1014AD ctermfg=19 guibg=NONE
 hi Visual term=reverse gui=NONE guifg=#222222 guibg=#BDDFFF ctermbg=229
 hi VisualNOS term=reverse ctermfg=yellow gui=UNDERLINE guifg=#222222 guibg=#BDDFFF ctermbg=153
 
-" Syntax group {{{1
+" Syntax group
 hi Comment term=BOLD guifg=#3F6B5B ctermfg=240
 hi Constant term=UNDERLINE guifg=#B91F49 ctermfg=125
 hi Error term=REVERSE ctermfg=15 ctermbg=9 guibg=Red guifg=White
@@ -108,7 +108,7 @@ hi! link rubyGlobalVariable rubyInstanceVariable
 hi! link rspecKeywords rubyDefine
 hi! link rspecMatchers rubyFunction
 
-" HTML {{{1
+" HTML
 hi htmlLink                 gui=UNDERLINE guifg=#0000ff ctermfg=21 guibg=NONE
 hi htmlBold                 gui=BOLD
 hi htmlBoldItalic           gui=BOLD,ITALIC
