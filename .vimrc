@@ -108,7 +108,7 @@ set spelllang=es_es
 " ####### COPIAR Y PEGAR ######
 " Pegar a y del sistema
 vm <C-y> "+y
-nm <C-y> "+gp 
+nm <C-y> "+gp
 im <C-v> <Esc>"+gp a
 inoremap <C-r> <C-r><C-p>
 
@@ -120,7 +120,7 @@ nm gV `[v`]
 " Salir con la ñ de modo visual.
 vm ñ <C-C>
 " Y lo mismo en la línea de órdenes
-cm ñ <C-C> 
+cm ñ <C-C>
 
 
 " ###### ABRIR, CERRAR Y GUARDAR ######
@@ -128,7 +128,7 @@ cm ñ <C-C>
 nm ñ :w<CR>
 im <C-S> <Esc>:w<CR>a
 " Salir del buffer actual, dejando la ventana usando bufkill
-nm <Leader>z :BD<CR> 
+nm <Leader>z :BD<CR>
 " Cierra la ventana.
 nm <Leader>q :q<CR>
 nm <Leader>x :x<CR>
@@ -188,7 +188,7 @@ nnoremap <C-L> <C-I>
 " Resalta el primer resultado de la búsqueda según tecleas
 set incsearch
 " Resalta todas las coincidencias de la búsqueda
-set hlsearch 
+set hlsearch
 " Quita el resaltado de las coincidencias (lo vuelve a poner en la siguiente
 " búsqueda)
 nm ç :nohlsearch<CR>
