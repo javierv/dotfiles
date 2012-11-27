@@ -75,7 +75,6 @@ hi Type term=UNDERLINE ctermfg=Blue gui=NONE guifg=Blue
 hi String term=UNDERLINE guifg=#B91F49 ctermfg=22
 hi! link Character	String
 hi! link Boolean	Constant
-hi! link rubyDefine Keyword
 hi! link Float		Number
 hi! link Function	Identifier
 hi! link Conditional	Statement
@@ -95,6 +94,9 @@ hi! link SpecialChar	Special
 hi! link Delimiter	Special
 hi! link SpecialComment Special
 hi! link Debug		Special
+
+" Ruby styles
+hi! link rubyDefine Keyword
 hi! link rubyConstant Type
 hi rubyInstanceVariable guifg=#8A1909 ctermfg=160
 hi! link rubySymbol PreProc
