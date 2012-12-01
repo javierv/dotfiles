@@ -416,7 +416,10 @@ nm <Leader>ñ @:
 nm <Leader>d :diffupdate<cr>
 
 " Identificar espacios al final de la línea
-match TrailingWhitespace /\s\+$/
+autocmd BufWinEnter * match TrailingWhitespace /\s\+$/
+autocmd InsertEnter * match TrailingWhitespace /\(\zs\%#\|\s\)\+$/
+autocmd InsertLeave * match TrailingWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
 
 " Configuración local
 let fichero_configuracion_local='~/.vimrc.local'
