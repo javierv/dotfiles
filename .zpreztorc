@@ -15,7 +15,6 @@ zstyle ':prezto:load' zfunction 'zmv' 'zcalc'
 #
 # completion                Several command completions and options
 # archive                   Provides `extract` and `ls-archive`
-# command-not-found         Suggest packages to install.
 # git                       Shows branch and icons; adds useless aliases.
 # ssh-agent                 Allows using ssh-add automatically.
 # syntax-highlighting       Live color syntax for commands.
@@ -25,7 +24,6 @@ zstyle ':prezto:load' zfunction 'zmv' 'zcalc'
 zstyle ':prezto:load' pmodule \
   'completion' \
   'archive' \
-  'command-not-found' \
   'git' \
   'ssh-agent' \
   'syntax-highlighting' \
