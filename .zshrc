@@ -15,6 +15,10 @@ setopt hist_ignore_dups    # Don't save commands repeated *in a row*.
 setopt hist_ignore_space   # Don't save commands starting with space.
 setopt hist_find_no_dups   # Don't find repeated commands.
 
+##### DIRECTORIES #####
+setopt auto_cd        # Changes directory without typing cd.
+setopt extended_glob  # Allows '~' in the prompt instead of './~'
+
 
 ##### COLORS #####
 alias ls='ls --group-directories-first'
@@ -73,7 +77,6 @@ done
 bindkey 'ñ' vi-cmd-mode
 
 setopt nonomatch # Avoid "no matches found" with scp, sudo, and probably others.
-setopt clobber # Overwrite existing files with > and >>.
 
 # Source local configuration.
 if [ -f ~/.zshrc.local ]; then
