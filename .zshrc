@@ -3,27 +3,21 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-setopt nonomatch # Avoid "no matches found" with scp, sudo, and probably others.
-setopt clobber # Overwrite existing files with > and >>.
 
-# Use vi keybindings
-bindkey 'ñ'     vi-cmd-mode
-
-# Colors. Copied from prezto's utility module.
+##### COLORS #####
 alias ls='ls --group-directories-first'
+eval "$(dircolors)"
+alias ls="$aliases[ls] --color=auto"
 
-if zstyle -t ':prezto:module:utility:ls' color; then
-  if [[ -s "$HOME/.dir_colors" ]]; then
-    eval "$(dircolors "$HOME/.dir_colors")"
-  else
-    eval "$(dircolors)"
-  fi
-
-  alias ls="$aliases[ls] --color=auto"
+# 256 colors
+if [[ $TMUX = '' ]]; then
+  export TERM=xterm-256color
 else
-  alias ls="$aliases[ls] -F"
+  export TERM=screen-256color
 fi
 
+
+###### ALIASES #####
 # aliases for frequently typed commands
 alias ll='ls -l'
 alias la='ls -A'
@@ -43,7 +37,8 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
-# aliases for file extensions
+
+##### FILE EXTENSIONS #####
 for extension in jpg png jpeg gif; do
 	alias -s $extension=gwenview
 done
@@ -61,13 +56,14 @@ for extension in epub pdf; do
 done
 
 
-# 256 colors
-if [[ $TMUX = '' ]]; then
-  export TERM=xterm-256color
-else
-  export TERM=screen-256color
-fi
+##### MISC #####
+# Use mixed emacs-vi keybindings
+bindkey 'ñ' vi-cmd-mode
 
+setopt nonomatch # Avoid "no matches found" with scp, sudo, and probably others.
+setopt clobber # Overwrite existing files with > and >>.
+
+# Source local configuration.
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
 fi
