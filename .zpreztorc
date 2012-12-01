@@ -14,7 +14,6 @@ zstyle ':prezto:load' zfunction 'zmv' 'zcalc'
 # Some modules require git submodule init inside prezto.
 #
 # editor                    Several shortcuts for vi and emacs modes.
-# history                   Sets history options like ignore dups.
 # directory                 Sets directory options like autocd.
 # completion                Several command completions and options
 # archive                   Provides `extract` and `ls-archive`
@@ -27,7 +26,6 @@ zstyle ':prezto:load' zfunction 'zmv' 'zcalc'
 #
 zstyle ':prezto:load' pmodule \
   'editor' \
-  'history' \
   'directory' \
   'completion' \
   'archive' \

@@ -3,6 +3,18 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+##### HISTORY #####
+# Keep 10000 lines of history within the shell and save it to ~/.zhistory:
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zhistory
+
+setopt inc_append_history  # Write to the history file immediately
+setopt share_history       # Share history between open sessions.
+setopt hist_ignore_dups    # Don't save commands repeated *in a row*.
+setopt hist_ignore_space   # Don't save commands starting with space.
+setopt hist_find_no_dups   # Don't find repeated commands.
+
 
 ##### COLORS #####
 alias ls='ls --group-directories-first'
