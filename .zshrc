@@ -74,6 +74,7 @@ done
 
 ##### MISC #####
 # Use mixed emacs-vi keybindings
+bindkey -e
 bindkey 'ñ' vi-cmd-mode
 
 setopt nonomatch # Avoid "no matches found" with scp, sudo, and probably others.

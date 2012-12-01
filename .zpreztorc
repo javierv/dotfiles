@@ -33,12 +33,6 @@ zstyle ':prezto:load' pmodule \
   'prompt'
 
 #
-# Editor
-#
-# Set the key mapping style to 'emacs' or 'vi'.
-zstyle ':prezto:module:editor' keymap 'emacs'
-
-#
 # Prompt
 #
 # Set the prompt theme to load.
