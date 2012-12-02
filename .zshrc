@@ -121,7 +121,7 @@ bindkey -e
 bindkey 'ñ' vi-cmd-mode
 
 setopt nonomatch # Avoid "no matches found" with scp, sudo, and probably others.
-
+stty -ixon # No controlar flujo con ctrl-s y ctrl-q.
 autoload -U zmv zcalc
 
 # Suggest packages to install
