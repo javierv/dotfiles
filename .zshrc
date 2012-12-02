@@ -91,6 +91,12 @@ zstyle ':completion:*:descriptions' format ' %F{yellow}-- %d --%f'
 # Paginate completions, like options for ls.
 zstyle ':completion:*:default' list-prompt '%S%M matches%s'
 
+# Kill command
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:*:kill:*' menu yes select
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,user,comm'
+zstyle ':completion:*:*:kill:*' insert-ids single
+
 
 ##### MISC #####
 # Use mixed emacs-vi keybindings
