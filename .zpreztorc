@@ -15,7 +15,6 @@ zstyle ':prezto:load' zfunction 'zmv' 'zcalc'
 #
 # archive                   Provides `extract` and `ls-archive`
 # git                       Shows branch and icons; adds useless aliases.
-# ssh-agent                 Allows using ssh-add automatically.
 # syntax-highlighting       Live color syntax for commands.
 # history-substring-search  Filters history for current command-line text.
 # prompt                    Prompt themes.
@@ -23,7 +22,6 @@ zstyle ':prezto:load' zfunction 'zmv' 'zcalc'
 zstyle ':prezto:load' pmodule \
   'archive' \
   'git' \
-  'ssh-agent' \
   'syntax-highlighting' \
   'history-substring-search' \
   'prompt'
