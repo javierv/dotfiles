@@ -3,6 +3,18 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+
+##### PLUGINS #####
+source "$HOME/.zsh/syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$HOME/.zsh/history-substring-search/zsh-history-substring-search.zsh"
+
+# Use regular shortcuts for substring matching
+bindkey -M emacs '\C-P' history-substring-search-up
+bindkey -M emacs '\C-N' history-substring-search-down
+bindkey -M vicmd "k" history-substring-search-up
+bindkey -M vicmd "j" history-substring-search-down
+
+
 ##### HISTORY #####
 # Keep 10000 lines of history within the shell and save it to ~/.zhistory:
 HISTSIZE=10000

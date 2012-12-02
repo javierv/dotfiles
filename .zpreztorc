@@ -1,20 +1,13 @@
 # Set the Prezto modules to load; the order matters.
 # Some modules require git submodule init inside prezto.
 #
-# git                       Shows branch and icons; adds useless aliases.
-# syntax-highlighting       Live color syntax for commands.
-# history-substring-search  Filters history for current command-line text.
-# prompt                    Prompt themes.
+# git    shows branch and icons in prompt.
+# editor changes the prompt depending on vi or emacs mode.
 #
 zstyle ':prezto:load' pmodule \
   'git' \
-  'syntax-highlighting' \
-  'history-substring-search' \
+  'editor' \
   'prompt'
 
 # Prompt theme
 zstyle ':prezto:module:prompt' theme 'sorin'
-
-# Set syntax highlighters. By default main, brackets, and cursor are enabled.
-zstyle ':prezto:module:syntax-highlighting' highlighters 'main'
-zstyle ':prezto:module:syntax-highlighting' color 'yes'

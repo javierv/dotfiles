@@ -19,3 +19,5 @@ if [[ -s "$HOME/.rbenv/bin/rbenv" ]]; then
   path+=("$HOME/.rbenv/bin")
   eval "$(rbenv init - zsh)"
 fi
+
+fpath=("$HOME/.zsh/completions/src" $fpath)
