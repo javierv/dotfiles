@@ -72,6 +72,16 @@ for extension in epub pdf; do
 done
 
 
+##### COMPLETION #####
+autoload -Uz compinit; compinit
+zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS} # Color file completions
+
+# Use caching to make completion for cammands such as dpkg and apt usable.
+zstyle ':completion::complete:*' use-cache on
+zstyle ':completion::complete:*' cache-path "${ZDOTDIR:-$HOME}/.zcompcache"
+
+
 ##### MISC #####
 # Use mixed emacs-vi keybindings
 bindkey -e
