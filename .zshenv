@@ -20,4 +20,4 @@ if [[ -s "$HOME/.rbenv/bin/rbenv" ]]; then
   eval "$(rbenv init - zsh)"
 fi
 
-fpath=("$HOME/.zsh/completions/src" $fpath)
+fpath=("$HOME/.zsh/completions/src" "$HOME/.zsh/themes" $fpath)

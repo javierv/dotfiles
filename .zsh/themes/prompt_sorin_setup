@@ -1,0 +1,425 @@
+#
+# A simple theme that displays relevant, contextual information.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+# Screenshots:
+#   http://i.imgur.com/nBEEZ.png
+#
+#
+# Exposes Git repository information via the $git_info associative array.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+function is-true {
+  [[ -n "$1" && "$1" == (1|[Yy]([Ee][Ss]|)|[Tt]([Rr][Uu][Ee]|)|[Oo]([Nn]|)) ]]
+}
+function coalesce {
+  for arg in $argv; do
+    print "$arg"
+    return 0
+  done
+  return 1
+}
+
+# Gets the Git status information.
+function git-info {
+  # Extended globbing is needed to parse repository status.
+  setopt LOCAL_OPTIONS
+  setopt EXTENDED_GLOB
+
+  local action_format
+  local action_formatted
+  local added=0
+  local added_format
+  local added_formatted
+  local ahead
+  local ahead_and_behind
+  local ahead_and_behind_cmd
+  local ahead_format
+  local ahead_formatted
+  local ahead_or_behind
+  local behind
+  local behind_format
+  local behind_formatted
+  local branch
+  local branch_format
+  local branch_formatted
+  local branch_info
+  local clean
+  local clean_formatted
+  local commit
+  local commit_format
+  local commit_formatted
+  local deleted=0
+  local deleted_format
+  local deleted_formatted
+  local dirty=0
+  local dirty_format
+  local dirty_formatted
+  local ignore_submodules
+  local -A info_formats
+  local info_format
+  local line_number=0
+  local modified=0
+  local modified_format
+  local modified_formatted
+  local position
+  local position_format
+  local position_formatted
+  local remote
+  local remote_cmd
+  local remote_format
+  local remote_formatted
+  local renamed=0
+  local renamed_format
+  local renamed_formatted
+  local stashed=0
+  local stashed_format
+  local stashed_formatted
+  local status_cmd
+  local unmerged=0
+  local unmerged_format
+  local unmerged_formatted
+  local untracked=0
+  local untracked_format
+  local untracked_formatted
+
+  # Clean up previous $git_info.
+  unset git_info
+  typeset -gA git_info
+
+  # Return if not inside a Git repository work tree.
+  if ! is-true "$(git rev-parse --is-inside-work-tree 2> /dev/null)"; then
+    return 1
+  fi
+
+  if (( $# > 0 )); then
+    if [[ "$1" == [Oo][Nn] ]]; then
+      git config --bool prompt.showinfo true
+    elif [[ "$1" == [Oo][Ff][Ff] ]]; then
+      git config --bool prompt.showinfo false
+    else
+      print "usage: $0 [ on | off ]" >&2
+    fi
+    return 0
+  fi
+
+  # Return if git-info is disabled.
+  if ! is-true "${$(git config --bool prompt.showinfo):-true}"; then
+    return 1
+  fi
+
+  # Used to abort and turn git-info off on SIGINT.
+  _git_info_executing=true
+
+  # Use porcelain status for easy parsing.
+  status_cmd='git status --porcelain'
+
+  # Gets the remote name.
+  remote_cmd='git rev-parse --symbolic-full-name --verify HEAD@{upstream}'
+
+  # Gets the commit difference counts between local and remote.
+  ahead_and_behind_cmd='git rev-list --count --left-right HEAD...@{upstream}'
+
+  # Ignore submodule status.
+  zstyle -s ':prezto:module:git:status:ignore' submodules 'ignore_submodules'
+  if [[ -n "$ignore_submodules" ]]; then
+    status_cmd+=" --ignore-submodules=${ignore_submodules}"
+  fi
+
+  # Format commit.
+  commit="$(git rev-parse HEAD 2> /dev/null)"
+  if [[ -n "$commit" ]]; then
+    zstyle -s ':prezto:module:git:info:commit' format 'commit_format'
+    zformat -f commit_formatted "$commit_format" "c:$commit"
+  fi
+
+  # Get current status.
+  while IFS=$'\n' read line; do
+    # Count added, deleted, modified, renamed, unmerged, untracked, dirty.
+    # T (type change) is undocumented, see http://git.io/FnpMGw.
+    # For a table of scenarii, see http://i.imgur.com/2YLu1.png.
+    [[ "$line" == ([ACDMT][\ MT]|[ACMT]D)\ * ]] && (( added++ ))
+    [[ "$line" == [\ ACMRT]D\ * ]] && (( deleted++ ))
+    [[ "$line" == ?[MT]\ * ]] && (( modified++ ))
+    [[ "$line" == R?\ * ]] && (( renamed++ ))
+    [[ "$line" == (AA|DD|U?|?U)\ * ]] && (( unmerged++ ))
+    [[ "$line" == \?\?\ * ]] && (( untracked++ ))
+    (( dirty++ ))
+  done < <(${(z)status_cmd} 2> /dev/null)
+
+  # Format branch.
+  branch="${$(git symbolic-ref -q HEAD)##refs/heads/}"
+  if [[ -n "$branch" ]]; then
+    zstyle -s ':prezto:module:git:info:branch' format 'branch_format'
+    zformat -f branch_formatted "$branch_format" "b:$branch"
+
+    # Format remote.
+    remote="${$(${(z)remote_cmd} 2> /dev/null)##refs/remotes/}"
+    if [[ -n "$remote" ]]; then
+      zstyle -s ':prezto:module:git:info:remote' format 'remote_format'
+      zformat -f remote_formatted "$remote_format" "R:$remote"
+
+      # Get ahead and behind counts.
+      ahead_and_behind="$(${(z)ahead_and_behind_cmd} 2> /dev/null)"
+
+      # Format ahead.
+      ahead="$ahead_and_behind[(w)1]"
+      if (( $ahead > 0 )); then
+        zstyle -s ':prezto:module:git:info:ahead' format 'ahead_format'
+        zformat -f ahead_formatted "$ahead_format" "A:$ahead"
+      fi
+
+      # Format behind.
+      behind="$ahead_and_behind[(w)2]"
+      if (( $behind > 0 )); then
+        zstyle -s ':prezto:module:git:info:behind' format 'behind_format'
+        zformat -f behind_formatted "$behind_format" "B:$behind"
+      fi
+    fi
+  else
+    # Format position.
+    position="$(git describe --contains --all HEAD 2> /dev/null)"
+    if [[ -n "$position" ]]; then
+      zstyle -s ':prezto:module:git:info:position' format 'position_format'
+      zformat -f position_formatted "$position_format" "p:$position"
+    fi
+  fi
+
+  # Format added.
+  if (( $added > 0 )); then
+    zstyle -s ':prezto:module:git:info:added' format 'added_format'
+    zformat -f added_formatted "$added_format" "a:$added_format"
+  fi
+
+  # Format deleted.
+  if (( $deleted > 0 )); then
+    zstyle -s ':prezto:module:git:info:deleted' format 'deleted_format'
+    zformat -f deleted_formatted "$deleted_format" "d:$deleted_format"
+  fi
+
+  # Format modified.
+  if (( $modified > 0 )); then
+    zstyle -s ':prezto:module:git:info:modified' format 'modified_format'
+    zformat -f modified_formatted "$modified_format" "m:$modified"
+  fi
+
+  # Format renamed.
+  if (( $renamed > 0 )); then
+    zstyle -s ':prezto:module:git:info:renamed' format 'renamed_format'
+    zformat -f renamed_formatted "$renamed_format" "r:$renamed"
+  fi
+
+  # Format unmerged.
+  if (( $unmerged > 0 )); then
+    zstyle -s ':prezto:module:git:info:unmerged' format 'unmerged_format'
+    zformat -f unmerged_formatted "$unmerged_format" "U:$unmerged"
+  fi
+
+  # Format untracked.
+  if (( $untracked > 0 )); then
+    zstyle -s ':prezto:module:git:info:untracked' format 'untracked_format'
+    zformat -f untracked_formatted "$untracked_format" "u:$untracked"
+  fi
+
+  # Format dirty and clean.
+  if (( $dirty > 0 )); then
+    zstyle -s ':prezto:module:git:info:dirty' format 'dirty_format'
+    zformat -f dirty_formatted "$dirty_format" "D:$dirty"
+  else
+    zstyle -s ':prezto:module:git:info:clean' format 'clean_formatted'
+  fi
+
+  # Format info.
+  zstyle -a ':prezto:module:git:info:keys' format 'info_formats'
+  for info_format in ${(k)info_formats}; do
+    zformat -f REPLY "$info_formats[$info_format]" \
+      "A:$ahead_formatted" \
+      "B:$behind_formatted" \
+      "D:$dirty_formatted" \
+      "R:$remote_formatted" \
+      "S:$stashed_formatted" \
+      "U:$unmerged_formatted" \
+      "a:$added_formatted" \
+      "b:$branch_formatted" \
+      "C:$clean_formatted" \
+      "c:$commit_formatted" \
+      "d:$deleted_formatted" \
+      "m:$modified_formatted" \
+      "p:$position_formatted" \
+      "r:$renamed_formatted" \
+      "s:$action_formatted" \
+      "u:$untracked_formatted"
+    git_info[$info_format]="$REPLY"
+  done
+
+  unset REPLY
+  unset _git_info_executing
+
+  return 0
+}
+
+git-info "$@"
+
+##### EDITOR #####
+# Exposes information about the Zsh Line Editor via the $editor_info associative
+# array.
+function editor-info {
+  # Clean up previous $editor_info.
+  unset editor_info
+  typeset -gA editor_info
+
+  if [[ "$KEYMAP" == 'vicmd' ]]; then
+    zstyle -s ':prezto:module:editor:info:keymap:alternate' format 'REPLY'
+    editor_info[keymap]="$REPLY"
+  else
+    zstyle -s ':prezto:module:editor:info:keymap:primary' format 'REPLY'
+    editor_info[keymap]="$REPLY"
+
+    if [[ "$ZLE_STATE" == *overwrite* ]]; then
+      zstyle -s ':prezto:module:editor:info:keymap:primary:overwrite' format 'REPLY'
+      editor_info[overwrite]="$REPLY"
+    else
+      zstyle -s ':prezto:module:editor:info:keymap:primary:insert' format 'REPLY'
+      editor_info[overwrite]="$REPLY"
+    fi
+  fi
+
+  unset REPLY
+
+  zle reset-prompt
+  zle -R
+}
+zle -N editor-info
+
+# Ensures that $terminfo values are valid and updates editor information when
+# the keymap changes.
+function zle-keymap-select zle-line-init zle-line-finish {
+  # The terminal must be in application mode when ZLE is active for $terminfo
+  # values to be valid.
+  if (( $+terminfo[smkx] && $+terminfo[rmkx] )); then
+    case "$0" in
+      (zle-line-init)
+        # Enable terminal application mode.
+        echoti smkx
+      ;;
+      (zle-line-finish)
+        # Disable terminal application mode.
+        echoti rmkx
+      ;;
+    esac
+  fi
+
+  # Update editor information.
+  zle editor-info
+}
+zle -N zle-keymap-select
+zle -N zle-line-finish
+zle -N zle-line-init
+
+# Toggles emacs overwrite mode and updates editor information.
+function overwrite-mode {
+  zle .overwrite-mode
+  zle editor-info
+}
+zle -N overwrite-mode
+
+# Enters vi insert mode and updates editor information.
+function vi-insert {
+  zle .vi-insert
+  zle editor-info
+}
+zle -N vi-insert
+
+# Moves to the first non-blank character then enters vi insert mode and updates
+# editor information.
+function vi-insert-bol {
+  zle .vi-insert-bol
+  zle editor-info
+}
+zle -N vi-insert-bol
+
+# Enters vi replace mode and updates editor information.
+function vi-replace  {
+  zle .vi-replace
+  zle editor-info
+}
+zle -N vi-replace
+
+# Displays an indicator when completing.
+function expand-or-complete-with-indicator {
+  local indicator
+  zstyle -s ':prezto:module:editor:info:completing' format 'indicator'
+  print -Pn "$indicator"
+  zle expand-or-complete
+  zle redisplay
+}
+zle -N expand-or-complete-with-indicator
+
+function prompt_sorin_pwd {
+  local pwd="${PWD/#$HOME/~}"
+
+  if [[ "$pwd" == (#m)[/~] ]]; then
+    _prompt_sorin_pwd="$MATCH"
+    unset MATCH
+  else
+    _prompt_sorin_pwd="${${${(@j:/:M)${(@s:/:)pwd}##.#?}:h}%/}/${pwd:t}"
+  fi
+}
+
+function prompt_sorin_precmd {
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+
+  # Format PWD.
+  prompt_sorin_pwd
+
+  # Get Git repository information.
+  git-info
+}
+
+function prompt_sorin_setup {
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+  prompt_opts=(cr percent subst)
+
+  # Load required functions.
+  autoload -Uz add-zsh-hook
+
+  # Add hook for calling git-info before each command.
+  add-zsh-hook precmd prompt_sorin_precmd
+
+
+  ##### EDITOR #####
+  zstyle ':prezto:module:editor:info:completing' format '%B%F{red}...%f%b'
+  zstyle ':prezto:module:editor:info:keymap:primary' format ' %B%F{red}❯%F{yellow}❯%F{green}❯%f%b'
+  zstyle ':prezto:module:editor:info:keymap:primary:overwrite' format ' %F{red}♺%f'
+  zstyle ':prezto:module:editor:info:keymap:alternate' format ' %B%F{green}❮%F{yellow}❮%F{red}❮%f%b'
+
+
+  ##### GIT #####
+  zstyle ':prezto:module:git:info:added' format ' %%B%F{green}✚%f%%b'
+  zstyle ':prezto:module:git:info:ahead' format ' %%B%F{yellow}⬆%f%%b'
+  zstyle ':prezto:module:git:info:behind' format ' %%B%F{yellow}⬇%f%%b'
+  zstyle ':prezto:module:git:info:branch' format ':%F{green}%b%f'
+  zstyle ':prezto:module:git:info:commit' format ':%F{green}%.7c%f'
+  zstyle ':prezto:module:git:info:deleted' format ' %%B%F{red}✖%f%%b'
+  zstyle ':prezto:module:git:info:modified' format ' %%B%F{blue}✱%f%%b'
+  zstyle ':prezto:module:git:info:position' format ':%F{green}%p%f'
+  zstyle ':prezto:module:git:info:renamed' format ' %%B%F{magenta}➜%f%%b'
+  zstyle ':prezto:module:git:info:stashed' format ' %%B%F{cyan}✭%f%%b'
+  zstyle ':prezto:module:git:info:unmerged' format ' %%B%F{yellow}═%f%%b'
+  zstyle ':prezto:module:git:info:untracked' format ' %%B%F{white}◼%f%%b'
+  zstyle ':prezto:module:git:info:keys' format \
+    'prompt' ' %F{blue}git%f$(coalesce "%b" "%p" "%c")%s' \
+    'rprompt' '%A%B%S%a%d%m%r%U%u'
+  PROMPT='%F{cyan}${_prompt_sorin_pwd}%f${git_info:+${(e)git_info[prompt]}}%(!. %B%F{red}#%f%b.)${editor_info[keymap]} '
+  RPROMPT='${editor_info[overwrite]}%(?:: %F{red}⏎%f)${VIM:+" %B%F{green}V%f%b"}${git_info[rprompt]}'
+  SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
+}
+
+prompt_sorin_setup "$@"

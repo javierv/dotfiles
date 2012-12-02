@@ -1,9 +1,0 @@
-# Use prezto modules to set the prompt.
-# git    shows branch and icons in prompt.
-# editor changes the prompt depending on vi or emacs mode.
-zstyle ':prezto:load' pmodule \
-  'git' \
-  'editor' \
-  'prompt'
-
-zstyle ':prezto:module:prompt' theme 'sorin'
