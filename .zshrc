@@ -74,6 +74,10 @@ done
 
 ##### COMPLETION #####
 autoload -Uz compinit; compinit
+
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+unsetopt case_glob
+
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS} # Color file completions
 
