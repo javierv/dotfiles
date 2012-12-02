@@ -105,6 +105,8 @@ bindkey 'ñ' vi-cmd-mode
 
 setopt nonomatch # Avoid "no matches found" with scp, sudo, and probably others.
 
+autoload -U zmv zcalc
+
 # Suggest packages to install
 if [[ -s '/etc/zsh_command_not_found' ]]; then
   source '/etc/zsh_command_not_found'

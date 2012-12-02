@@ -4,9 +4,6 @@ zstyle ':prezto:*:*' case-sensitive 'no'
 # Color output
 zstyle ':prezto:*:*' color 'yes'
 
-# Set the Zsh functions to load (man zshcontrib).
-zstyle ':prezto:load' zfunction 'zmv' 'zcalc'
-
 # Set the Prezto modules to load; the order matters.
 # Some modules require git submodule init inside prezto.
 #
