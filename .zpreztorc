@@ -12,8 +12,9 @@ zstyle ':prezto:load' pmodule \
   'history-substring-search' \
   'prompt'
 
-# Prompt them
+# Prompt theme
 zstyle ':prezto:module:prompt' theme 'sorin'
 
 # Set syntax highlighters. By default main, brackets, and cursor are enabled.
 zstyle ':prezto:module:syntax-highlighting' highlighters 'main'
+zstyle ':prezto:module:syntax-highlighting' color 'yes'
