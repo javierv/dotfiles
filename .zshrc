@@ -34,6 +34,9 @@ setopt extended_glob  # Allows '~' in the prompt instead of './~'
 alias ls='ls --group-directories-first'
 eval "$(dircolors)"
 alias ls="$aliases[ls] --color=auto"
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
 # 256 colors
 if [[ $TMUX = '' ]]; then
