@@ -13,14 +13,12 @@ zstyle ':prezto:load' zfunction 'zmv' 'zcalc'
 # Set the Prezto modules to load; the order matters.
 # Some modules require git submodule init inside prezto.
 #
-# archive                   Provides `extract` and `ls-archive`
 # git                       Shows branch and icons; adds useless aliases.
 # syntax-highlighting       Live color syntax for commands.
 # history-substring-search  Filters history for current command-line text.
 # prompt                    Prompt themes.
 #
 zstyle ':prezto:load' pmodule \
-  'archive' \
   'git' \
   'syntax-highlighting' \
   'history-substring-search' \
