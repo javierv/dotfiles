@@ -81,6 +81,16 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS} # Color file compl
 zstyle ':completion::complete:*' use-cache on
 zstyle ':completion::complete:*' cache-path "${ZDOTDIR:-$HOME}/.zcompcache"
 
+# Show a message for no matches.
+zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
+
+# Group completions, like "commands", "aliases", "directories in cdpath".
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*:descriptions' format ' %F{yellow}-- %d --%f'
+
+# Paginate completions, like options for ls.
+zstyle ':completion:*:default' list-prompt '%S%M matches%s'
+
 
 ##### MISC #####
 # Use mixed emacs-vi keybindings
