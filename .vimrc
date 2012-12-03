@@ -85,6 +85,9 @@ let g:netrw_home = '~/.vim'
 set noeol
 set binary
 
+" Elimina el retardo al salir del modo inserción.
+set noesckeys
+
 " Muerte a los números octales.
 set nrformats=hex
 
