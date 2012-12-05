@@ -90,7 +90,7 @@ private
   end
 
   def ignored_files
-    %w[. .. install.rb README.markdown .git .gitconfig .gitignore .gitmodules open_project]
+    %w[. .. install.rb README.markdown .git .gitconfig .gitignore .gitmodules open_project ide-editor.png]
   end
 
   def absolute_path(file)
