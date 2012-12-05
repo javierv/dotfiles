@@ -86,11 +86,7 @@ private
   end
 
   def symlinked_files
-    Dir.entries(original_folder) - ignored_files
-  end
-
-  def ignored_files
-    %w[. .. install.rb README.markdown .git .gitconfig .gitignore .gitmodules open_project ide-editor.png]
+    %w[.ackrc bin .inputrc .irbrc .pryrc .tmux.conf .vim .vimrc .Xmodmap .xmonad .zsh .zshenv .zshrc]
   end
 
   def absolute_path(file)
