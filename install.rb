@@ -13,8 +13,7 @@ class DotfilesInstaller
 
   def install_submodules
     puts "Installing submodules"
-    %x[cd #{original_folder} && git submodule update --init &&
-     cd #{original_folder}/.zprezto && git submodule update --init]
+    %x[cd #{original_folder} && git submodule update --init]
   end
 
   def switch_to_zsh
@@ -46,7 +45,7 @@ class DotfilesInstaller
   def create_local_configurations
     create_local_zshrc
 
-    %w[.vimrc.local .zpreztorc.local .aliases].each do |file|
+    %w[.vimrc.local .aliases].each do |file|
       unless File.exist?(destination_path(file))
         %x[touch #{destination_path(file)}]
         puts "Created #{file}"
