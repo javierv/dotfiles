@@ -13,7 +13,7 @@ hi Normal ctermfg=235 guifg=#222222 guibg=#fdfdfd ctermbg=15
 
 " Search
 hi IncSearch cterm=UNDERLINE ctermfg=237 gui=UNDERLINE guifg=#222222 guibg=#FFE568 ctermbg=221
-hi Search term=reverse cterm=UNDERLINE ctermfg=237 gui=NONE guifg=#222222 guibg=#FFE568 ctermbg=221
+hi Search cterm=UNDERLINE ctermfg=237 gui=NONE guifg=#222222 guibg=#FFE568 ctermbg=221
 
 " Messages
 hi ErrorMsg gui=BOLD guifg=#EB1513 ctermfg=9 guibg=NONE
@@ -23,7 +23,7 @@ hi MoreMsg guibg=NONE guifg=seagreen
 hi! link Question MoreMsg
 
 " Split area
-hi StatusLine term=BOLD,reverse cterm=NONE ctermfg=58 gui=BOLD guibg=#56A0EE ctermbg=75 guifg=white
+hi StatusLine cterm=NONE ctermfg=58 gui=BOLD guibg=#56A0EE ctermbg=75 guifg=white
 hi StatusLineNC gui=NONE guibg=#56A0EE ctermbg=75 guifg=#E9E9F4 ctermfg=244
 hi! link VertSplit StatusLineNC
 hi WildMenu gui=UNDERLINE guifg=#56A0EE ctermfg=75 guibg=#E9E9F4 ctermbg=7
@@ -59,22 +59,22 @@ hi Directory    gui=NONE guifg=#0000ff ctermfg=21 guibg=NONE
 hi LineNr       gui=NONE guifg=#8080a0 ctermfg=103 guibg=NONE
 hi NonText      gui=BOLD guifg=#4000ff ctermfg=57 guibg=#f0f0f0 ctermbg=255
 hi Title        gui=BOLD guifg=#1014AD ctermfg=19 guibg=NONE
-hi Visual term=reverse gui=NONE guibg=#ffff95 ctermbg=229
-hi VisualNOS term=reverse ctermfg=yellow gui=UNDERLINE guifg=#222222 guibg=#BDDFFF ctermbg=153
+hi Visual gui=NONE guibg=#ffff95 ctermbg=229
+hi VisualNOS ctermfg=yellow gui=UNDERLINE guifg=#222222 guibg=#BDDFFF ctermbg=153
 
 " Syntax group
-hi Comment term=BOLD guifg=#3F6B5B ctermfg=240
-hi Constant term=UNDERLINE guifg=#B91F49 ctermfg=125
-hi Error term=REVERSE ctermfg=15 ctermbg=9 guibg=Red guifg=White
-hi Identifier term=UNDERLINE ctermfg=Blue guifg=Blue
-hi Number   term=UNDERLINE gui=NONE guifg=#008c15 ctermfg=2
-hi PreProc term=UNDERLINE guifg=#1071CE ctermfg=26
-hi Special term=BOLD ctermfg=darkmagenta guifg=red2
-hi Statement term=BOLD gui=NONE guifg=#F04F00 ctermfg=202
-hi Tag term=BOLD guifg=#af5f00 ctermfg=130
-hi Todo term=STANDOUT ctermbg=Yellow ctermfg=blue guifg=Blue guibg=Yellow
-hi Type term=UNDERLINE ctermfg=Blue gui=NONE guifg=#2222fa
-hi String term=UNDERLINE guifg=#005f00 ctermfg=22
+hi Comment guifg=#3F6B5B ctermfg=240
+hi Constant guifg=#B91F49 ctermfg=125
+hi Error ctermfg=15 ctermbg=9 guibg=Red guifg=White
+hi Identifier ctermfg=Blue guifg=Blue
+hi Number   gui=NONE guifg=#008c15 ctermfg=2
+hi PreProc guifg=#1071CE ctermfg=26
+hi Special ctermfg=darkmagenta guifg=red2
+hi Statement gui=NONE guifg=#F04F00 ctermfg=202
+hi Tag guifg=#af5f00 ctermfg=130
+hi Todo ctermbg=Yellow ctermfg=blue guifg=Blue guibg=Yellow
+hi Type ctermfg=Blue gui=NONE guifg=#2222fa
+hi String guifg=#005f00 ctermfg=22
 hi! link Character	String
 hi! link Boolean	Constant
 hi! link Float		Number
