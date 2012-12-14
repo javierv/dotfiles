@@ -237,10 +237,11 @@ if has("gui_running")
   " Elimina las barras de edición y los menús
   set guioptions-=m
   set guioptions-=T
-  colorscheme railscasts " railscasts, nuvola, los summerfruit y mac_classic son candidatos.
-else
-  colorscheme autumnriver " nuvola, summerfruit256 y mac_classic son los candidatos.
 endif
+
+" Tema propio, basado en nuvola.
+colorscheme autumnriver
+
 " Incluye el título en la ventana (gvim lo hace automáticamente)
 set title
 " Incluye siempre la ruta del fichero que se edita
