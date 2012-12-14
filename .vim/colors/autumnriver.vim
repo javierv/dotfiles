@@ -35,7 +35,7 @@ hi DiffDelete gui=NONE guifg=#2020ff ctermfg=21 guibg=#c8f2ea ctermbg=223
 hi DiffAdd gui=NONE guifg=#2020ff ctermfg=21 guibg=#c8f2ea ctermbg=194
 
 " Git styles
-hi diffAdded guifg=#00bf00 ctermfg=28
+hi diffAdded guifg=#008f00 ctermfg=28
 hi diffRemoved guifg=#bf0000 ctermfg=124
 hi link gitcommitSelectedType diffAdded
 hi link gitcommitSelectedFile gitcommitSelectedType
