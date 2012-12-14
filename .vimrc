@@ -233,8 +233,6 @@ nnoremap + mao<esc>`a
 
 " ###### ASPECTO ######
 if has("gui_running")
-  " Ajusta el tamaño de la ventana en gvim
-  set lines=200 columns=200
   " Elimina las barras de edición y los menús
   set guioptions-=m
   set guioptions-=T
