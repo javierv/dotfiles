@@ -39,6 +39,8 @@ hi diffAdded guifg=#008f00 ctermfg=28
 hi diffRemoved guifg=#bf0000 ctermfg=124
 hi link gitcommitSelectedType diffAdded
 hi link gitcommitSelectedFile gitcommitSelectedType
+hi link gitcommitUnmergedType diffRemoved
+hi link gitcommitUnmergedFile gitcommitUnmergedType
 hi link gitcommitDiscardedType diffRemoved
 hi link gitcommitDiscardedFile gitcommitDiscardedType
 hi gitcommitUntrackedFile guifg=#6E79F1 guibg=#FFFFFF ctermfg=69 ctermbg=15
