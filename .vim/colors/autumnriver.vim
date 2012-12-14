@@ -9,7 +9,7 @@ endif
 let g:colors_name = "autumnriver"
 
 " Normal
-hi Normal ctermfg=235 guifg=#222222 guibg=#fefefe ctermbg=15
+hi Normal ctermfg=235 guifg=#222222 guibg=#fdfdfd ctermbg=15
 
 " Search
 hi IncSearch cterm=UNDERLINE ctermfg=237 gui=UNDERLINE guifg=#222222 guibg=#FFE568 ctermbg=221
