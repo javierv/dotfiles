@@ -68,7 +68,7 @@ hi Identifier term=UNDERLINE ctermfg=Blue guifg=Blue
 hi Number   term=UNDERLINE gui=NONE guifg=#008c15 ctermfg=2
 hi PreProc term=UNDERLINE guifg=#1071CE ctermfg=26
 hi Special term=BOLD ctermfg=darkmagenta guifg=red2
-hi Statement term=BOLD gui=NONE guifg=#F06F00 ctermfg=202
+hi Statement term=BOLD gui=NONE guifg=#F04F00 ctermfg=202
 hi Tag term=BOLD guifg=#af5f00 ctermfg=130
 hi Todo term=STANDOUT ctermbg=Yellow ctermfg=blue guifg=Blue guibg=Yellow
 hi Type term=UNDERLINE ctermfg=Blue gui=NONE guifg=#2222fa
