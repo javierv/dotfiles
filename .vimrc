@@ -237,6 +237,7 @@ if has("gui_running")
   " Elimina las barras de edición y los menús
   set guioptions-=m
   set guioptions-=T
+  set guicursor+=a:blinkon0
 endif
 
 " Tema propio, basado en nuvola.
