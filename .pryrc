@@ -1,9 +1,10 @@
 #!/usr/bin/env ruby
 
 Pry.config.editor = "vim"
-# Show SQL queries
-ActiveRecord::Base.logger = Logger.new(STDOUT) if defined?(ActiveRecord)
 
+def show_sql
+  ActiveRecord::Base.logger = Logger.new(STDOUT) if defined?(ActiveRecord)
+end
 
 ##### INTEGRATION WITH BUNDLER #####
 
