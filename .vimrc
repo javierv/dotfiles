@@ -335,8 +335,8 @@ nm <Leader>gD :diffoff!<cr><c-w>h:bd<cr>
 nm <Leader>ge :Gedit<cr>
 nm <Leader>gb :Gblame<cr>
 nm <Leader>gl :Glog<cr>
-nm <Leader>gv :Gitv --all<cr>
-nm <Leader>gV :Gitv! --all<cr>
+nm <Leader>gv :Gitv<cr>
+nm <Leader>gV :Gitv!<cr>
 nm <Leader>gh :Gitv -S
 nm <Leader>gS :call Gitv_OpenGitCommand("diff", 'vnew')<cr>
 " Cierra los buffers de fugitive automáticamente.
