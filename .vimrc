@@ -236,6 +236,7 @@ if has("gui_running")
   " Elimina las barras de edición y los menús
   set guioptions-=m
   set guioptions-=T
+  " Quita el parpadeo del cursor.
   set guicursor+=a:blinkon0
 endif
 
