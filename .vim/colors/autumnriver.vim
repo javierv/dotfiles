@@ -96,15 +96,16 @@ hi! link SpecialComment Special
 hi! link Debug		Special
 
 " Ruby styles
+hi! rubyConstant guifg=#cA1909 ctermfg=160
+hi! link railsClass rubyConstant
+hi! rubyInstanceVariable guifg=#aa00ef ctermfg=129
+hi! link rubyGlobalVariable rubyInstanceVariable
 hi! link rubyDefine Keyword
-hi! link rubyConstant Type
-hi rubyInstanceVariable guifg=#cA1909 ctermfg=160
 hi! link rubySymbol PreProc
 hi! link rubyBlockParameter Normal
 hi! link rubyStringDelimiter String
 hi! link rubyFunction Tag
 hi! link rubyRailsMethod rubyFunction
-hi! link rubyGlobalVariable rubyInstanceVariable
 hi! link rspecKeywords rubyDefine
 hi! link rspecMatchers rubyFunction
 
