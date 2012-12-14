@@ -9,7 +9,7 @@ endif
 let g:colors_name = "autumnriver"
 
 " Normal
-hi Normal ctermfg=235 guifg=#222222 guibg=#F9F5F9 ctermbg=15
+hi Normal ctermfg=235 guifg=#222222 guibg=#fefefe ctermbg=15
 
 " Search
 hi IncSearch cterm=UNDERLINE ctermfg=237 gui=UNDERLINE guifg=#222222 guibg=#FFE568 ctermbg=221
@@ -55,9 +55,9 @@ hi! link FoldColumn Folded
 " Other
 hi Directory    gui=NONE guifg=#0000ff ctermfg=21 guibg=NONE
 hi LineNr       gui=NONE guifg=#8080a0 ctermfg=103 guibg=NONE
-hi NonText      gui=BOLD guifg=#4000ff ctermfg=57 guibg=#EFEFF7 ctermbg=255
+hi NonText      gui=BOLD guifg=#4000ff ctermfg=57 guibg=#f0f0f0 ctermbg=255
 hi Title        gui=BOLD guifg=#1014AD ctermfg=19 guibg=NONE
-hi Visual term=reverse gui=NONE guifg=#222222 guibg=#BDDFFF ctermbg=229
+hi Visual term=reverse gui=NONE guibg=#ffff95 ctermbg=229
 hi VisualNOS term=reverse ctermfg=yellow gui=UNDERLINE guifg=#222222 guibg=#BDDFFF ctermbg=153
 
 " Syntax group
@@ -65,14 +65,14 @@ hi Comment term=BOLD guifg=#3F6B5B ctermfg=240
 hi Constant term=UNDERLINE guifg=#B91F49 ctermfg=125
 hi Error term=REVERSE ctermfg=15 ctermbg=9 guibg=Red guifg=White
 hi Identifier term=UNDERLINE ctermfg=Blue guifg=Blue
-hi Number   term=UNDERLINE gui=NONE guifg=#00C226 ctermfg=2
+hi Number   term=UNDERLINE gui=NONE guifg=#00a222 ctermfg=2
 hi PreProc term=UNDERLINE guifg=#1071CE ctermfg=26
 hi Special term=BOLD ctermfg=darkmagenta guifg=red2
 hi Statement term=BOLD gui=NONE guifg=#F06F00 ctermfg=202
-hi Tag term=BOLD guifg=DarkGreen ctermfg=130
+hi Tag term=BOLD guifg=#af5f00 ctermfg=130
 hi Todo term=STANDOUT ctermbg=Yellow ctermfg=blue guifg=Blue guibg=Yellow
-hi Type term=UNDERLINE ctermfg=Blue gui=NONE guifg=Blue
-hi String term=UNDERLINE guifg=#B91F49 ctermfg=22
+hi Type term=UNDERLINE ctermfg=Blue gui=NONE guifg=#2222fa
+hi String term=UNDERLINE guifg=#005f00 ctermfg=22
 hi! link Character	String
 hi! link Boolean	Constant
 hi! link Float		Number
@@ -98,7 +98,7 @@ hi! link Debug		Special
 " Ruby styles
 hi! link rubyDefine Keyword
 hi! link rubyConstant Type
-hi rubyInstanceVariable guifg=#8A1909 ctermfg=160
+hi rubyInstanceVariable guifg=#cA1909 ctermfg=160
 hi! link rubySymbol PreProc
 hi! link rubyBlockParameter Normal
 hi! link rubyStringDelimiter String
@@ -119,7 +119,7 @@ hi htmlUnderline            gui=UNDERLINE
 hi htmlUnderlineItalic      gui=UNDERLINE,ITALIC
 
 " Autocomplete menu
-hi Pmenu ctermbg=153 gui=bold
+hi Pmenu ctermbg=153 guibg=#afd7ff
 
 " Trailing whitespace
 hi TrailingWhitespace ctermbg=red guibg=red
