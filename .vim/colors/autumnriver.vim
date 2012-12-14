@@ -65,7 +65,7 @@ hi Comment term=BOLD guifg=#3F6B5B ctermfg=240
 hi Constant term=UNDERLINE guifg=#B91F49 ctermfg=125
 hi Error term=REVERSE ctermfg=15 ctermbg=9 guibg=Red guifg=White
 hi Identifier term=UNDERLINE ctermfg=Blue guifg=Blue
-hi Number   term=UNDERLINE gui=NONE guifg=#00a222 ctermfg=2
+hi Number   term=UNDERLINE gui=NONE guifg=#008c15 ctermfg=2
 hi PreProc term=UNDERLINE guifg=#1071CE ctermfg=26
 hi Special term=BOLD ctermfg=darkmagenta guifg=red2
 hi Statement term=BOLD gui=NONE guifg=#F06F00 ctermfg=202
