@@ -46,7 +46,7 @@ hi link gitcommitDiscardedFile gitcommitDiscardedType
 hi gitcommitUntrackedFile guifg=#6E79F1 guibg=#FFFFFF ctermfg=69 ctermbg=15
 
 " Cursor
-hi Cursor       gui=none guifg=#222222 guibg=orange
+hi Cursor       gui=none guifg=#fdfdfd guibg=#f29222
 "hi lCursor      gui=NONE guifg=#f8f8f8 ctermfg=15 guibg=#8000ff ctermbg=93
 hi CursorIM     gui=NONE guifg=#f8f8f8 ctermfg=15 guibg=#8000ff ctermbg=93
 
