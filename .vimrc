@@ -415,6 +415,9 @@ nm <Leader>ñ @:
 "refrescar vimdiff; se lía a menudo.
 nm <Leader>d :diffupdate<cr>
 
+" Insetar punto de ruptura en Ruby
+nm <Leader>p Obinding.pry<Esc>
+
 " Identificar espacios al final de la línea
 autocmd BufWinEnter * match TrailingWhitespace /\s\+$/
 autocmd InsertEnter * match TrailingWhitespace /\(\zs\%#\|\s\)\+$/
