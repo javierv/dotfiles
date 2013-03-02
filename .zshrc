@@ -6,11 +6,17 @@ prompt sorin
 source "$HOME/.zsh/syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$HOME/.zsh/history-substring-search/zsh-history-substring-search.zsh"
 
+
+##### SHORTCUTS #####
 # Use regular shortcuts for substring matching
 bindkey -M emacs '\C-P' history-substring-search-up
 bindkey -M emacs '\C-N' history-substring-search-down
 bindkey -M vicmd "k" history-substring-search-up
 bindkey -M vicmd "j" history-substring-search-down
+
+# Use mixed emacs-vi keybindings
+bindkey -e
+bindkey 'ñ' vi-cmd-mode
 
 
 ##### HISTORY #####
@@ -72,7 +78,7 @@ for extension in jpg png jpeg gif; do
 	alias -s $extension=gwenview
 done
 
-for extension in avi mp4 webm ogv; do
+for extension in avi mp4 webm ogv mkv; do
   alias -s $extension=mplayer
 done
 
@@ -116,10 +122,6 @@ zstyle ':completion:*:*:kill:*' insert-ids single
 
 
 ##### MISC #####
-# Use mixed emacs-vi keybindings
-bindkey -e
-bindkey 'ñ' vi-cmd-mode
-
 setopt nonomatch # Avoid "no matches found" with scp, sudo, and probably others.
 stty -ixon # No controlar flujo con ctrl-s y ctrl-q.
 autoload -U zmv zcalc
