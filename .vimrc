@@ -23,7 +23,6 @@ Bundle 'kana/vim-textobj-entire'
 Bundle 'kana/vim-textobj-line'
 Bundle 'lucapette/vim-textobj-underscore'
 Bundle 'kana/vim-smartword'
-Bundle 'Lokaltog/vim-easymotion'
 Bundle 'nelstrom/vim-visual-star-search'
 
 " Ruby.
