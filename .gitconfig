@@ -12,3 +12,7 @@
   branch = true
   diff = true
   status = true
+[core]
+  whitespace = trailing-space,space-before-tab
+[apply]
+  whitespace = fix
