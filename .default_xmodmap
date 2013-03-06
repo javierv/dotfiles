@@ -15,3 +15,4 @@ keycode  44 = j J j J dead_hook dead_horn dead_hook dead_horn j J dead_hook dead
 keycode  39 = s S s S ssharp section ssharp section s S ssharp section s S ssharp section
 keycode  25 = w W w W lstroke Lstroke lstroke Lstroke w W lstroke Lstroke
 
+keycode  56 = b B b B rightdoublequotemark rightsinglequotemark rightdoublequotemark rightsinglequotemark b B rightdoublequotemark rightsinglequotemark b B rightdoublequotemark rightsinglequotemark

@@ -44,3 +44,7 @@ keycode  39 = s S s S scircumflex Scircumflex ssharp section s S ssharp section 
 
 ! Altgr+W genera ŭ.
 keycode  25 = w W w W ubreve Ubreve lstroke Lstroke w W lstroke Lstroke
+
+!!!!! CARACTERES DEL ALEMÁN !!!!!
+! Altgr+b genera ß.
+keycode  56 = b B b B ssharp rightsinglequotemark rightdoublequotemark rightsinglequotemark b B rightdoublequotemark rightsinglequotemark b B rightdoublequotemark rightsinglequotemark
