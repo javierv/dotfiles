@@ -19,6 +19,9 @@ keycode  94 = Shift_L NoSymbol Shift_L NoSymbol Shift_L
 
 
 !!!!! CARACTERES TECLEADOS EN PROGRAMACIÓN !!!!!
+! Altgr+W genera ".
+keycode  25 = w W w W quotedbl Lstroke lstroke Lstroke w W lstroke Lstroke
+
 ! Altgr+D genera \.
 keycode  40 = d D d D backslash ETH backslash ETH d D backslash ETH
 
@@ -42,8 +45,8 @@ keycode  44 = j J j J jcircumflex Jcircumflex dead_hook dead_horn j J dead_hook 
 ! Altgr+s genera ŝ.
 keycode  39 = s S s S scircumflex Scircumflex ssharp section s S ssharp section s S ssharp section
 
-! Altgr+W genera ŭ.
-keycode  25 = w W w W ubreve Ubreve lstroke Lstroke w W lstroke Lstroke
+! Altgr+u genera ŭ
+keycode  30 = u U u U ubreve Ubreve downarrow uparrow u U downarrow uparrow u U downarrow uparrow
 
 !!!!! CARACTERES DEL ALEMÁN !!!!!
 ! Altgr+b genera ß.
