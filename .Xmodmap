@@ -6,9 +6,6 @@ add Control = Control_L
 ! eñe mayúscula como Esc.
 keycode  47 = ntilde Escape ntilde Escape asciitilde dead_doubleacute asciitilde dead_doubleacute ntilde Escape asciitilde dead_doubleacute ntilde Escape asciitilde dead_doubleacute
 
-!"Menu" key as Composer
-keycode 135 = Multi_key
-
 !Deactivate Insert
 keycode 118 =
 
@@ -23,24 +20,6 @@ keycode  42 = g G g G backslash ENG backslash ENG g G backslash ENG
 
 ! Altgr+W genera ".
 keycode  25 = w W w W quotedbl Lstroke quotedbl Lstroke w W quotedbl Lstroke
-
-! Altgr+D genera $.
-keycode  40 = d D d D dollar ETH dollar ETH d D dollar ETH
-
-! Altgr+N genera =
-keycode  57 = n N n N equal N equal N n N equal N
-
-! Los paréntesis se generan con altgr+j y altgr+k
-keycode  44 = j J j J parenleft dead_horn parenleft dead_horn j J parenleft dead_horn
-keycode  45 = k K k K parenright ampersand parenright ampersand k K parenright ampersand
-
-! Las exclamaciones se generan con altgr+c y altgr+v
-keycode  54 = c C c C exclamdown copyright exclamdown copyright c C exclamdown copyright
-keycode  55 = v V v V exclam leftsinglequotemark exclam leftsinglequotemark v V exclam leftsinglequotemark
-
-! Los interrogantes se generan con altgr+m y altgr+,
-keycode  58 = m M m M questiondown masculine questiondown masculine m M questiondown masculine
-keycode  59 = comma semicolon comma semicolon question multiply question multiply comma semicolon question multiply
 
 ! Intercambiamos mayúsculas izquierdo con <>.
 keycode  50 = less greater less greater bar brokenbar bar brokenbar less greater bar brokenbar
