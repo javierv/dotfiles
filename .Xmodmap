@@ -1,3 +1,4 @@
+!!!!! TECLAS AUXILIARES MUY USADAS !!!!!
 !Bloque de mayúsculas como control
 clear Lock
 keycode 66 = Control_L NoSymbol Control_L NoSymbol Control_L
@@ -6,21 +7,40 @@ add Control = Control_L
 ! eñe mayúscula como Esc.
 keycode  47 = ntilde Escape ntilde Escape asciitilde dead_doubleacute asciitilde dead_doubleacute ntilde Escape asciitilde dead_doubleacute ntilde Escape asciitilde dead_doubleacute
 
-!Deactivate Insert
+!Fuera Insert
 keycode 118 =
 
 ! Una sola pulsación para `.
 keycode 34 = grave asciicircum grave asciicircum bracketleft dead_abovering bracketleft
 
+! Intercambiamos mayúsculas izquierdo con <>. Único cambio peligroso.
+keycode  50 = less greater less greater bar brokenbar bar brokenbar less greater bar brokenbar
+keycode  94 = Shift_L NoSymbol Shift_L NoSymbol Shift_L
+
+
+!!!!! CARACTERES TECLEADOS EN PROGRAMACIÓN !!!!!
+! Altgr+D genera \.
+keycode  40 = d D d D backslash ETH backslash ETH d D backslash ETH
+
 ! Altgr+F genera /.
 keycode  41 = f F f F slash ordfeminine slash ordfeminine f F slash ordfeminine
 
-! Altgr+G genera \.
-keycode  42 = g G g G backslash ENG backslash ENG g G backslash ENG
 
-! Altgr+W genera ".
-keycode  25 = w W w W quotedbl Lstroke quotedbl Lstroke w W quotedbl Lstroke
+!!!!! CARACTERES DEL ESPERANTO !!!!!
+! Altgr+c genera ĉ
+keycode  54 = c C c C ccircumflex Ccircumflex cent copyright c C cent copyright
 
-! Intercambiamos mayúsculas izquierdo con <>.
-keycode  50 = less greater less greater bar brokenbar bar brokenbar less greater bar brokenbar
-keycode  94 = Shift_L NoSymbol Shift_L NoSymbol Shift_L
+! Altgr+g genera ĝ.
+keycode  42 = g G g G gcircumflex Gcircumflex eng ENG g G eng ENG
+
+! Altgr+h genera ĥ .
+keycode  43 = h H h H hcircumflex Hcircumflex hstroke Hstroke h H hstroke Hstroke h H hstroke Hstroke
+
+! Altgr+j genera ĵ.
+keycode  44 = j J j J jcircumflex Jcircumflex dead_hook dead_horn j J dead_hook dead_horn
+
+! Altgr+s genera ŝ.
+keycode  39 = s S s S scircumflex Scircumflex ssharp section s S ssharp section s S ssharp section
+
+! Altgr+W genera ŭ.
+keycode  25 = w W w W ubreve Ubreve lstroke Lstroke w W lstroke Lstroke

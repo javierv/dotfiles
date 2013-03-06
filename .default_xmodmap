@@ -1,8 +1,17 @@
 keycode 66 = Caps_Lock NoSymbol Caps_Lock
 keycode  47 = ntilde Ntilde ntilde Ntilde asciitilde dead_doubleacute asciitilde dead_doubleacute ntilde Ntilde asciitilde dead_doubleacute ntilde Ntilde asciitilde dead_doubleacute
 keycode 34 = dead_grave dead_circumflex dead_grave dead_circumflex bracketleft dead_abovering bracketleft
-keycode  41 = f F f F dstroke ordfeminine dstroke ordfeminine f F dstroke ordfeminine
-keycode  42 = g G g G eng ENG eng ENG g G eng ENG
-keycode  25 = w W w W lstroke Lstroke lstroke Lstroke w W lstroke Lstroke
+
 keycode  50 = Shift_L NoSymbol Shift_L NoSymbol Shift_L
 keycode  94 = less greater less greater bar brokenbar bar brokenbar less greater bar brokenbar
+
+keycode  40 = d D d D eth ETH eth ETH d D eth ETH
+keycode  41 = f F f F dstroke ordfeminine dstroke ordfeminine f F dstroke ordfeminine
+
+keycode  54 = c C c C cent copyright cent copyright c C cent copyright
+keycode  42 = g G g G eng ENG eng ENG g G eng ENG
+keycode  43 = h H h H hstroke Hstroke hstroke Hstroke h H hstroke Hstroke h H hstroke Hstroke
+keycode  44 = j J j J dead_hook dead_horn dead_hook dead_horn j J dead_hook dead_horn
+keycode  39 = s S s S ssharp section ssharp section s S ssharp section s S ssharp section
+keycode  25 = w W w W lstroke Lstroke lstroke Lstroke w W lstroke Lstroke
+
