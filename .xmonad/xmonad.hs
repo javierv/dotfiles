@@ -18,6 +18,8 @@ main = do
         [className   =? c --> doShift "2:mail" | c <- ["Thunderbird"]]
       , [className   =? c --> doShift "4:music" | c <- ["Amarok"]]
       , [className   =? c --> doShift "1:dev" | c <- ["Firefox"]]
+      , [className   =? c --> doFloat | c <- ["mame"]]
+      , [className   =? c --> doFloat | c <- ["pcsx"]]
       ])
   , layoutHook = smartBorders (layoutHook kde4Config) 
 }
