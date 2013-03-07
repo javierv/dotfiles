@@ -21,7 +21,7 @@ main = do
       , [className   =? c --> doFloat | c <- ["mame"]]
       , [className   =? c --> doFloat | c <- ["pcsx"]]
       ])
-  , layoutHook = smartBorders (layoutHook kde4Config) 
+  , layoutHook = smartBorders (layoutHook kde4Config)
 }
 
 kdeOverride :: Query Bool
