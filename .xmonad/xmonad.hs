@@ -6,23 +6,32 @@ import XMonad.Layout.NoBorders
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.ManageHelpers
 import XMonad.Util.WindowProperties (getProp32s)
+import XMonad.Util.EZConfig(additionalKeysP)
 
 main = do
-  xmonad kde4Config {
-    startupHook = setWMName "LG3D"
-  , workspaces = ["1:dev", "2:mail", "3:misc", "4:music"]
-  , manageHook = ((className =? "krunner") >>= return . not --> manageHook kde4Config)
-      <+> (kdeOverride --> doFloat)
-      <+> (composeOne [ isFullscreen -?> doFullFloat])
-      <+> (composeAll . concat $ [
-        [className   =? c --> doShift "2:mail" | c <- ["Thunderbird"]]
-      , [className   =? c --> doShift "4:music" | c <- ["Amarok"]]
-      , [className   =? c --> doShift "1:dev" | c <- ["Firefox"]]
-      , [className   =? c --> doFloat | c <- ["mame"]]
-      , [className   =? c --> doFloat | c <- ["pcsx"]]
-      ])
-  , layoutHook = smartBorders (layoutHook kde4Config)
-}
+  xmonad $ kde4Config {
+      startupHook = setWMName "LG3D"
+    , workspaces = ["1:dev", "2:mail", "3:misc", "4:music"]
+    , manageHook = ((className =? "krunner") >>= return . not --> manageHook kde4Config)
+        <+> (kdeOverride --> doFloat)
+        <+> (composeOne [ isFullscreen -?> doFullFloat])
+        <+> (composeAll . concat $ [
+          [className   =? c --> doShift "2:mail" | c <- ["Thunderbird"]]
+        , [className   =? c --> doShift "4:music" | c <- ["Amarok"]]
+        , [className   =? c --> doShift "1:dev" | c <- ["Firefox"]]
+        , [className   =? c --> doFloat | c <- ["mame"]]
+        , [className   =? c --> doFloat | c <- ["pcsx"]]
+        ])
+    , layoutHook = smartBorders (layoutHook kde4Config)
+    }
+    `additionalKeysP`
+    [ ("M-a", spawn "amarok")
+    , ("M-c", spawn "konsole")
+    , ("M-b", spawn "chromium-browser")
+    , ("M-m", spawn "thunderbird")
+    , ("M-w", spawn "twinkle")
+    , ("M-x", spawn "lyx")
+    ]
 
 kdeOverride :: Query Bool
 kdeOverride = ask >>= \w -> liftX $ do
