@@ -5,7 +5,7 @@
 --type-set=haml=.haml
 --type-set=sass=.sass,.scss
 
-# Ignore simplecov
 --ignore-dir=coverage
 --ignore-dir=tmp
+--ignore-dir=files
 --no-sql
