@@ -1,19 +1,22 @@
 import System.IO
 
 import XMonad
-import XMonad.Config.Kde
 import XMonad.Layout.NoBorders
-import XMonad.Hooks.SetWMName
-import XMonad.Hooks.ManageHelpers
-import XMonad.Util.WindowProperties (getProp32s)
+import XMonad.Hooks.ManageHelpers --doFullFloat, isFullScreen, ...
+import XMonad.Hooks.ManageDocks -- avoidStruts: stalonetray, xmobar
+import XMonad.Hooks.DynamicLog
+import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeysP)
 
 main = do
-  xmonad $ kde4Config {
-      startupHook = setWMName "LG3D"
+  xmproc <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
+  xmonad $ defaultConfig {
+      startupHook = do
+        spawn "stalonetray"
+        spawn "xmobar ~/.xmonad/xmobarrc"
+        spawn "nm-applet" -- Network Manager: WLAN.
     , workspaces = ["1:dev", "2:mail", "3:misc", "4:music"]
-    , manageHook = ((className =? "krunner") >>= return . not --> manageHook kde4Config)
-        <+> (kdeOverride --> doFloat)
+    , manageHook = manageDocks <+> manageHook defaultConfig
         <+> (composeOne [ isFullscreen -?> doFullFloat])
         <+> (composeAll . concat $ [
           [className   =? c --> doShift "2:mail" | c <- ["Thunderbird"]]
@@ -21,8 +24,13 @@ main = do
         , [className   =? c --> doShift "1:dev" | c <- ["Firefox"]]
         , [className   =? c --> doFloat | c <- ["mame"]]
         , [className   =? c --> doFloat | c <- ["pcsx"]]
+        , [className   =? c --> doIgnore | c <- ["stalonetray"]]
         ])
-    , layoutHook = smartBorders (layoutHook kde4Config)
+    , layoutHook = avoidStruts $ smartBorders (layoutHook defaultConfig)
+    , logHook = dynamicLogWithPP xmobarPP
+                { ppOutput = hPutStrLn xmproc
+                , ppTitle = xmobarColor "green" "" . shorten 50
+                }
     }
     `additionalKeysP`
     [ ("M-a", spawn "amarok")
@@ -32,9 +40,3 @@ main = do
     , ("M-w", spawn "twinkle")
     , ("M-x", spawn "lyx")
     ]
-
-kdeOverride :: Query Bool
-kdeOverride = ask >>= \w -> liftX $ do
-    override <- getAtom "_KDE_NET_WM_WINDOW_TYPE_OVERRIDE"
-    wt <- getProp32s "_NET_WM_WINDOW_TYPE" w
-    return $ maybe False (elem $ fromIntegral override) wt
