@@ -12,7 +12,7 @@ main = do
   xmproc <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
   xmonad $ defaultConfig {
       startupHook = do
-        spawn "stalonetray"
+        spawn "stalonetray --max-geometry 7x1-0+0 --icon-size 16"
         spawn "xmobar ~/.xmonad/xmobarrc"
         spawn "nm-applet" -- Network Manager: WLAN.
     , workspaces = ["1:dev", "2:mail", "3:misc", "4:music"]
