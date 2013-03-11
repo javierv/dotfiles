@@ -1,3 +1,4 @@
 Config { commands = [Run StdinReader]
        , template = "%StdinReader% }{ <fc=#ee9a00>%date%</fc>"
+       , position = BottomSize L 100 20
        }
