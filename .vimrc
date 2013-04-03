@@ -391,7 +391,7 @@ vmap e  <Plug>(smartword-e)
 vmap ge <Plug>(smartword-ge)
 
 " Ag
-nmap <Leader>a :Ag! -i<Space>
+nmap <Leader>a :Ag! -S<Space>
 
 " Rspec.
 let g:RspecBin = 'rspec'
