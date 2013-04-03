@@ -68,6 +68,10 @@ function sb() {
   rails c $1 --sandbox
 }
 
+function cdr() {
+  cd "$(git rev-parse --show-toplevel)"
+}
+
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
