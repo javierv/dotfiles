@@ -13,5 +13,4 @@ Here's a typical layout (as of November 2012) when working on a Ruby (or Rails) 
 
 TODO:
 
-1. Experiment improving keyboard layout.
-1. Configure zsh.
+1. Configure xmonad with xmobar to replace KDE.
