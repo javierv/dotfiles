@@ -17,6 +17,22 @@ if defined?(Gem.post_reset_hooks)
 end
 
 
+##### EXTRA METHODS #####
+
+class Object
+  def interesting_methods
+    case self.class
+    when Class
+      self.public_methods.sort - Object.public_methods
+    when Module
+      self.public_methods.sort - Module.public_methods
+    else
+      self.public_methods.sort - Object.new.public_methods
+    end
+  end
+end
+
+
 ##### EXTRA LIBRARIES #####
 
 # Although some of these libraries are automatically loaded when
