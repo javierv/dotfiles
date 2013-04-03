@@ -48,7 +48,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'msanders/snipmate.vim'
 
 " Integración con la shell
-Bundle 'mileszs/ack.vim'
+Bundle 'rking/ag.vim'
 Bundle 'epeli/slimux'
 
 " Aspecto.
@@ -390,8 +390,8 @@ vmap b  <Plug>(smartword-b)
 vmap e  <Plug>(smartword-e)
 vmap ge <Plug>(smartword-ge)
 
-" Ack
-nmap <Leader>a :Ack! -i<Space>
+" Ag
+nmap <Leader>a :Ag! -i<Space>
 
 " Rspec.
 let g:RspecBin = 'rspec'
