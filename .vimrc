@@ -336,6 +336,7 @@ nm <Leader>ge :Gedit<cr>
 nm <Leader>gb :Gblame<cr>
 nm <Leader>gl :Glog<cr>
 nm <Leader>gv :Gitv<cr>
+vm <leader>gv :Gitv!<cr>
 nm <Leader>gV :Gitv!<cr>
 nm <Leader>gh :Gitv -S
 nm <Leader>gS :call Gitv_OpenGitCommand("diff", 'vnew')<cr>
