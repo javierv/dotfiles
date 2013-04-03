@@ -1,4 +1,4 @@
-My configuration files for vim, tmux and shell.
+My configuration files for vim, tmux, shell, git, pry, xmonad and xmodmap.
 
 Installation:
 
