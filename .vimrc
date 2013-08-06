@@ -414,7 +414,8 @@ nm <Leader>ñ @:
 nm <Leader>d :diffupdate<cr>
 
 " Insetar punto de ruptura en Ruby
-nm <Leader>p Obinding.pry<Esc>
+autocmd FileType eruby nm <Leader>p O<% binding.pry %><Esc>
+autocmd FileType ruby nm <Leader>p Obinding.pry<Esc>
 
 " Identificar espacios al final de la línea
 autocmd BufWinEnter * match TrailingWhitespace /\s\+$/
