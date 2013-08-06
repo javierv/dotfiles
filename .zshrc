@@ -83,10 +83,10 @@ for extension in jpg png jpeg gif; do
 done
 
 for extension in avi mp4 webm ogv mkv; do
-  alias -s $extension=mplayer
+  alias -s $extension=dragon
 done
 
-for extension in rb txt erb haml markdown yml; do
+for extension in txt erb haml markdown yml; do
   alias -s $extension=vim
 done
 
