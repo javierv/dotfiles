@@ -14,6 +14,7 @@
   status = true
 [core]
   whitespace = trailing-space,space-before-tab
+  autocrlf = input
 [apply]
   whitespace = fix
 [push]
