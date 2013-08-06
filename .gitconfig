@@ -16,3 +16,7 @@
   whitespace = trailing-space,space-before-tab
 [apply]
   whitespace = fix
+[push]
+  default=current
+[pull]
+  default=current
