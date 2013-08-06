@@ -368,9 +368,6 @@ vm <Leader>t: :Tabularize /:\zs<CR>
 nm <Leader>t, :Tabularize /,\zs<CR>
 vm <Leader>t, :Tabularize /,\zs<CR>
 
-" Easymotion
-let g:EasyMotion_leader_key = '<Leader>m'
-
 " Tcomment
 nm <Leader>c gcc
 vm <Leader>c gc
