@@ -368,6 +368,10 @@ vm <Leader>t: :Tabularize /:\zs<CR>
 nm <Leader>t, :Tabularize /,\zs<CR>
 vm <Leader>t, :Tabularize /,\zs<CR>
 
+" Surround con ERB
+autocmd FileType eruby let b:surround_45 = "<% \r %>" " 45 es el ASCII de -
+autocmd FileType eruby let b:surround_61 = "<%= \r %>" " 61 es el ASCII de =
+
 " Tcomment
 nm <Leader>c gcc
 vm <Leader>c gc
