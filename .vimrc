@@ -305,7 +305,9 @@ nm <Leader>rvsh :RVspec helpers/
 nm <Leader>rvsm :RVspec models/
 nm <Leader>rvsc :RVspec controllers/
 nm <Leader>rsr :Rspec requests/
+nm <Leader>rsf :Rspec features/
 nm <Leader>rvsr :RVspec requests/
+nm <Leader>rvsf :RVspec features/
 nm <Leader>rsu :Rsupport<Space>
 nm <Leader>rvsu :RVsupport<Space>
 nm <Leader>rsd :Rspec decorators/
