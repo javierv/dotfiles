@@ -42,4 +42,5 @@ main = do
     , ("M-m", spawn "thunderbird")
     , ("M-w", spawn "twinkle")
     , ("M-x", spawn "lyx")
+    , ("M-o", spawn "okular")
     ]
