@@ -12,7 +12,7 @@ main = do
   xmproc <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
   xmonad $ defaultConfig {
       startupHook = do
-        spawn "stalonetray --max-geometry 7x1-0+0 --icon-size 16"
+        spawn "stalonetray --max-geometry 7x1-0+0 --icon-size 24 --icon-gravity SE --grow-gravity E"
         spawn "xmobar ~/.xmonad/xmobarrc"
         spawn "nm-applet" -- Network Manager: WLAN.
     , workspaces = ["1:dev", "2:mail", "3:misc", "4:music"]
@@ -22,8 +22,11 @@ main = do
           [className   =? c --> doShift "2:mail" | c <- ["Thunderbird"]]
         , [className   =? c --> doShift "4:music" | c <- ["Amarok"]]
         , [className   =? c --> doShift "1:dev" | c <- ["Firefox"]]
-        , [className   =? c --> doFloat | c <- ["mame"]]
         , [className   =? c --> doFloat | c <- ["pcsx"]]
+        , [className   =? c --> doFloat | c <- ["mame"]]
+        , [className   =? c --> doFloat | c <- ["yabause"]]
+        , [className   =? c --> doFloat | c <- ["yabause-qt"]]
+        , [className   =? c --> doFloat | c <- ["VisualBoyAdvance"]]
         , [className   =? c --> doIgnore | c <- ["stalonetray"]]
         ])
     , layoutHook = avoidStruts $ smartBorders (layoutHook defaultConfig)
