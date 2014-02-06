@@ -425,7 +425,7 @@ autocmd FileType ruby nm <Leader>p Obinding.pry<Esc>
 
 " Identificar espacios al final de la línea
 autocmd BufWinEnter * match TrailingWhitespace /\s\+$/
-autocmd InsertEnter * match TrailingWhitespace /\(\zs\%#\|\s\)\+$/
+autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match TrailingWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
