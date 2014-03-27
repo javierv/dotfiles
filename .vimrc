@@ -54,6 +54,7 @@ Bundle 'epeli/slimux'
 " Aspecto.
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'gerw/vim-HiLinkTrace'
+Bundle 'junegunn/goyo.vim'
 
 " Sustituciones.
 Bundle 'tpope/vim-abolish'
