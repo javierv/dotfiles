@@ -17,6 +17,7 @@ fi
 
 if [[ -s "$HOME/.rbenv/bin/rbenv" ]]; then
   path+=("$HOME/.rbenv/bin")
+  path+=("$HOME/.rbenv/shims")
   eval "$(rbenv init - zsh)"
 fi
 
