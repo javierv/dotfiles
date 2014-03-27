@@ -7,6 +7,7 @@ import XMonad.Hooks.SetWMName
 import XMonad.Hooks.ManageHelpers
 import XMonad.Util.WindowProperties (getProp32s)
 import XMonad.Util.EZConfig(additionalKeysP)
+import XMonad.Util.EZConfig(additionalKeys)
 
 main = do
   xmonad $ kde4Config {
@@ -38,6 +39,16 @@ main = do
     , ("M-w", spawn "twinkle")
     , ("M-x", spawn "lyx")
     , ("M-o", spawn "okular")
+    ]
+    `additionalKeys`
+    [ ((mod4Mask, xK_c), spawn "mpc pause")
+    , ((mod4Mask, xK_b), spawn "mpc next")
+    , ((mod4Mask, xK_z), spawn "mpc prev")
+    , ((mod4Mask, xK_v), spawn "mpc play")
+    , ((mod4Mask, xK_l), spawn "mpc seek +10")
+    , ((mod4Mask, xK_h), spawn "mpc seek -10")
+    , ((mod4Mask, xK_plus), spawn "mpc volume +5")
+    , ((mod4Mask, xK_minus), spawn "mpc volume -5")
     ]
 
 kdeOverride :: Query Bool
