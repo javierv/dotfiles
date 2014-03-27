@@ -410,8 +410,8 @@ autocmd FileType *
  \ endif
 
 " ####### VARIOS #######
-" Firma de amarok
-nm <Leader>f G:r!amarok2-nowplaying<cr>O--<Esc>0k
+" Firma con la canción que se está escuchando
+nm <Leader>f G:r!nowplaying<cr>O--<Esc>0k
 
 " Repetir la última orden
 nm <Leader>ñ @:
