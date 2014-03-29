@@ -1,0 +1,3 @@
+#!/bin/sh
+# TODO: accept more than one argument.
+mpc update && mpc clear && mpc search any "${1}" | mpc add && mpc random off && mpc play
