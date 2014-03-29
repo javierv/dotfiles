@@ -49,6 +49,7 @@ main = do
     , ((mod4Mask, xK_h), spawn "mpc seek -10")
     , ((mod4Mask, xK_plus), spawn "mpc volume +5")
     , ((mod4Mask, xK_minus), spawn "mpc volume -5")
+    , ((mod4Mask, xK_r), spawn "mpc update && mpc clear && mpc add / && mpc random on && mpc play")
     ]
 
 kdeOverride :: Query Bool
