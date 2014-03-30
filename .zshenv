@@ -8,7 +8,6 @@ path=(
   /usr/{bin,sbin,games}
   /usr/bin/X11
   /{bin,sbin}
-  $path
 )
 
 if [ -d "$HOME/bin" ] ; then
@@ -16,8 +15,11 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 if [[ -s "$HOME/.rbenv/bin/rbenv" ]]; then
-  path+=("$HOME/.rbenv/bin")
-  path+=("$HOME/.rbenv/shims")
+  path=(
+    "$HOME/.rbenv/bin"
+    "$HOME/.rbenv/shims"
+    $path
+  )
   eval "$(rbenv init - zsh)"
 fi
 
