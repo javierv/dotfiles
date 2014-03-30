@@ -1,0 +1,2 @@
+#!/bin/sh
+mpc search any "${1}" | mpc add
