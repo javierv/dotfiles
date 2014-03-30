@@ -57,12 +57,13 @@ fi
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
-alias q='exit'
 alias gg='git gui &'
 alias apt-search='apt-cache search'
 alias apt-show='apt-cache show'
 alias apt-install='apt-get install'
 alias sudo='sudo '
+alias p='mpcplay'
+alias q='mpcqueue'
 
 function sb() {
   rails c $1 --sandbox
