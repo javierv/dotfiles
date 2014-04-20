@@ -107,6 +107,54 @@ set wildmode=list:longest,full
 nm <silent> <leader>k :set spell!<CR>
 set spelllang=es_es
 
+" ###### ASPECTO ######
+if has("gui_running")
+  " Elimina las barras de edición y los menús
+  set guioptions-=m
+  set guioptions-=T
+  " Quita el parpadeo del cursor.
+  set guicursor+=a:blinkon0
+endif
+
+" Tema propio, basado en nuvola.
+colorscheme autumnriver
+
+" Resaltados de sintaxis en función del tipo de fichero
+syntax on
+filetype off
+filetype plugin indent on
+" Sintaxis con espacios
+autocmd FileType * setlocal ts=2 sts=2 sw=2 tw=0 expandtab
+autocmd FileType gitcommit set tw=72
+
+" Incluye el título en la ventana (gvim lo hace automáticamente)
+set title
+" Incluye siempre la ruta del fichero que se edita
+set laststatus=2
+
+" Cambiar el cursor en Konsole, con o sin tmux.
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\007\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\007\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+
+" Powerline
+set noshowmode
+let g:Powerline_stl_path_style = "short"
+" Requiere parchear una tipografía con powerline fontpatcher
+let g:Powerline_symbols = "fancy"
+
+" Muestra el número de línea
+set number
+" Muestra el número de línea al final de la pantalla (ya estaba activo por
+" defecto)
+set ruler
+" Por defecto, no contrae las líneas cuando carga un nuevo buffer
+set nofoldenable
+
 
 " ####### COPIAR Y PEGAR ######
 " Pegar a y del sistema
@@ -229,57 +277,8 @@ nm S :<C-U>exec "normal a".RepeatChar(nr2char(getchar()), v:count1)<CR>
 nnoremap - maO<esc>`a
 nnoremap + mao<esc>`a
 
-
-" ###### ASPECTO ######
-if has("gui_running")
-  " Elimina las barras de edición y los menús
-  set guioptions-=m
-  set guioptions-=T
-  " Quita el parpadeo del cursor.
-  set guicursor+=a:blinkon0
-endif
-
-" Tema propio, basado en nuvola.
-colorscheme autumnriver
-
-" Incluye el título en la ventana (gvim lo hace automáticamente)
-set title
-" Incluye siempre la ruta del fichero que se edita
-set laststatus=2
-
-" Cambiar el cursor en Konsole, con o sin tmux.
-if exists('$TMUX')
-  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\007\<Esc>\\"
-  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\007\<Esc>\\"
-else
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
-
-" Powerline
-set noshowmode
-let g:Powerline_stl_path_style = "short"
-" Requiere parchear una tipografía con powerline fontpatcher
-let g:Powerline_symbols = "fancy"
-
-" Resaltados de sintaxis en función del tipo de fichero
-syntax on
-filetype off
-filetype plugin indent on
-" Sintaxis con espacios
-autocmd FileType * setlocal ts=2 sts=2 sw=2 tw=0 expandtab
-autocmd FileType gitcommit set tw=72
-
 " o y O no añaden comentario cuando se usan en línea con comentario
 autocmd FileType * setlocal formatoptions-=o
-
-" Muestra el número de línea
-set number
-" Muestra el número de línea al final de la pantalla (ya estaba activo por
-" defecto)
-set ruler
-" Por defecto, no contrae las líneas cuando carga un nuevo buffer
-set nofoldenable
 
 
 " ######### RAILS #########
