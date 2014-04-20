@@ -27,12 +27,13 @@ Bundle 'nelstrom/vim-visual-star-search'
 
 " Ruby.
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-rails'
 Bundle 'jgdavey/vim-blockle'
 Bundle 'tpope/vim-endwise'
 Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'tpope/vim-rails'
 Bundle 'skwp/vim-rspec'
-Bundle 'tpope/vim-bundler'
 
 " Git.
 Bundle 'gregsexton/gitv'
