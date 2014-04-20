@@ -270,6 +270,9 @@ filetype plugin indent on
 autocmd FileType * setlocal ts=2 sts=2 sw=2 tw=0 expandtab
 autocmd FileType gitcommit set tw=72
 
+" o y O no añaden comentario cuando se usan en línea con comentario
+autocmd FileType * setlocal formatoptions-=o
+
 " Muestra el número de línea
 set number
 " Muestra el número de línea al final de la pantalla (ya estaba activo por
