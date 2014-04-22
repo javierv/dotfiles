@@ -39,7 +39,7 @@ class DotfilesInstaller
     unless File.exist?(destination_path('.gitconfig'))
       %x[cp #{absolute_path('.gitconfig')} #{destination_folder}]
       puts "Copied gitconfig file"
-    end 
+    end
   end
 
   def create_local_configurations
@@ -85,7 +85,7 @@ private
   end
 
   def symlinked_files
-    %w[bin .inputrc .irbrc .pryrc .tmux.conf .vim .vimrc .Xmodmap .xmonad .zsh .zshenv .zshrc]
+    %w[bin .inputrc .irbrc .pryrc .tmux.conf .vim .vimrc .Xmodmap .xmonad .zsh .zshenv .zshrc .git_template]
   end
 
   def absolute_path(file)
