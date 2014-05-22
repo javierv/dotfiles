@@ -14,6 +14,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/ReplaceWithRegister'
+Bundle 'tommcdo/vim-exchange'
 
 " Navegación por conjuntos de texto.
 Bundle 'kana/vim-textobj-user'
