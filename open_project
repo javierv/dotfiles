@@ -13,6 +13,7 @@ if ! tmux has-session -t "$project" 2> /dev/null; then
   tmux new-window -t "$project":2 -n 'servers'
   tmux split-window -h
   tmux send-keys 'rails s' C-m
+  tmux split-window -v
   tmux send-keys 'spin serve --push-results' C-m
   tmux select-pane -t 1
 
