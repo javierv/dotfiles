@@ -290,12 +290,14 @@ nm <Leader>rV :Rview<Space>
 nm <Leader>rh :Rhelper<Space>
 nm <Leader>rj :Rjavascript<Space>
 nm <Leader>rd :Rdecorator<Space>
+nm <Leader>rp :Rpdf<Space>
 nm <Leader>rvm :RVmodel<Space>
 nm <Leader>rvc :RVcontroller<Space>
 nm <Leader>rvv :RVview<Space>
 nm <Leader>rvh :RVhelper<Space>
 nm <Leader>rvj :RVjavascript<Space>
 nm <Leader>rvd :RVdecorator<Space>
+nm <Leader>rvp :RVpdf<Space>
 nm <Leader>ra :A<cr>
 nm <Leader>rva :AV<cr>
 nm <Leader>rr :R<cr>
@@ -317,6 +319,8 @@ nm <Leader>rsu :Rsupport<Space>
 nm <Leader>rvsu :RVsupport<Space>
 nm <Leader>rsd :Rspec decorators/
 nm <Leader>rvsd :RVspec decorators/
+nm <Leader>rsp :Rspec pdfs/
+nm <Leader>rvsp :RVspec pdfs/
 nm <Leader>rf :e spec/factories.rb<cr>
 " Atajos para tipos de ficheros.
 autocmd user Rails Rnavcommand sass app/assets/stylesheets -suffix=.sass
