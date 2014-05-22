@@ -18,9 +18,9 @@ end
 
 ##### INTEGRATION WITH RAILS #####
 # Note: Only for Rails 3.2; for Rails 3.1 we need a different way.
-# if defined?(Rails) && Rails.env
-#   extend Rails::ConsoleMethods
-# end
+if defined?(Rails) && Rails.env
+  extend Rails::ConsoleMethods
+end
 
 ##### EXTRA METHODS #####
 
