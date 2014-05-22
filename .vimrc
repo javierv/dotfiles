@@ -323,15 +323,14 @@ nm <Leader>rsp :Rspec pdfs/
 nm <Leader>rvsp :RVspec pdfs/
 nm <Leader>rf :e spec/factories.rb<cr>
 " Atajos para tipos de ficheros.
-autocmd user Rails Rnavcommand sass app/assets/stylesheets -suffix=.sass
-autocmd User Rails Rnavcommand coffee app/assets/javascripts -suffix=.coffee
-autocmd User Rails Rnavcommand casmine spec/javascripts/ -glob=**/* -suffix=.coffee
-autocmd User Rails Rnavcommand jfixtures spec/javascripts/fixtures -glob=**/* -suffix=.html
-autocmd User Rails Rnavcommand support spec/requests/support -glob=**/* -suffix=.rb
-autocmd User Rails Rnavcommand decorator app/decorators -glob=**/* -suffix=_decorator.rb
-autocmd User Rails Rnavcommand cell app/cells -glob=**/* -suffix=_cell.rb
-autocmd User Rails Rnavcommand cview app/cells -glob=**/* -suffix=.haml
-autocmd User Rails Rnavcommand builder app/form_builders -glob=**/* -suffix=.rb
+let g:rails_projections = {
+  \ "app/decorators/*_decorator.rb": { "command": "decorator" },
+  \ "app/form_builders/*_form_builder.rb": { "command": "builder" },
+  \ "app/pdfs/*.rb": { "command": "pdf" },
+  \ "app/cells/*_cell.rb": { "command": "cell" },
+  \ "app/cells/*.haml": { "command": "cview" },
+  \ "spec/javascripts/fixtures/*.html": { "command": "jfixtures" },
+  \ "spec/requests/support/*.rb": {"command": "support"}}
 
 
 " ######## GIT ########
