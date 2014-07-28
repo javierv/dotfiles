@@ -363,8 +363,8 @@ nm <Leader>sp :SlimuxShellPrompt<CR>
 nm <Leader>sr :SlimuxREPLSendLine<CR>
 vm <Leader>sr :SlimuxREPLSendSelection<CR>
 " Ejecutar test con spin
-nm <Leader>ss :SlimuxShellRun spin push %<Tab><CR>
-nm <Leader>sl :SlimuxShellRun spin push %l<Tab><CR>
+nm <Leader>ss :SlimuxShellRun rspec %<Tab><CR>
+nm <Leader>sl :SlimuxShellRun rspec %l<Tab><CR>
 
 " ###### OTROS PLUGINS ######
 " Tabularize
