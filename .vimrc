@@ -16,6 +16,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/ReplaceWithRegister'
 Bundle 'tommcdo/vim-exchange'
 Bundle 'AndrewRadev/splitjoin.vim'
+Bundle 'AndrewRadev/switch.vim'
 
 " Navegación por conjuntos de texto.
 Bundle 'kana/vim-textobj-user'
