@@ -15,8 +15,6 @@ Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/ReplaceWithRegister'
 Bundle 'tommcdo/vim-exchange'
-Bundle 'AndrewRadev/splitjoin.vim'
-Bundle 'AndrewRadev/switch.vim'
 
 " Navegación por conjuntos de texto.
 Bundle 'kana/vim-textobj-user'
@@ -49,6 +47,9 @@ Bundle 'thomd/vim-jasmine'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'msanders/snipmate.vim'
+Bundle 'AndrewRadev/splitjoin.vim'
+Bundle 'AndrewRadev/switch.vim'
+Bundle 'AndrewRadev/sideways.vim'
 
 " Integración con la shell
 Bundle 'rking/ag.vim'
@@ -409,6 +410,9 @@ let g:RspecBin = 'rspec'
 
 " Switch
 nnoremap - :Switch<cr>
+
+" Sideways
+nnoremap <C-h> :SidewaysLeft<cr>
 
 " Autocompletado
 let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
