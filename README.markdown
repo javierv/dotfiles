@@ -10,7 +10,3 @@ Since it's intended for my personal use, the script shows no mercy on existing f
 Here's a typical layout (as of November 2012) when working on a Ruby (or Rails) project:
 
 ![ScreenShot](https://raw.github.com/javierv/dotfiles/master/ide-editor.png)
-
-TODO:
-
-1. Configure xmonad with xmobar to replace KDE.
