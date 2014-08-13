@@ -18,7 +18,7 @@
 [apply]
   whitespace = fix
 [push]
-  default=current
+  default = simple
 [pull]
   default=current
 [init]
