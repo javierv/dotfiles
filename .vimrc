@@ -415,6 +415,10 @@ nnoremap - :Switch<cr>
 " Sideways
 nnoremap <C-h> :SidewaysLeft<cr>
 
+" Targets
+let g:targets_separators = ', . ; : + - = ~ _ * # | \ & $'
+let g:targets_pairs = '() {} [] <>'
+
 " Autocompletado
 let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 let g:SuperTabDefaultCompletionType = 'context'
