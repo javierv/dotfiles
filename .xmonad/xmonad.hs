@@ -34,7 +34,7 @@ main = do
     `additionalKeysP`
     [ ("M-a", spawn "amarok")
     , ("M-c", spawn "konsole")
-    , ("M-b", spawn "chromium-browser")
+    , ("M-b", spawn "firefox")
     , ("M-m", spawn "thunderbird")
     , ("M-w", spawn "twinkle")
     , ("M-x", spawn "lyx")
