@@ -24,8 +24,7 @@ main = do
         , [className   =? c --> doShift "1:dev" | c <- ["Firefox"]]
         , [className   =? c --> doFloat | c <- ["pcsx"]]
         , [className   =? c --> doFloat | c <- ["mame"]]
-        , [className   =? c --> doFloat | c <- ["yabause"]]
-        , [className   =? c --> doFloat | c <- ["yabause-qt"]]
+        , [className   =? c --> doFloat | c <- ["Yabause"]]
         , [className   =? c --> doFloat | c <- ["VisualBoyAdvance"]]
         , [className   =? c --> doIgnore | c <- ["stalonetray"]]
         ])
