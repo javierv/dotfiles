@@ -25,6 +25,7 @@ main = do
         , [className   =? c --> doFloat | c <- ["pcsx"]]
         , [className   =? c --> doFloat | c <- ["mame"]]
         , [className   =? c --> doFloat | c <- ["Yabause"]]
+        , [className   =? c --> doFloat | c <- ["mupen64plus"]]
         , [className   =? c --> doIgnore | c <- ["stalonetray"]]
         ])
     , layoutHook = smartBorders (layoutHook kde4Config)
