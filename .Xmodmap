@@ -10,6 +10,9 @@ keycode  47 = ntilde Escape ntilde Escape asciitilde dead_doubleacute asciitilde
 !Fuera Insert
 keycode 118 =
 
+!Menu cambia la entrada de mozc
+keycode 135 = Hiragana_Katakana NoSymbol Menu NoSymbol Menu Menu
+
 ! Una sola pulsación para `.
 keycode 34 = grave asciicircum grave asciicircum bracketleft dead_abovering bracketleft
 
