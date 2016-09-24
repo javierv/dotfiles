@@ -28,6 +28,7 @@ main = do
         , [className   =? c --> doIgnore | c <- ["stalonetray"]]
         ])
     , layoutHook = smartBorders (layoutHook kde4Config)
+    , focusedBorderColor = "#444444"
     }
     `additionalKeysP`
     [ ("M-c", spawn "konsole")
