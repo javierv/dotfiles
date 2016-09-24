@@ -33,9 +33,9 @@ main = do
     [ ("M-c", spawn "konsole")
     , ("M-b", spawn "firefox")
     , ("M-m", spawn "thunderbird")
-    , ("M-w", spawn "twinkle")
-    , ("M-x", spawn "lyx")
+    , ("M-x", spawn "anki")
     , ("M-o", spawn "okular")
+    , ("M-d", spawn "dolphin")
     ]
     `additionalKeys`
     [ ((mod4Mask, xK_c), spawn "mpc pause")
