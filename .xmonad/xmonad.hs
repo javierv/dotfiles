@@ -37,6 +37,7 @@ main = do
     [ ("M-c", spawn "konsole")
     , ("M-b", spawn "firefox")
     , ("M-m", spawn "thunderbird")
+    , ("M-w", spawn "xrandr | grep '900x1440+0+0 left' > /dev/null && xrandr --output VGA1 --rotate normal --mode 1440x900 || xrandr --output VGA1 --rotate left --mode 1440x900")
     , ("M-x", spawn "anki")
     , ("M-o", spawn "okular")
     , ("M-d", spawn "dolphin")
