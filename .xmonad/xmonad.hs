@@ -39,6 +39,7 @@ main = do
     [ ("M-c", spawn "konsole")
     , ("M-b", spawn "firefox")
     , ("M-m", spawn "thunderbird")
+    , ("M-r", spawn "xmonad --restart")
     , ("M-w", spawn "xrandr | grep '900x1440+0+0 left' > /dev/null && xrandr --output VGA1 --rotate normal --mode 1440x900 || xrandr --output VGA1 --rotate left --mode 1440x900")
     , ("M-x", spawn "anki")
     , ("M-o", spawn "okular")
@@ -54,6 +55,7 @@ main = do
     , ((mod4Mask, xK_plus), spawn "mpc volume +5")
     , ((mod4Mask, xK_minus), spawn "mpc volume -5")
     , ((mod4Mask, xK_r), spawn "mpc update && mpc clear && mpc add / && mpc random on && mpc play")
+    , ((mod4Mask, xK_p), spawn "kquitapp5 plasmashell ; /usr/bin/plasmashell --shut-up")
     ]
 
 kdeOverride :: Query Bool
