@@ -21,6 +21,7 @@ main = do
         <+> (composeAll . concat $ [
           [className   =? c --> doShift "2:mail" | c <- ["Thunderbird"]]
         , [className   =? c --> doShift "1:dev" | c <- ["Firefox"]]
+        , [className   =? c --> doFloat | c <- ["plasmashell"]]
         , [className   =? c --> doFloat | c <- ["pcsx"]]
         , [className   =? c --> doFloat | c <- ["gsdx"]]
         , [className   =? c --> doFloat | c <- ["pcsx2"]]
