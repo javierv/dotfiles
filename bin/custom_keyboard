@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
-setxkbmap es
+setxkbmap es -option "esperanto:qwerty"
 xmodmap ~/.Xmodmap
