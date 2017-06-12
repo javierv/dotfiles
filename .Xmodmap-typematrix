@@ -1,7 +1,8 @@
 !!!!! TECLAS AUXILIARES MUY USADAS !!!!!
-! Menú como control
-keycode 135 = Control_L NoSymbol Control_L NoSymbol Control_L
-add Control = Control_L
+! Control con los pulgares
+keycode 102 = Control_L NoSymbol Control_L NoSymbol Control_L
+keycode 100 = Control_R NoSymbol Control_R NoSymbol Control_R
+add Control = Control_L Control_R
 
 ! eñe mayúscula como Esc.
 keycode  47 = ntilde Escape ntilde Escape asciitilde dead_doubleacute asciitilde dead_doubleacute ntilde Escape asciitilde dead_doubleacute ntilde Escape asciitilde dead_doubleacute
@@ -10,7 +11,7 @@ keycode  47 = ntilde Escape ntilde Escape asciitilde dead_doubleacute asciitilde
 keycode 118 =
 
 !Menu cambia la entrada de mozc
-! keycode 135 = Hiragana_Katakana NoSymbol Menu NoSymbol Menu Menu
+keycode 135 = Hiragana_Katakana NoSymbol Menu NoSymbol Menu Menu
 
 ! Una sola pulsación para `.
 keycode 34 = grave asciicircum grave asciicircum bracketleft dead_abovering bracketleft
@@ -31,7 +32,7 @@ keycode 172 = less greater less greater bar brokenbar bar
 ! Intercambiamos cedilla con mayúscula derecha.
 clear shift
 keycode 62 = ccedilla Ccedilla ccedilla Ccedilla braceright dead_breve braceright dead_breve ccedilla Ccedilla braceright dead_breve ccedilla Ccedilla braceright dead_breve
-keycode 51 = Shift_R NoSymbol Shift_R
+keycode 97 = Shift_R NoSymbol Shift_R
 add shift = Shift_L Shift_R
 
 !!!!! CARACTERES DEL ALEMÁN !!!!!
