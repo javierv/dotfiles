@@ -14,6 +14,7 @@ main = do
       startupHook = do
         setWMName "LG3D"
         spawn "ibus-daemon -drx"
+        spawn "xkbset sticky -twokey -latchlock"
     , workspaces = ["1:dev", "2:mail", "3:misc", "4:music"]
     , manageHook = ((className =? "krunner") >>= return . not --> manageHook kde4Config)
         <+> (kdeOverride --> doFloat)
