@@ -303,25 +303,10 @@ nm <Leader>ra :A<cr>
 nm <Leader>rva :AV<cr>
 nm <Leader>rr :R<cr>
 nm <Leader>rvr :RV<cr>
-nm <Leader>rl :Rlayout<cr>
-nm <Leader>rS :Rspec<Space>
-nm <Leader>rsh :Rspec helpers/
-nm <Leader>rsm :Rspec models/
-nm <Leader>rsc :Rspec controllers/
-nm <Leader>rvS :RVspec<Space>
-nm <Leader>rvsh :RVspec helpers/
-nm <Leader>rvsm :RVspec models/
-nm <Leader>rvsc :RVspec controllers/
-nm <Leader>rsr :Rspec requests/
-nm <Leader>rsf :Rspec features/
-nm <Leader>rvsr :RVspec requests/
-nm <Leader>rvsf :RVspec features/
-nm <Leader>rsu :Rsupport<Space>
-nm <Leader>rvsu :RVsupport<Space>
-nm <Leader>rsd :Rspec decorators/
-nm <Leader>rvsd :RVspec decorators/
-nm <Leader>rsp :Rspec pdfs/
-nm <Leader>rvsp :RVspec pdfs/
+nm <Leader>rl :Elib<Space>
+nm <Leader>rvl :Vlib<Space>
+nm <Leader>rs :Espec<Space>
+nm <Leader>rvs :Vspec<Space>
 nm <Leader>rf :e spec/factories.rb<cr>
 " Atajos para tipos de ficheros.
 let g:rails_projections = {
