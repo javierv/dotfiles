@@ -29,6 +29,7 @@ Bundle 'nelstrom/vim-visual-star-search'
 
 " Ruby.
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-projectionist'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-rails'
