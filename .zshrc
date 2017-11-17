@@ -5,6 +5,7 @@ prompt sorin
 ##### PLUGINS #####
 source "$HOME/.zsh/syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$HOME/.zsh/history-substring-search/zsh-history-substring-search.zsh"
+source "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 
 ##### SHORTCUTS #####
@@ -18,6 +19,11 @@ bindkey -M vicmd "j" history-substring-search-down
 bindkey -e
 bindkey 'ñ' vi-cmd-mode
 
+# Use shortcuts to handle autosuggestions
+bindkey '^@' autosuggest-accept # Ctrl-space
+bindkey '^J' autosuggest-accept # Shift-enter
+# Can't use Ctrl-Enter because my terminal doesn't distinguish it from Enter.
+bindkey '^F' autosuggest-execute
 
 ##### HISTORY #####
 # Keep 10000 lines of history within the shell and save it to ~/.zhistory:
