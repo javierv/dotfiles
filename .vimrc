@@ -285,20 +285,20 @@ autocmd FileType * setlocal formatoptions-=o
 
 
 " ######### RAILS #########
-nm <Leader>rm :Rmodel<Space>
-nm <Leader>rc :Rcontroller<Space>
-nm <Leader>rV :Rview<Space>
-nm <Leader>rh :Rhelper<Space>
-nm <Leader>rj :Rjavascript<Space>
-nm <Leader>rd :Rdecorator<Space>
-nm <Leader>rp :Rpdf<Space>
-nm <Leader>rvm :RVmodel<Space>
-nm <Leader>rvc :RVcontroller<Space>
-nm <Leader>rvv :RVview<Space>
-nm <Leader>rvh :RVhelper<Space>
-nm <Leader>rvj :RVjavascript<Space>
-nm <Leader>rvd :RVdecorator<Space>
-nm <Leader>rvp :RVpdf<Space>
+nm <Leader>rm :Emodel<Space>
+nm <Leader>rc :Econtroller<Space>
+nm <Leader>rV :Eview<Space>
+nm <Leader>rh :Ehelper<Space>
+nm <Leader>rj :Ejavascript<Space>
+nm <Leader>rd :Edecorator<Space>
+nm <Leader>rp :Epdf<Space>
+nm <Leader>rvm :EVmodel<Space>
+nm <Leader>rvc :EVcontroller<Space>
+nm <Leader>rvv :EVview<Space>
+nm <Leader>rvh :EVhelper<Space>
+nm <Leader>rvj :EVjavascript<Space>
+nm <Leader>rvd :EVdecorator<Space>
+nm <Leader>rvp :EVpdf<Space>
 nm <Leader>ra :A<cr>
 nm <Leader>rva :AV<cr>
 nm <Leader>rr :R<cr>
