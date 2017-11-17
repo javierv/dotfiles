@@ -75,10 +75,13 @@ hi Tag guifg=#af5f00 ctermfg=130
 hi Todo ctermbg=Yellow ctermfg=blue guifg=Blue guibg=Yellow
 hi Type ctermfg=Blue gui=NONE guifg=#2222fa
 hi String guifg=#005f00 ctermfg=22
+hi ModuleName guifg=#cA1909 ctermfg=160
+hi SpecialVariable guifg=#aa00ef ctermfg=129
+
 hi! link Character	String
 hi! link Boolean	Constant
 hi! link Float		Number
-hi! link Function	Identifier
+hi! link Function Tag
 hi! link Conditional	Statement
 hi! link Repeat	Statement
 hi! link Label		Statemengreen
@@ -86,8 +89,8 @@ hi! link Operator	Statement
 hi! link Keyword	Statement
 hi! link Exception	Statement
 hi! link Include	PreProc
-hi! link Define	PreProc
-hi! link Macro		PreProc
+hi! link Define Keyword
+hi! link Macro Keyword
 hi! link PreCondit	PreProc
 hi! link StorageClass	Type
 hi! link Structure	Type
@@ -96,20 +99,24 @@ hi! link SpecialChar	Special
 hi! link Delimiter	Special
 hi! link SpecialComment Special
 hi! link Debug		Special
+hi! link Symbol PreProc
+hi! link StringDelimiter String
 
 " Ruby styles
-hi! rubyConstant guifg=#cA1909 ctermfg=160
-hi! link railsClass rubyConstant
-hi! rubyInstanceVariable guifg=#aa00ef ctermfg=129
+hi! link rubyConstant ModuleName
+hi! link rubyInstanceVariable SpecialVariable
 hi! link rubyGlobalVariable rubyInstanceVariable
-hi! link rubyDefine Keyword
-hi! link rubySymbol PreProc
+hi! link rubySymbol Symbol
 hi! link rubyBlockParameter Normal
-hi! link rubyStringDelimiter String
-hi! link rubyFunction Tag
-hi! link rubyRailsMethod rubyFunction
-hi! link rspecKeywords rubyDefine
+hi! link rubyStringDelimiter StringDelimiter
+hi! link rspecKeywords Keyword
 hi! link rspecMatchers rubyFunction
+
+" Elixir styles
+hi! link elixirModuleDeclaration ModuleName
+hi! link elixirAlias ModuleName
+hi! link elixirAtom Symbol
+hi! link elixirStringDelimiter StringDelimiter
 
 " HTML
 hi htmlLink                 gui=UNDERLINE guifg=#0000ff ctermfg=21 guibg=NONE
