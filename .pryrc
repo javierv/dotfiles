@@ -6,16 +6,6 @@ def show_sql
   ActiveRecord::Base.logger = Logger.new(STDOUT) if defined?(ActiveRecord)
 end
 
-##### INTEGRATION WITH BUNDLER #####
-
-# Allow loading gems not inside Gemfile. Extracted from irbtools README.
-if defined?(Gem.post_reset_hooks)
-  Gem.post_reset_hooks.reject!{ |hook| hook.source_location.first =~ %r{/bundler/} }
-  Gem::Specification.reset
-  load 'rubygems/custom_require.rb'
-  alias gem require
-end
-
 ##### INTEGRATION WITH RAILS #####
 # Note: Only for Rails 3.2; for Rails 3.1 we need a different way.
 if defined?(Rails) && Rails.env
