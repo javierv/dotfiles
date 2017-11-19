@@ -70,8 +70,7 @@ Bundle 'tpope/vim-abolish'
 Bundle 'ervandew/supertab'
 
 " Varios.
-" Undotree es otra opción, que no he probado.
-Bundle 'sjl/gundo.vim'
+Bundle 'mbbill/undotree'
 Bundle 'vim-scripts/bufkill.vim'
 Bundle 'tpope/vim-rsi'
 
@@ -377,8 +376,8 @@ vm <Leader>c gc
 " Syntastic
 let g:syntastic_auto_loc_list=1 " Abre automáticamente la lista de errores.
 
-" Gundo
-nm <Leader>u :GundoToggle<CR>
+" Undotree
+nm <Leader>u :UndotreeToggle<CR>
 
 " Smartwords
 nmap w  <Plug>(smartword-w)
