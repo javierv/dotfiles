@@ -241,6 +241,10 @@ nm <C-P> :e #<CR>
 " y Ctrl-l en cambio no lo uso nunca.
 nnoremap <C-L> <C-I>
 
+" C-] en algunos terminales se interpreta como C-+ y además es difícil de
+" teclear.
+nm <Space> <C-]>
+
 
 " ###### BÚSQUEDAS ######
 " Resalta el primer resultado de la búsqueda según tecleas
