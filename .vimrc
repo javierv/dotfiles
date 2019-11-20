@@ -301,7 +301,16 @@ nm <Leader>ra :A<cr>
 nm <Leader>rr :R<cr>
 nm <Leader>rl :Elib<Space>
 nm <Leader>rs :Espec<Space>
-nm <Leader>rf :e spec/factories.rb<cr>
+nm <Leader>rsm :Espec models/
+nm <Leader>rsf :Espec features/
+nm <Leader>rss :Espec system/
+nm <Leader>rsl :Espec lib/
+nm <Leader>rsc :Espec controllers/
+nm <Leader>rsv :Espec views/
+nm <Leader>rf :Efactory<Space>
+nm <Leader>re :Eenvironment<Space>
+nm <Leader>ri :Einitializer<Space>
+nm <Leader>rt :Elocale<Space>
 " Atajos para tipos de ficheros.
 let g:rails_projections = {
   \ "app/decorators/*_decorator.rb": { "command": "decorator" },
@@ -310,6 +319,7 @@ let g:rails_projections = {
   \ "app/cells/*_cell.rb": { "command": "cell" },
   \ "app/cells/*.haml": { "command": "cview" },
   \ "spec/javascripts/fixtures/*.html": { "command": "jfixtures" },
+  \ "spec/factories/*.rb": {"command": "factory"},
   \ "spec/requests/support/*.rb": {"command": "support"}}
 
 
