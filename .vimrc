@@ -378,7 +378,9 @@ nm <Leader>c gcc
 vm <Leader>c gc
 
 " Syntastic
-let g:syntastic_auto_loc_list=1 " Abre automáticamente la lista de errores.
+let g:syntastic_auto_loc_list = 1 " Abre automáticamente la lista de errores.
+let g:syntastic_javascript_checkers = ["eslint"]
+let g:syntastic_javascript_eslint_exe = "eslint --quiet"
 
 " Undotree
 nm <Leader>u :UndotreeToggle<CR>
