@@ -169,6 +169,8 @@ vm <C-y> "+y
 nm <C-y> "+gp
 im <C-v> <Esc>"+gp a
 inoremap <C-r> <C-r><C-p>
+" Pegar texto copiado en la línea de órdenes
+cm <C-v> <C-r>"
 
 " Seleccionar el último texto copiado o pegado
 nm gV `[v`]
