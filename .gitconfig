@@ -6,8 +6,11 @@
   cm = commit
   br = branch
   st = status
+  rb = rebase
+  cp = cherry-pick
   d = diff
   l = log
+  sh = stash
 [color]
   branch = true
   diff = true
