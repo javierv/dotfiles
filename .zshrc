@@ -26,9 +26,9 @@ bindkey '^J' autosuggest-accept # Shift-enter
 bindkey '^F' autosuggest-execute
 
 ##### HISTORY #####
-# Keep 10000 lines of history within the shell and save it to ~/.zhistory:
-HISTSIZE=10000
-SAVEHIST=10000
+# Lines of history to keep in ~/.zhistory:
+HISTSIZE=1000000
+SAVEHIST=1000000
 HISTFILE=~/.zhistory
 
 setopt inc_append_history  # Write to the history file immediately
