@@ -292,26 +292,15 @@ autocmd FileType * setlocal formatoptions-=o
 " ######### RAILS #########
 nm <Leader>rm :Emodel<Space>
 nm <Leader>rc :Econtroller<Space>
-nm <Leader>rV :Eview<Space>
+nm <Leader>rv :Eview<Space>
 nm <Leader>rh :Ehelper<Space>
 nm <Leader>rj :Ejavascript<Space>
 nm <Leader>rd :Edecorator<Space>
 nm <Leader>rp :Epdf<Space>
-nm <Leader>rvm :Vmodel<Space>
-nm <Leader>rvc :Vcontroller<Space>
-nm <Leader>rvv :Vview<Space>
-nm <Leader>rvh :Vhelper<Space>
-nm <Leader>rvj :Vjavascript<Space>
-nm <Leader>rvd :Vdecorator<Space>
-nm <Leader>rvp :Vpdf<Space>
 nm <Leader>ra :A<cr>
-nm <Leader>rva :AV<cr>
 nm <Leader>rr :R<cr>
-nm <Leader>rvr :RV<cr>
 nm <Leader>rl :Elib<Space>
-nm <Leader>rvl :Vlib<Space>
 nm <Leader>rs :Espec<Space>
-nm <Leader>rvs :Vspec<Space>
 nm <Leader>rf :e spec/factories.rb<cr>
 " Atajos para tipos de ficheros.
 let g:rails_projections = {
