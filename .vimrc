@@ -42,7 +42,6 @@ Bundle 'gregsexton/gitv'
 Bundle 'tpope/vim-fugitive'
 
 " Otros lenguages.
-Bundle 'kchmck/vim-coffee-script'
 Bundle 'thomd/vim-jasmine'
 Bundle 'elixir-editors/vim-elixir'
 
