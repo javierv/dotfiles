@@ -49,7 +49,6 @@ call minpac#add("scrooloose/syntastic")
 call minpac#add("msanders/snipmate.vim")
 call minpac#add("AndrewRadev/splitjoin.vim")
 call minpac#add("AndrewRadev/switch.vim")
-call minpac#add("AndrewRadev/sideways.vim")
 
 " Integración con la shell
 call minpac#add("jremmen/vim-ripgrep")
@@ -403,9 +402,6 @@ let g:RspecBin = 'rspec'
 
 " Switch
 nnoremap - :Switch<cr>
-
-" Sideways
-nnoremap <C-h> :SidewaysLeft<cr>
 
 " Targets
 let g:targets_separators = ', . ; : + - = ~ _ * # | \ & $'
