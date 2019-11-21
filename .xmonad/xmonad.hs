@@ -43,7 +43,7 @@ main = do
     , ("M-r", spawn "xmonad --restart")
     , ("M-f", spawn "xsel | iconv -f UTF8 -t UTF16 | xvkbd -utf -file -")
     , ("M-w", spawn "xrandr | grep '900x1440+0+0 left' > /dev/null && xrandr --output VGA1 --rotate normal --mode 1440x900 || xrandr --output VGA1 --rotate left --mode 1440x900")
-    , ("M-x", spawn "anki")
+    , ("M-x", spawn "lyx")
     , ("M-o", spawn "okular")
     , ("M-d", spawn "dolphin")
     ]
