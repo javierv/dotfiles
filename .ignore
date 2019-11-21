@@ -1,0 +1,7 @@
+.git/
+.git_template/
+.vim/pack/minpac/opt/minpac
+.zsh/completions
+.zsh/history-substring-search
+.zsh/syntax-highlighting
+.zsh/zsh-autosuggestions
