@@ -401,7 +401,7 @@ let g:rg_command = "rg --vimgrep --hidden -S"
 let g:RspecBin = 'rspec'
 
 " Switch
-nnoremap - :Switch<cr>
+let g:switch_mapping = "-"
 
 " Targets
 let g:targets_separators = ', . ; : + - = ~ _ * # | \ & $'
