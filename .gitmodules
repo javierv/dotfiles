@@ -7,6 +7,9 @@
 [submodule ".zsh/syntax-highlighting"]
 	path = .zsh/syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule ".zsh/zsh-autosuggestions"]
+	path = .zsh/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
 [submodule ".vim/pack/minpac/opt/minpac"]
 	path = .vim/pack/minpac/opt/minpac
 	url = https://github.com/k-takata/minpac.git
