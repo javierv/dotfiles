@@ -55,7 +55,7 @@ class DotfilesInstaller
 
   def install_vim_plugins
     puts "Installing vim plugins"
-    %x[vim +BundleInstall +qall]
+    %x[vim +Pack +qall]
   end
 
   def install_gems

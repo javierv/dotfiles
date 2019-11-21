@@ -4,6 +4,7 @@ set nocompatible
 " ######## PLUGINS ########
 packadd minpac
 call minpac#init()
+command! Pack call minpac#update()
 
 " Edición de texto.
 call minpac#add("tpope/vim-repeat")
