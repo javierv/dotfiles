@@ -382,6 +382,7 @@ nm <Leader>u :UndotreeToggle<CR>
 
 " FZF
 nnoremap <Leader>f :<C-u>FZF<CR>
+nnoremap <Leader>h :History:<CR>
 
 " Smartwords
 nmap w  <Plug>(smartword-w)
