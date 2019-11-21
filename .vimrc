@@ -59,7 +59,6 @@ call minpac#add("junegunn/fzf.vim")
 
 " Aspecto.
 call minpac#add("Lokaltog/vim-powerline")
-call minpac#add("gerw/vim-HiLinkTrace")
 call minpac#add("junegunn/goyo.vim")
 
 " Sustituciones.
