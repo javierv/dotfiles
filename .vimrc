@@ -1,81 +1,74 @@
 " Quita el modo compatible con vi
 set nocompatible
 
-
 " ######## PLUGINS ########
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
+packadd minpac
+call minpac#init()
 
 " Edición de texto.
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'godlygeek/tabular'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'vim-scripts/ReplaceWithRegister'
-Bundle 'tommcdo/vim-exchange'
+call minpac#add("tpope/vim-repeat")
+call minpac#add("tpope/vim-surround")
+call minpac#add("godlygeek/tabular")
+call minpac#add("tpope/vim-unimpaired")
+call minpac#add("vim-scripts/ReplaceWithRegister")
+call minpac#add("tommcdo/vim-exchange")
 
 " Navegación por conjuntos de texto.
-Bundle 'kana/vim-textobj-user'
-Bundle 'kana/vim-textobj-lastpat'
-Bundle 'kana/vim-textobj-indent'
-Bundle 'kana/vim-textobj-entire'
-Bundle 'kana/vim-textobj-line'
-Bundle 'wellle/targets.vim'
-Bundle 'lucapette/vim-textobj-underscore'
-Bundle 'kana/vim-smartword'
-Bundle 'nelstrom/vim-visual-star-search'
+call minpac#add("kana/vim-textobj-user")
+call minpac#add("kana/vim-textobj-lastpat")
+call minpac#add("kana/vim-textobj-indent")
+call minpac#add("kana/vim-textobj-entire")
+call minpac#add("kana/vim-textobj-line")
+call minpac#add("wellle/targets.vim")
+call minpac#add("lucapette/vim-textobj-underscore")
+call minpac#add("kana/vim-smartword")
+call minpac#add("nelstrom/vim-visual-star-search")
 
 " Ruby.
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-projectionist'
-Bundle 'tpope/vim-rake'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-endwise'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'skwp/vim-rspec'
+call minpac#add("vim-ruby/vim-ruby")
+call minpac#add("tpope/vim-projectionist")
+call minpac#add("tpope/vim-rake")
+call minpac#add("tpope/vim-bundler")
+call minpac#add("tpope/vim-rails")
+call minpac#add("tpope/vim-endwise")
+call minpac#add("nelstrom/vim-textobj-rubyblock")
+call minpac#add("skwp/vim-rspec")
 
 " Git.
-Bundle 'gregsexton/gitv'
-Bundle 'tpope/vim-fugitive'
+call minpac#add("gregsexton/gitv")
+call minpac#add("tpope/vim-fugitive")
 
 " Otros lenguages.
-Bundle 'thomd/vim-jasmine'
-Bundle 'elixir-editors/vim-elixir'
+call minpac#add("thomd/vim-jasmine")
+call minpac#add("elixir-editors/vim-elixir")
 
 " Apoyo a varios lenguajes.
-Bundle 'tomtom/tcomment_vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'msanders/snipmate.vim'
-Bundle 'AndrewRadev/splitjoin.vim'
-Bundle 'AndrewRadev/switch.vim'
-Bundle 'AndrewRadev/sideways.vim'
+call minpac#add("tomtom/tcomment_vim")
+call minpac#add("scrooloose/syntastic")
+call minpac#add("msanders/snipmate.vim")
+call minpac#add("AndrewRadev/splitjoin.vim")
+call minpac#add("AndrewRadev/switch.vim")
+call minpac#add("AndrewRadev/sideways.vim")
 
 " Integración con la shell
-Bundle 'rking/ag.vim'
-Bundle 'epeli/slimux'
+call minpac#add("rking/ag.vim")
+call minpac#add("epeli/slimux")
 
 " Aspecto.
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'gerw/vim-HiLinkTrace'
-Bundle 'junegunn/goyo.vim'
+call minpac#add("Lokaltog/vim-powerline")
+call minpac#add("gerw/vim-HiLinkTrace")
+call minpac#add("junegunn/goyo.vim")
 
 " Sustituciones.
-Bundle 'tpope/vim-abolish'
+call minpac#add("tpope/vim-abolish")
 
 " Autocompletado
-Bundle 'ervandew/supertab'
+call minpac#add("ervandew/supertab")
 
 " Varios.
-Bundle 'mbbill/undotree'
-Bundle 'vim-scripts/bufkill.vim'
-Bundle 'tpope/vim-rsi'
-
-" Plugins no controlados por Vundle
-let extra_paths=substitute(glob('~/.vim/bundle-custom/*'), '\n', ',', 'g')
-exec 'set runtimepath+=' . extra_paths
+call minpac#add("mbbill/undotree")
+call minpac#add("vim-scripts/bufkill.vim")
+call minpac#add("tpope/vim-rsi")
 
 " Aumenta el poder del % para if-else-end y más cosas (activa por defecto).
 runtime macros/matchit.vim
