@@ -93,7 +93,7 @@ private
   end
 
   def development_gems
-    %w[spin gem-ctags pry hookup rbenv-rehash launchy better_errors binding_of_caller]
+    %w[gem-ctags pry hookup rbenv-rehash launchy better_errors binding_of_caller]
   end
 end
 
