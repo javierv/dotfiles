@@ -15,13 +15,13 @@ main = do
         setWMName "LG3D"
         spawn "ibus-daemon -drx"
         spawn "xkbset sticky -twokey -latchlock"
-    , workspaces = ["1:dev", "2:mail", "3:misc", "4:music"]
+    , workspaces = ["dev", "mail", "misc", "music"]
     , manageHook = ((className =? "krunner") >>= return . not --> manageHook kde4Config)
         <+> (kdeOverride --> doFloat)
         <+> (composeOne [ isFullscreen -?> doFullFloat])
         <+> (composeAll . concat $ [
-          [className   =? c --> doShift "2:mail" | c <- ["Thunderbird"]]
-        , [className   =? c --> doShift "1:dev" | c <- ["Firefox"]]
+          [className   =? c --> doShift "dev" | c <- ["Firefox"]]
+        , [className   =? c --> doShift "mail" | c <- ["Thunderbird"]]
         , [className   =? c --> doFloat | c <- ["plasmashell"]]
         , [className   =? c --> doFloat | c <- ["pcsx"]]
         , [className   =? c --> doFloat | c <- ["gsdx"]]
