@@ -136,6 +136,7 @@ zstyle ':completion:*:*:kill:*' insert-ids single
 setopt nonomatch # Avoid "no matches found" with scp, sudo, and probably others.
 stty -ixon # No controlar flujo con ctrl-s y ctrl-q.
 autoload -U zmv zcalc
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
 
 # Suggest packages to install
 if [[ -s '/etc/zsh_command_not_found' ]]; then

@@ -51,8 +51,10 @@ call minpac#add("AndrewRadev/switch.vim")
 call minpac#add("AndrewRadev/sideways.vim")
 
 " Integración con la shell
-call minpac#add("rking/ag.vim")
+call minpac#add("jremmen/vim-ripgrep")
 call minpac#add("epeli/slimux")
+call minpac#add("junegunn/fzf")
+call minpac#add("junegunn/fzf.vim")
 
 " Aspecto.
 call minpac#add("Lokaltog/vim-powerline")
@@ -378,6 +380,9 @@ let g:syntastic_javascript_eslint_exe = "eslint --quiet"
 " Undotree
 nm <Leader>u :UndotreeToggle<CR>
 
+" FZF
+nnoremap <Leader>f :<C-u>FZF<CR>
+
 " Smartwords
 nmap w  <Plug>(smartword-w)
 nmap b  <Plug>(smartword-b)
@@ -388,8 +393,9 @@ vmap b  <Plug>(smartword-b)
 vmap e  <Plug>(smartword-e)
 vmap ge <Plug>(smartword-ge)
 
-" Ag
-nmap <Leader>a :Ag! -S<Space>
+" Búsquedas en ficheros
+nmap <Leader>a :Rg<Space>
+let g:rg_command = "rg --vimgrep --hidden -S"
 
 " Rspec.
 let g:RspecBin = 'rspec'
@@ -415,7 +421,7 @@ autocmd FileType *
 
 " ####### VARIOS #######
 " Firma con la canción que se está escuchando
-nm <Leader>f G:r!nowplaying<cr>O--<Esc>0k
+nm <Leader>j G:r!nowplaying<cr>O--<Esc>0k
 
 " Repetir la última orden
 nm <Leader>ñ @:
