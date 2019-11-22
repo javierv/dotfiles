@@ -33,7 +33,6 @@ call minpac#add("tpope/vim-bundler")
 call minpac#add("tpope/vim-rails")
 call minpac#add("tpope/vim-endwise")
 call minpac#add("nelstrom/vim-textobj-rubyblock")
-call minpac#add("skwp/vim-rspec")
 
 " Git.
 call minpac#add("gregsexton/gitv")
@@ -405,8 +404,6 @@ nmap <Leader>a :GrepperRg<space>
 nmap gs <plug>(GrepperOperator)
 vmap gs <plug>(GrepperOperator)
 
-" Rspec.
-let g:RspecBin = 'rspec'
 
 " Switch
 let g:switch_mapping = "-"
