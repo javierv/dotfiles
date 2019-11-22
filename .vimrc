@@ -54,6 +54,7 @@ call minpac#add("mhinz/vim-grepper")
 call minpac#add("epeli/slimux")
 call minpac#add("junegunn/fzf")
 call minpac#add("junegunn/fzf.vim")
+call minpac#add("janko/vim-test")
 
 " Aspecto.
 call minpac#add("Lokaltog/vim-powerline")
@@ -342,15 +343,20 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 " Simplifica localizar el directorio del fichero actual.
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
 cnoremap %<Tab> <C-R>=expand('%:p')<CR>
-cnoremap %l<Tab> <C-R>=expand('%:p').':'.line('.')<CR>
 
 nm <Leader>sc :SlimuxShellRun
-nm <Leader>sp :SlimuxShellPrompt<CR>
 nm <Leader>sr :SlimuxREPLSendLine<CR>
 vm <Leader>sr :SlimuxREPLSendSelection<CR>
-" Ejecutar test con spin
-nm <Leader>ss :SlimuxShellRun rspec %<Tab><CR>
-nm <Leader>sl :SlimuxShellRun rspec %l<Tab><CR>
+
+" Ejecutar tests
+let test#strategy = "slimux"
+let test#preserve_screen = 1
+let test#ruby#bundle_exec = 0
+let test#ruby#use_binstubs = 0
+nmap <Leader>sl :TestNearest<CR>
+nmap <Leader>ss :TestFile<CR>
+nmap <Leader>sp :TestLast<CR>
+nmap <Leader>sv :TestVisit<CR>
 
 " ###### OTROS PLUGINS ######
 " Tabularize
