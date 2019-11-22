@@ -22,9 +22,15 @@ keycode  25 = w W w W quotedbl Lstroke lstroke Lstroke w W lstroke Lstroke
 
 ! Altgr+D genera \.
 keycode  40 = d D d D backslash ETH backslash ETH d D backslash ETH
-
 ! Altgr+F genera /.
 keycode  41 = f F f F slash ordfeminine slash ordfeminine f F slash ordfeminine
+
+! Corchetes con Altgr+J y Altgr+K
+keycode  44 = j J j J bracketleft dead_horn dead_hook dead_horn j J dead_hook dead_horn j J dead_hook dead_horn
+keycode  45 = k K k K bracketright ampersand kra ampersand k K kra ampersand k K kra ampersand
+! Llaves con Altgr+C y Altgr+V
+keycode  54 = c C c C braceleft copyright cent copyright c C cent copyright c C cent copyright
+keycode  55 = v V v V braceright leftsinglequotemark leftdoublequotemark leftsinglequotemark v V leftdoublequotemark leftsinglequotemark v V leftdoublequotemark leftsinglequotemark
 
 ! Recuperamos menor y mayor que, que no van con teclado español.
 keycode 172 = less greater less greater bar brokenbar bar
