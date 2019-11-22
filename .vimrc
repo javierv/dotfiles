@@ -51,7 +51,7 @@ call minpac#add("AndrewRadev/splitjoin.vim")
 call minpac#add("AndrewRadev/switch.vim")
 
 " Integración con la shell
-call minpac#add("jremmen/vim-ripgrep")
+call minpac#add("mhinz/vim-grepper")
 call minpac#add("epeli/slimux")
 call minpac#add("junegunn/fzf")
 call minpac#add("junegunn/fzf.vim")
@@ -394,8 +394,16 @@ vmap e  <Plug>(smartword-e)
 vmap ge <Plug>(smartword-ge)
 
 " Búsquedas en ficheros
-nmap <Leader>a :Rg<Space>
-let g:rg_command = "rg --vimgrep --hidden -S"
+let g:grepper = {}
+let g:grepper.tools = ["rg"]
+let g:grepper.highlight = 1
+let g:grepper.stop = 50000
+let g:grepper.rg = { "grepprg": "rg --vimgrep --hidden -S" }
+nmap <Leader>a :GrepperRg<space>
+
+" Búsqueda del texto seleccionado
+nmap gs <plug>(GrepperOperator)
+vmap gs <plug>(GrepperOperator)
 
 " Rspec.
 let g:RspecBin = 'rspec'
