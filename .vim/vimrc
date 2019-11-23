@@ -202,11 +202,6 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " ###### NAVEGACIÓN ######
 " Navegación por líneas.
-" Atajos para navegar cuando las líneas están cortadas
-vnoremap <C-j> gj
-vnoremap <C-k> gk
-nnoremap <C-j> gj
-nnoremap <C-k> gk
 " 0 es más fácil de teclear que ^ en teclado español, así que intercambio sus
 " funciones
 nnoremap 0 ^
