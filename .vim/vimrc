@@ -234,6 +234,11 @@ nnoremap <C-L> <C-I>
 " teclear.
 nm <Leader><Space> <C-]>
 
+" Si el nombre del fichero incluye número de línea, vamos a esa línea con gf
+set isfname-=:
+nnoremap gf gF
+nnoremap gF gf
+
 " ###### BÚSQUEDAS ######
 " Resalta el primer resultado de la búsqueda según tecleas
 set incsearch
