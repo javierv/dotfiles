@@ -170,11 +170,12 @@ nm gV `[v`]
 
 
 " ###### PASAR DE UN MODO A OTRO ######
+" Pasar más fácilmente a la línea de órdenes
+nnoremap <Space> :
 " Salir con la ñ de modo visual.
 vm ñ <C-C>
 " Y lo mismo en la línea de órdenes
 cm ñ <C-C>
-
 
 " ###### ABRIR, CERRAR Y GUARDAR ######
 " Grabar archivo tanto en modo normal como en edición
@@ -231,8 +232,7 @@ nnoremap <C-L> <C-I>
 
 " C-] en algunos terminales se interpreta como C-+ y además es difícil de
 " teclear.
-nm <Space> <C-]>
-
+nm <Leader><Space> <C-]>
 
 " ###### BÚSQUEDAS ######
 " Resalta el primer resultado de la búsqueda según tecleas
