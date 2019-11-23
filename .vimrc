@@ -226,8 +226,6 @@ nm <S-tab> <C-W>W
 " y abajo en vez de arriba
 set splitright
 set splitbelow
-" Navegación entre buffers
-nm <C-N> :bn<CR>
 " Editar el buffer que se editaba justo antes de cambiar al actual
 nm <C-P> :e #<CR>
 
