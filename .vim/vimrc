@@ -334,7 +334,7 @@ nm <Leader>gh :Gitv -S
 nm <Leader>gS :call Gitv_OpenGitCommand("diff", 'vnew')<cr>
 " Cierra los buffers de fugitive automáticamente.
 autocmd BufReadPost fugitive://* set bufhidden=delete
-
+set tags^=.git/tags
 
 " ##### INTEGRACIÓN CON TMUX #####
 " Simplifica localizar el directorio del fichero actual.
