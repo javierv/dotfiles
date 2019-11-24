@@ -12,6 +12,10 @@
   d = diff
   l = log
   sh = stash
+  f = fetch
+  p = pull
+  fo = fetch origin
+  po = pull origin
 [color]
   branch = true
   diff = true
