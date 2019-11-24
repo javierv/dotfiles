@@ -197,6 +197,7 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " Cerrar quickfix y loclist
 autocmd FileType qf nm <buffer> q :q<CR>
+nm <Leader>bl :lclose<CR>
 
 " ###### NAVEGACIÓN ######
 " Navegación por líneas.
