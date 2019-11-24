@@ -215,7 +215,6 @@ nnoremap ` '
 
 " Navegación entre ventanas
 nm <tab> <C-W>w
-nm <S-tab> <C-W>W
 " Abrir ventanas a la derecha en vez de a la izquierda
 " y abajo en vez de arriba
 set splitright
