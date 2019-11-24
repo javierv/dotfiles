@@ -153,6 +153,11 @@ set nofoldenable
 
 
 " ####### COPIAR Y PEGAR ######
+" Autoindentado al pegar
+nnoremap <silent> <Plug>PasteIndent p=`]<C-o> :call repeat#set("\<Plug>PasteIndent", v:count)<CR>
+nmap p <Plug>PasteIndent
+nnoremap <silent> <Plug>PasteAbove P=`]<C-o> :call repeat#set("\<Plug>PasteAbove")<CR>
+nmap P <Plug>PasteAbove
 " Pegar a y del sistema
 vm <C-c> "+y
 nm <Leader>y "+gp
