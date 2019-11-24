@@ -195,6 +195,8 @@ set hidden
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
+" Cerrar quickfix y loclist
+autocmd FileType qf nm <buffer> q :q<CR>
 
 " ###### NAVEGACIÓN ######
 " Navegación por líneas.
