@@ -214,7 +214,7 @@ nnoremap ' `
 nnoremap ` '
 
 " Navegación entre ventanas
-nm <tab> <C-W>w
+nnoremap <tab> <C-W>w
 " Abrir ventanas a la derecha en vez de a la izquierda
 " y abajo en vez de arriba
 set splitright
@@ -224,9 +224,10 @@ nm <Leader><Leader> <C-^>
 
 " Saltos
 " Vim no distinque entre Ctrl-i y TAB, y uso tab para cambiar de ventana
-nnoremap <Leader>l <C-I>
+nnoremap <C-C> <C-I>
 " <C-O> lo coge tmux
-nnoremap <Leader>j <C-O>
+nnoremap <C-W> <C-O>
+nnoremap <Leader>w <C-W>
 
 " C-] en algunos terminales se interpreta como C-+ y además es difícil de
 " teclear.
