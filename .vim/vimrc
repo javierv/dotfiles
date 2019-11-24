@@ -436,9 +436,6 @@ nm <Leader>k G:r!nowplaying<cr>O--<Esc>0k
 " Repetir la última orden
 nm <Leader>ñ @:
 
-"refrescar vimdiff; se lía a menudo.
-nm <Leader>d :diffupdate<cr>
-
 " Insetar punto de ruptura en Ruby
 autocmd FileType eruby nm <buffer> <Leader>p O<% binding.pry %><Esc>
 autocmd FileType ruby nm <buffer> <Leader>p Obinding.pry<Esc>
