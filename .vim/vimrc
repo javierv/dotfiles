@@ -154,8 +154,8 @@ set nofoldenable
 
 " ####### COPIAR Y PEGAR ######
 " Pegar a y del sistema
-vm <C-y> "+y
-nm <C-y> "+gp
+vm <C-c> "+y
+nm <Leader>y "+gp
 inoremap <C-r> <C-r><C-p>
 " Pegar texto copiado en la línea de órdenes
 cm <C-v> <C-r>"
@@ -176,7 +176,6 @@ cm ñ <C-C>
 " ###### ABRIR, CERRAR Y GUARDAR ######
 " Grabar archivo tanto en modo normal como en edición
 nm ñ :w<CR>
-im <C-S> <Esc>:w<CR>a
 " Salir del buffer actual, dejando la ventana usando bufkill
 nm <Leader>z :BD<CR>
 " Cierra la ventana.
@@ -219,12 +218,13 @@ nm <S-tab> <C-W>W
 set splitright
 set splitbelow
 " Editar el buffer que se editaba justo antes de cambiar al actual
-nm <C-P> :e #<CR>
+nm <Leader>w :e #<CR>
 
 " Saltos
-" Vim no distinque entre Ctrl-i y TAB, uso tab para cambiar de ventana
-" y Ctrl-l en cambio no lo uso nunca.
-nnoremap <C-L> <C-I>
+" Vim no distinque entre Ctrl-i y TAB, y uso tab para cambiar de ventana
+nnoremap <Leader>l <C-I>
+" <C-O> lo coge tmux
+nnoremap <Leader>j <C-O>
 
 " C-] en algunos terminales se interpreta como C-+ y además es difícil de
 " teclear.
@@ -258,8 +258,8 @@ vnoremap & :&&<CR>
 
 " ##### LÍNEA DE ÓRDENES #####
 " Buscar el historial de forma incremental sin las flechas
-cnoremap <C-p> <Up>
-cnoremap <C-n> <Down>
+cnoremap <C-k> <Up>
+cnoremap <C-j> <Down>
 
 
 " #### INTRODUCIR CARACTERES Y LÍNEAS EN MODO NORMAL ####
@@ -423,7 +423,7 @@ autocmd FileType *
 
 " ####### VARIOS #######
 " Firma con la canción que se está escuchando
-nm <Leader>j G:r!nowplaying<cr>O--<Esc>0k
+nm <Leader>k G:r!nowplaying<cr>O--<Esc>0k
 
 " Repetir la última orden
 nm <Leader>ñ @:

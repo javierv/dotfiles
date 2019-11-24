@@ -9,9 +9,9 @@ source "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 
 ##### SHORTCUTS #####
-# Use regular shortcuts for substring matching
-bindkey -M emacs '\C-P' history-substring-search-up
-bindkey -M emacs '\C-N' history-substring-search-down
+# Use similar shortcuts for substring matching
+bindkey -M emacs '\C-K' history-substring-search-up
+# bindkey -M emacs '\C-J' history-substring-search-down # Can't bind C-J
 bindkey -M vicmd "k" history-substring-search-up
 bindkey -M vicmd "j" history-substring-search-down
 
