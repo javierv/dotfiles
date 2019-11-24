@@ -221,7 +221,7 @@ nm <S-tab> <C-W>W
 set splitright
 set splitbelow
 " Editar el buffer que se editaba justo antes de cambiar al actual
-nm <Leader>w :e #<CR>
+nm <Leader><Leader> <C-^>
 
 " Saltos
 " Vim no distinque entre Ctrl-i y TAB, y uso tab para cambiar de ventana
