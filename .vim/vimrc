@@ -103,10 +103,6 @@ set history=10000
 " las opciones que más me gustan son list:longest y list:full
 set wildmode=list:longest,full
 
-" Idioma y corrección ortográfica
-nm <silent> <leader>k :set spell!<CR>
-set spelllang=es_es
-
 " ###### ASPECTO ######
 if has("gui_running")
   " Elimina las barras de edición y los menús
