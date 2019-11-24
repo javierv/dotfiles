@@ -184,7 +184,7 @@ nm ñ :w<CR>
 " Salir del buffer actual, dejando la ventana usando bufkill
 nm <Leader>z :BD<CR>
 " Cierra la ventana.
-nm <Leader>q :q<CR>
+nm <Leader>d :q<CR>
 nm <Leader>x :x<CR>
 "Dejar sólo el buffer actual
 nm <Leader>o :on<CR>
