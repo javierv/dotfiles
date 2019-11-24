@@ -11,7 +11,7 @@ call minpac#add("tpope/vim-repeat")
 call minpac#add("tpope/vim-surround")
 call minpac#add("godlygeek/tabular")
 call minpac#add("tpope/vim-unimpaired")
-call minpac#add("vim-scripts/ReplaceWithRegister")
+call minpac#add("inkarkat/vim-ReplaceWithRegister")
 call minpac#add("tommcdo/vim-exchange")
 
 " Navegación por conjuntos de texto.
@@ -68,7 +68,7 @@ call minpac#add("ervandew/supertab")
 
 " Varios.
 call minpac#add("mbbill/undotree")
-call minpac#add("vim-scripts/bufkill.vim")
+call minpac#add("qpkorr/vim-bufkill")
 call minpac#add("tpope/vim-rsi")
 
 " Aumenta el poder del % para if-else-end y más cosas (activa por defecto).
