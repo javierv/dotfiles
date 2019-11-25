@@ -45,7 +45,6 @@ call minpac#add("elixir-editors/vim-elixir")
 " Apoyo a varios lenguajes.
 call minpac#add("tomtom/tcomment_vim")
 call minpac#add("scrooloose/syntastic")
-call minpac#add("msanders/snipmate.vim")
 call minpac#add("AndrewRadev/splitjoin.vim")
 call minpac#add("AndrewRadev/switch.vim")
 
@@ -65,6 +64,8 @@ call minpac#add("tpope/vim-abolish")
 
 " Autocompletado
 call minpac#add("ervandew/supertab")
+call minpac#add("SirVer/ultisnips")
+call minpac#add("honza/vim-snippets")
 
 " Varios.
 call minpac#add("mbbill/undotree")
