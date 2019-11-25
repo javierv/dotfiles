@@ -64,7 +64,6 @@ call minpac#add("tpope/vim-abolish")
 
 " Autocompletado
 call minpac#add("neoclide/coc.nvim", { "branch": "release"})
-call minpac#add("honza/vim-snippets")
 
 " Varios.
 call minpac#add("mbbill/undotree")
