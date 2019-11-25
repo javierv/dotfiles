@@ -14,6 +14,10 @@ if [ -d "$HOME/bin" ] ; then
   path+=("$HOME/bin")
 fi
 
+if [ -d "$HOME/n" ] ; then
+  export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
+fi
+
 if [[ -s "$HOME/.rbenv/bin/rbenv" ]]; then
   path=(
     "$HOME/.rbenv/bin"
