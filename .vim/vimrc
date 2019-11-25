@@ -171,9 +171,9 @@ nm gV `[v`]
 " Pasar más fácilmente a la línea de órdenes
 nnoremap <Space> :
 " Salir con la ñ de modo visual.
-vm ñ <C-C>
+vm ñ <C-c>
 " Y lo mismo en la línea de órdenes
-cm ñ <C-C>
+cm ñ <C-c>
 
 " ###### ABRIR, CERRAR Y GUARDAR ######
 " Grabar archivo tanto en modo normal como en edición
@@ -216,7 +216,7 @@ nnoremap ' `
 nnoremap ` '
 
 " Navegación entre ventanas
-nnoremap <tab> <C-W>w
+nnoremap <tab> <C-w>w
 " Abrir ventanas a la derecha en vez de a la izquierda
 " y abajo en vez de arriba
 set splitright
@@ -226,10 +226,10 @@ nm <Leader><Leader> <C-^>
 
 " Saltos
 " Vim no distinque entre Ctrl-i y TAB, y uso tab para cambiar de ventana
-nnoremap <C-C> <C-I>
-" <C-O> lo coge tmux
-nnoremap <C-W> <C-O>
-nnoremap <Leader>w <C-W>
+nnoremap <C-c> <C-i>
+" <C-o> lo coge tmux
+nnoremap <C-w> <C-o>
+nnoremap <Leader>w <C-w>
 
 " C-] en algunos terminales se interpreta como C-+ y además es difícil de
 " teclear.
@@ -272,8 +272,8 @@ cnoremap <C-j> <Down>
 function! RepeatChar(char, count)
   return repeat(a:char, a:count)
 endfunction
-nm s :<C-U>exec "normal i".RepeatChar(nr2char(getchar()), v:count1)<CR>
-nm S :<C-U>exec "normal a".RepeatChar(nr2char(getchar()), v:count1)<CR>
+nm s :<C-u>exec "normal i".RepeatChar(nr2char(getchar()), v:count1)<CR>
+nm S :<C-u>exec "normal a".RepeatChar(nr2char(getchar()), v:count1)<CR>
 
 " Introducir líneas en blanco antes y después de la actual en modo normal
 nmap <C-k> [<Space>
@@ -340,8 +340,8 @@ set tags^=.git/tags
 
 " ##### INTEGRACIÓN CON TMUX #####
 " Simplifica localizar el directorio del fichero actual.
-cnoremap %% <C-R>=expand('%:h').'/'<CR>
-cnoremap %<Tab> <C-R>=expand('%:p')<CR>
+cnoremap %% <C-r>=expand('%:h').'/'<CR>
+cnoremap %<Tab> <C-r>=expand('%:p')<CR>
 
 nm <Leader>sc :SlimuxShellRun
 nm <Leader>sr :SlimuxREPLSendLine<CR>
@@ -423,7 +423,7 @@ let g:SuperTabDefaultCompletionType = 'context'
 
 autocmd FileType *
  \ if &omnifunc != '' |
- \   call SuperTabChain(&omnifunc, "<C-P>") |
+ \   call SuperTabChain(&omnifunc, "<C-p>") |
  \ endif
 
 " ####### VARIOS #######
