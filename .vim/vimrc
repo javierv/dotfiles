@@ -63,9 +63,7 @@ call minpac#add("junegunn/goyo.vim")
 call minpac#add("tpope/vim-abolish")
 
 " Autocompletado
-call minpac#add("Shadowsith/vim-ruby-autocomplete")
-call minpac#add("lifepillar/vim-mucomplete")
-call minpac#add("SirVer/ultisnips")
+call minpac#add("neoclide/coc.nvim", { "branch": "release"})
 call minpac#add("honza/vim-snippets")
 
 " Varios.
@@ -368,6 +366,30 @@ nmap <Leader>ss :TestFile<CR>
 nmap <Leader>sp :TestLast<CR>
 nmap <Leader>sv :TestVisit<CR>
 
+" ###### AUTOCOMPLETADO ######
+" Con la opción por defecto, los mensajes de diagnóstico dan problemas
+set updatetime=300
+" Fuera mensaje de |ins-completion-menu|
+set shortmess+=c
+
+" Mismos atajos que en la línea de órdenes
+inoremap <silent><expr> <C-j> pumvisible() ? "\<C-n>" : coc#refresh()
+inoremap <C-k> <C-p>
+
+" Tabulador saca menú, navega por él, completa snippets, o indenta, dependiendo del contexto
+inoremap <silent><expr> <tab>
+  \ pumvisible() ? "\<C-n>" :
+  \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+  \ <SID>check_back_space() ? "\<tab>" :
+  \ coc#refresh()
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Tabulador para pasar de un lugar clave de snippet a otro
+let g:coc_snippet_next = "<tab>"
+
 " ###### OTROS PLUGINS ######
 " Tabularize
 " (requiere tabular, pero si pongo esta condición, no funciona)
@@ -420,34 +442,12 @@ nmap <Leader>a :GrepperRg<space>
 nmap gs <plug>(GrepperOperator)
 vmap gs <plug>(GrepperOperator)
 
-
 " Switch
 let g:switch_mapping = "-"
 
 " Targets
 let g:targets_separators = ', . ; : + - = ~ _ * # | \ & $'
 let g:targets_pairs = '() {} [] <>'
-
-" Autocompletado
-" Quitamos todos los atajos que usen <Tab>
-let g:UltiSnipsExpandTrigger = "<C-1>"
-let g:UltiSnipsJumpForwardTrigger = "<C-2>"
-inoremap <C-3> <plug>(MUcompleteFwd)
-
-" Compatibilidad entre ruby-autocomplete y ultisnippets
-let g:ulti_expand_or_jump_res = 0
-fun! TryUltiSnips()
-  if !pumvisible()
-    call UltiSnips#ExpandSnippetOrJump()
-  endif
-  return ""
-endf
-fun! TryMUcomplete()
-  return g:ulti_expand_or_jump_res ? "" : "\<plug>(MUcompleteFwd)"
-endf
-inoremap <plug>(TryUlti) <c-r>=TryUltiSnips()<cr>
-imap <expr> <silent> <plug>(TryMU) TryMUcomplete()
-imap <expr> <silent> <tab> "\<plug>(TryUlti)\<plug>(TryMU)"
 
 " ####### VARIOS #######
 " Firma con la canción que se está escuchando
