@@ -63,7 +63,8 @@ call minpac#add("junegunn/goyo.vim")
 call minpac#add("tpope/vim-abolish")
 
 " Autocompletado
-call minpac#add("ervandew/supertab")
+call minpac#add("Shadowsith/vim-ruby-autocomplete")
+call minpac#add("lifepillar/vim-mucomplete")
 call minpac#add("SirVer/ultisnips")
 call minpac#add("honza/vim-snippets")
 
@@ -428,13 +429,25 @@ let g:targets_separators = ', . ; : + - = ~ _ * # | \ & $'
 let g:targets_pairs = '() {} [] <>'
 
 " Autocompletado
-let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
-let g:SuperTabDefaultCompletionType = 'context'
+" Quitamos todos los atajos que usen <Tab>
+let g:UltiSnipsExpandTrigger = "<C-1>"
+let g:UltiSnipsJumpForwardTrigger = "<C-2>"
+inoremap <C-3> <plug>(MUcompleteFwd)
 
-autocmd FileType *
- \ if &omnifunc != '' |
- \   call SuperTabChain(&omnifunc, "<C-p>") |
- \ endif
+" Compatibilidad entre ruby-autocomplete y ultisnippets
+let g:ulti_expand_or_jump_res = 0
+fun! TryUltiSnips()
+  if !pumvisible()
+    call UltiSnips#ExpandSnippetOrJump()
+  endif
+  return ""
+endf
+fun! TryMUcomplete()
+  return g:ulti_expand_or_jump_res ? "" : "\<plug>(MUcompleteFwd)"
+endf
+inoremap <plug>(TryUlti) <c-r>=TryUltiSnips()<cr>
+imap <expr> <silent> <plug>(TryMU) TryMUcomplete()
+imap <expr> <silent> <tab> "\<plug>(TryUlti)\<plug>(TryMU)"
 
 " ####### VARIOS #######
 " Firma con la canción que se está escuchando
