@@ -389,6 +389,9 @@ endfunction
 " Tabulador para pasar de un lugar clave de snippet a otro
 let g:coc_snippet_next = "<tab>"
 
+" Ir a la definición (AltGr+D)
+nmap \ <Plug>(coc-definition)
+
 " ###### OTROS PLUGINS ######
 " Tabularize
 " (requiere tabular, pero si pongo esta condición, no funciona)
