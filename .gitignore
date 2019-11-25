@@ -2,5 +2,7 @@
 .vim/.netrwhist
 tags
 .vim/spell/
+.vim/undo/
+.vim/sessions/
 .vim/pack/minpac/start/*
 .VimballRecord
