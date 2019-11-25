@@ -1,1 +1,0 @@
-syntax match InvalidTab /\t/

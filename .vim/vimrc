@@ -444,11 +444,12 @@ autocmd BufWinEnter * match TrailingWhitespace /\s\+$/
 autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match TrailingWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+autocmd BufEnter,WinEnter * call matchadd("InvalidTab", "\\t", -1)
 
 " Configuración local
 let fichero_configuracion_local='~/.vimrc.local'
 if filereadable(expand(fichero_configuracion_local))
-	exec 'source ' . fichero_configuracion_local
+  exec 'source ' . fichero_configuracion_local
 endif
 
 " Carga en 'arglist' los ficheros de la 'quickfix list'

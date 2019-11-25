@@ -86,7 +86,7 @@ fi
 
 ##### FILE EXTENSIONS #####
 for extension in jpg png jpeg gif; do
-	alias -s $extension=gwenview
+  alias -s $extension=gwenview
 done
 
 for extension in avi mp4 webm ogv mkv; do
