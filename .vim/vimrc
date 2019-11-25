@@ -155,9 +155,9 @@ nnoremap <silent> <Plug>PasteIndent p=`]<C-o> :call repeat#set("\<Plug>PasteInde
 nmap p <Plug>PasteIndent
 nnoremap <silent> <Plug>PasteAbove P=`]<C-o> :call repeat#set("\<Plug>PasteAbove")<CR>
 nmap P <Plug>PasteAbove
-" Pegar a y del sistema
-vm <C-c> "+y
-nm <Leader>y "+gp
+" Pegar a y del sistema con AltGr+c y AltGr+v
+vm { "+y
+nm } "+gp
 inoremap <C-r> <C-r><C-p>
 " Pegar texto copiado en la línea de órdenes
 cm <C-v> <C-r>"
