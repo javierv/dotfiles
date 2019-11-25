@@ -174,6 +174,8 @@ nnoremap <Space> :
 vm ñ <C-c>
 " Y lo mismo en la línea de órdenes
 cm ñ <C-c>
+" C-c genera InsertLeave
+inoremap <C-c> <Esc>
 
 " ###### ABRIR, CERRAR Y GUARDAR ######
 " Grabar archivo tanto en modo normal como en edición
