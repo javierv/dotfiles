@@ -123,9 +123,23 @@ colorscheme autumnriver
 syntax on
 filetype off
 filetype plugin indent on
-" Sintaxis con espacios
-autocmd FileType * setlocal ts=2 sts=2 sw=2 tw=0 expandtab
-autocmd FileType gitcommit set tw=72
+
+augroup usespaces
+  autocmd!
+  " Sintaxis con espacios
+  autocmd FileType * setlocal ts=2 sts=2 sw=2 tw=0 expandtab
+  autocmd FileType gitcommit set tw=72
+  " Resaltado de tabuladores
+  autocmd Filetype * if index(["help"], &ft) < 0
+                        \ | call matchadd("InvalidTab", "\\t", -1)
+                        \ | endif
+  " Identificar espacios al final de la línea
+  autocmd BufWinEnter * match TrailingWhitespace /\s\+$/
+  autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
+  autocmd InsertLeave * match TrailingWhitespace /\s\+$/
+  autocmd BufWinLeave * call clearmatches()
+augroup END
+
 
 " Incluye el título en la ventana (gvim lo hace automáticamente)
 set title
@@ -466,15 +480,6 @@ nm <Leader>ñ @:
 " Insetar punto de ruptura en Ruby
 autocmd FileType eruby nm <buffer> <Leader>p O<% binding.pry %><Esc>
 autocmd FileType ruby nm <buffer> <Leader>p Obinding.pry<Esc>
-
-" Identificar espacios al final de la línea
-autocmd BufWinEnter * match TrailingWhitespace /\s\+$/
-autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match TrailingWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-autocmd Filetype * if index(["help"], &ft) < 0
-                      \ | call matchadd("InvalidTab", "\\t", -1)
-                      \ | endif
 
 " Configuración local
 let fichero_configuracion_local='~/.vimrc.local'
