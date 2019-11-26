@@ -293,27 +293,27 @@ autocmd FileType * setlocal formatoptions-=o
 
 
 " ######### RAILS #########
-nm <Leader>rm :Emodel<Space>
-nm <Leader>rc :Econtroller<Space>
-nm <Leader>rv :Eview<Space>
-nm <Leader>rh :Ehelper<Space>
-nm <Leader>rj :Ejavascript<Space>
-nm <Leader>rd :Edecorator<Space>
-nm <Leader>rp :Epdf<Space>
-nm <Leader>ra :A<cr>
-nm <Leader>rr :R<cr>
-nm <Leader>rl :Elib<Space>
-nm <Leader>rs :Espec<Space>
-nm <Leader>rsm :Espec models/
-nm <Leader>rsf :Espec features/
-nm <Leader>rss :Espec system/
-nm <Leader>rsl :Espec lib/
-nm <Leader>rsc :Espec controllers/
-nm <Leader>rsv :Espec views/
-nm <Leader>rf :Efactory<Space>
-nm <Leader>re :Eenvironment<Space>
-nm <Leader>ri :Einitializer<Space>
-nm <Leader>rt :Elocale<Space>
+nm <Leader>em :Emodel<Space>
+nm <Leader>ec :Econtroller<Space>
+nm <Leader>ev :Eview<Space>
+nm <Leader>eh :Ehelper<Space>
+nm <Leader>ej :Ejavascript<Space>
+nm <Leader>ed :Edecorator<Space>
+nm <Leader>ep :Epdf<Space>
+nm <Leader>ea :A<cr>
+nm <Leader>er :R<cr>
+nm <Leader>el :Elib<Space>
+nm <Leader>es :Espec<Space>
+nm <Leader>esm :Espec models/
+nm <Leader>esf :Espec features/
+nm <Leader>ess :Espec system/
+nm <Leader>esl :Espec lib/
+nm <Leader>esc :Espec controllers/
+nm <Leader>esv :Espec views/
+nm <Leader>ef :Efactory<Space>
+nm <Leader>ee :Eenvironment<Space>
+nm <Leader>ei :Einitializer<Space>
+nm <Leader>et :Elocale<Space>
 " Atajos para tipos de ficheros.
 let g:rails_projections = {
   \ "app/decorators/*_decorator.rb": { "command": "decorator" },
