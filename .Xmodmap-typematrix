@@ -25,6 +25,10 @@ keycode  40 = d D d D backslash ETH backslash ETH d D backslash ETH
 ! Altgr+F genera /.
 keycode  41 = f F f F slash ordfeminine slash ordfeminine f F slash ordfeminine
 
+! Paréntesis con Altgr+E y Altgr+R, dejando el € para Altgr+T
+keycode  26 = e E e E parenleft cent EuroSign cent e E EuroSign cent e E EuroSign cent
+keycode  27 = r R r R parenright registered paragraph registered r R
+keycode  28 = t T t T EuroSign Tslash tslash Tslash t T tslash Tslash t T tslash Tslash
 ! Corchetes con Altgr+J y Altgr+K
 keycode  44 = j J j J bracketleft dead_horn dead_hook dead_horn j J dead_hook dead_horn j J dead_hook dead_horn
 keycode  45 = k K k K bracketright ampersand kra ampersand k K kra ampersand k K kra ampersand
