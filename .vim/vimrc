@@ -174,9 +174,10 @@ nnoremap <silent> <Plug>PasteIndent p=`]<C-o> :call repeat#set("\<Plug>PasteInde
 nmap p <Plug>PasteIndent
 nnoremap <silent> <Plug>PasteAbove P=`]<C-o> :call repeat#set("\<Plug>PasteAbove")<CR>
 nmap P <Plug>PasteAbove
-" Pegar a y del sistema con AltGr+c y AltGr+v
-vm { "+y
-nm } "+gp
+" Pegar a y del sistema con C-c y C-w
+nnoremap <Leader>w <C-w>
+vm <C-c> "+y
+nm <C-w> "+gp
 inoremap <C-r> <C-r><C-p>
 " Pegar texto copiado en la línea de órdenes
 cm <C-v> <C-r>"
@@ -245,11 +246,10 @@ set splitbelow
 nm <Leader><Leader> <C-^>
 
 " Saltos
-" Vim no distinque entre Ctrl-i y TAB, y uso tab para cambiar de ventana
-nnoremap <C-c> <C-i>
 " <C-o> lo coge tmux
-nnoremap <C-w> <C-o>
-nnoremap <Leader>w <C-w>
+nnoremap { <C-o>
+" Vim no distinque entre Ctrl-i y TAB, y uso tab para cambiar de ventana
+nnoremap } <C-i>
 
 " C-] en algunos terminales se interpreta como C-+ y además es difícil de
 " teclear.
