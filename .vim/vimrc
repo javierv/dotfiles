@@ -472,7 +472,9 @@ autocmd BufWinEnter * match TrailingWhitespace /\s\+$/
 autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match TrailingWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
-autocmd BufEnter,WinEnter * call matchadd("InvalidTab", "\\t", -1)
+autocmd Filetype * if index(["help"], &ft) < 0
+                      \ | call matchadd("InvalidTab", "\\t", -1)
+                      \ | endif
 
 " Configuración local
 let fichero_configuracion_local='~/.vimrc.local'
