@@ -36,6 +36,13 @@ keycode  45 = k K k K bracketright ampersand kra ampersand k K kra ampersand k K
 keycode  54 = c C c C braceleft copyright cent copyright c C cent copyright c C cent copyright
 keycode  55 = v V v V braceright leftsinglequotemark leftdoublequotemark leftsinglequotemark v V leftdoublequotemark leftsinglequotemark v V leftdoublequotemark leftsinglequotemark
 
+! Interrogantes con Altgr+U y Altgr+I
+keycode  30 = u U u U questiondown uparrow downarrow uparrow u U downarrow uparrow u U downarrow uparrow
+keycode  31 = i I i I question idotless rightarrow idotless i I rightarrow idotless i I rightarrow idotless
+! Exclamaciones con Altgr+M y Altgr+,
+keycode  58 = m M m M exclamdown masculine mu masculine m M mu masculine m M mu masculine
+keycode  59 = comma semicolon comma semicolon exclam multiply horizconnector multiply comma semicolon horizconnector multiply comma semicolon horizconnector multiply
+
 ! Recuperamos menor y mayor que, que no van con teclado español.
 keycode 172 = less greater less greater bar brokenbar bar
 
