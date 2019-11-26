@@ -129,15 +129,13 @@ augroup usespaces
   " Sintaxis con espacios
   autocmd FileType * setlocal ts=2 sts=2 sw=2 tw=0 expandtab
   autocmd FileType gitcommit set tw=72
-  " Resaltado de tabuladores
-  autocmd Filetype * if index(["help"], &ft) < 0
-                        \ | call matchadd("InvalidTab", "\\t", -1)
-                        \ | endif
-  " Identificar espacios al final de la línea
-  autocmd BufWinEnter * match TrailingWhitespace /\s\+$/
-  autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
-  autocmd InsertLeave * match TrailingWhitespace /\s\+$/
-  autocmd BufWinLeave * call clearmatches()
+
+  " Resaltado de espacios a fin de línea y tabuladores
+  autocmd FileType * setlocal list listchars=trail:^,tab:^^
+  autocmd Filetype help setlocal nolist
+  " No mostrar espacios al final de la línea mientras se escribe
+  autocmd InsertEnter * setlocal nolist
+  autocmd InsertLeave * setlocal list
 augroup END
 
 

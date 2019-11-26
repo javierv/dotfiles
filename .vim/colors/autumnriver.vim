@@ -131,7 +131,5 @@ hi htmlUnderlineItalic      gui=UNDERLINE,ITALIC
 " Autocomplete menu
 hi Pmenu ctermbg=153 guibg=#afd7ff
 
-" Trailing whitespace
-hi TrailingWhitespace ctermbg=red guibg=red
-" Tabs that shouldn't be used for indentations
-hi InvalidTab ctermbg=208 guibg=#ff8700
+" Tabs and trailing whitespace
+hi SpecialKey ctermbg=red guibg=red
