@@ -171,9 +171,9 @@ set nofoldenable
 " ####### COPIAR Y PEGAR ######
 " Autoindentado al pegar
 nnoremap <silent> <Plug>PasteIndent p=`]<C-o> :call repeat#set("\<Plug>PasteIndent", v:count)<CR>
-nmap p <Plug>PasteIndent
 nnoremap <silent> <Plug>PasteAbove P=`]<C-o> :call repeat#set("\<Plug>PasteAbove")<CR>
-nmap P <Plug>PasteAbove
+autocmd FileType ruby nm <buffer> p <Plug>PasteIndent
+autocmd FileType ruby nm <buffer> P <Plug>PasteAbove
 " Pegar a y del sistema con C-c y C-w
 nnoremap <Leader>w <C-w>
 vm <C-c> "+y
