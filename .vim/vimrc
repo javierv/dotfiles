@@ -391,6 +391,11 @@ let g:coc_snippet_next = "<tab>"
 
 " Ir a la definición (AltGr+D)
 nmap \ <Plug>(coc-definition)
+" Usos de la palabra actual
+nm <Leader>re <Plug>(coc-references)
+" Refactorizaciones
+nm <Leader>rn <Plug>(coc-rename)
+nm <Leader>rf <Plug>(coc-refactor)
 
 " ###### OTROS PLUGINS ######
 " Tabularize

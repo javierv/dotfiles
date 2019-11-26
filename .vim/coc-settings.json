@@ -1,4 +1,7 @@
 {
   "suggest.autoTrigger": "none",
-  "suggest.keepCompleteopt": true
+  "suggest.keepCompleteopt": true,
+  "list.insertMappings": {
+    "<C-d>": "do:exit"
+  }
 }
