@@ -20,6 +20,9 @@ keycode 34 = grave asciicircum grave asciicircum bracketleft dead_abovering brac
 ! Altgr+W genera ".
 keycode  25 = w W w W quotedbl Lstroke lstroke Lstroke w W lstroke Lstroke
 
+! Altgr+S genera $
+keycode  39 = s S s S dollar section ssharp section s S ssharp section s S ssharp section
+
 ! Altgr+D genera _
 keycode  40 = d D d D underscore ETH backslash ETH d D backslash ETH
 
@@ -45,6 +48,14 @@ keycode  31 = i I i I question idotless rightarrow idotless i I rightarrow idotl
 ! Exclamaciones con Altgr+M y Altgr+,
 keycode  58 = m M m M exclamdown masculine mu masculine m M mu masculine m M mu masculine
 keycode  59 = comma semicolon comma semicolon exclam multiply horizconnector multiply comma semicolon horizconnector multiply comma semicolon horizconnector multiply
+
+! AltGr+O genera *
+keycode  32 = o O o O asterisk Oslash oslash Oslash o O oslash Oslash o O oslash Oslash
+! Altgr+L genera =
+keycode  46 = l L l L equal Lstroke lstroke Lstroke l L lstroke Lstroke l L lstroke Lstroke
+
+! El : se genera tanto con AltGr como con mayúscula
+keycode  60 = period colon period colon colon division periodcentered division period colon periodcentered division period colon periodcentered division
 
 ! Recuperamos menor y mayor que, que no van con teclado español.
 keycode 172 = less greater less greater bar brokenbar bar
