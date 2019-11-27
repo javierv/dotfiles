@@ -68,7 +68,7 @@ class DotfilesInstaller
       # Make a different prompt, so I know it's a different machine.
       %x[echo "PROMPT='%n@%m:%~> '" > #{destination_path('.zshrc.local')}]
       puts "Created .zshrc.local"
-    end 
+    end
   end
 
 private
@@ -85,7 +85,7 @@ private
   end
 
   def symlinked_files
-    %w[bin .inputrc .irbrc .pryrc .tmux.conf .vim .vimrc .Xmodmap .xmonad .zsh .zshenv .zshrc .git_template]
+    %w[bin .default_gems .inputrc .irbrc .pryrc .tmux.conf .vim .vimrc .Xmodmap .xmonad .zsh .zshenv .zshrc .git_template]
   end
 
   def absolute_path(file)
