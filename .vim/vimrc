@@ -198,8 +198,8 @@ cm ñ <C-c>
 inoremap <C-c> <Esc>
 
 " ###### ABRIR, CERRAR Y GUARDAR ######
-" Grabar archivo tanto en modo normal como en edición
-nm ñ :w<CR>
+" Grabar archivo en modo normal
+nm s :w<CR>
 " Salir del buffer actual, dejando la ventana usando bufkill
 nm <Leader>z :BD<CR>
 " Cierra la ventana.
@@ -292,7 +292,7 @@ cnoremap <C-j> <Down>
 function! RepeatChar(char, count)
   return repeat(a:char, a:count)
 endfunction
-nm s :<C-u>exec "normal i".RepeatChar(nr2char(getchar()), v:count1)<CR>
+nm ñ :<C-u>exec "normal i".RepeatChar(nr2char(getchar()), v:count1)<CR>
 nm S :<C-u>exec "normal a".RepeatChar(nr2char(getchar()), v:count1)<CR>
 
 " Introducir líneas en blanco antes y después de la actual en modo normal
