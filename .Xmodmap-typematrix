@@ -20,10 +20,13 @@ keycode 34 = grave asciicircum grave asciicircum bracketleft dead_abovering brac
 ! Altgr+W genera ".
 keycode  25 = w W w W quotedbl Lstroke lstroke Lstroke w W lstroke Lstroke
 
-! Altgr+D genera \.
-keycode  40 = d D d D backslash ETH backslash ETH d D backslash ETH
+! Altgr+D genera _
+keycode  40 = d D d D underscore ETH backslash ETH d D backslash ETH
+
 ! Altgr+F genera /.
 keycode  41 = f F f F slash ordfeminine slash ordfeminine f F slash ordfeminine
+! AltGr+G genera \
+keycode  42 = g G g G backslash ENG eng ENG g G eng ENG g G eng ENG
 
 ! Paréntesis con Altgr+E y Altgr+R, dejando el € para Altgr+T
 keycode  26 = e E e E parenleft cent EuroSign cent e E EuroSign cent e E EuroSign cent
