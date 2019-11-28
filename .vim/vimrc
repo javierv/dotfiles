@@ -131,7 +131,7 @@ augroup usespaces
   autocmd FileType gitcommit set tw=72
 
   " Resaltado de espacios a fin de línea y tabuladores
-  autocmd FileType * setlocal list listchars=trail:^,tab:^^
+  set list listchars=trail:^,tab:^^
   autocmd Filetype help setlocal nolist
   " No mostrar espacios al final de la línea mientras se escribe
   autocmd InsertEnter * setlocal nolist
