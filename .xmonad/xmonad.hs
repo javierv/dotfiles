@@ -8,18 +8,17 @@ import XMonad.Hooks.ManageHelpers
 import XMonad.Util.WindowProperties (getProp32s)
 import XMonad.Util.EZConfig(additionalKeysP)
 import XMonad.Util.EZConfig(additionalKeys)
+import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.EwmhDesktops
 
 main = do
-  xmonad $ kde4Config {
+  xmonad $ docks $ ewmh $ kde4Config {
       startupHook = do
         setWMName "LG3D"
         spawn "ibus-daemon -drx"
         spawn "xkbset sticky -twokey -latchlock"
     , workspaces = ["dev", "mail", "misc", "music"]
-    , manageHook = ((className =? "krunner") >>= return . not --> manageHook kde4Config)
-        <+> (kdeOverride --> doFloat)
-        <+> (composeOne [ isFullscreen -?> doFullFloat])
-        <+> (composeAll . concat $ [
+    , manageHook = composeAll . concat $ [
           [className   =? c --> doShift "dev" | c <- ["Firefox"]]
         , [className   =? c --> doShift "mail" | c <- ["Thunderbird"]]
         , [className   =? c --> doFloat | c <- ["plasmashell"]]
@@ -32,8 +31,9 @@ main = do
         , [className   =? c --> doFloat | c <- ["Yabause"]]
         , [className   =? c --> doFloat | c <- ["mupen64plus"]]
         , [className   =? c --> doIgnore | c <- ["stalonetray"]]
-        ])
+        ]
     , layoutHook = smartBorders (layoutHook kde4Config)
+    , handleEventHook = handleEventHook defaultConfig <+> fullscreenEventHook
     , focusedBorderColor = "#444444"
     }
     `additionalKeysP`
