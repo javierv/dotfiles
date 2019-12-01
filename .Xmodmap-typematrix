@@ -23,13 +23,15 @@ keycode  25 = w W w W quotedbl Lstroke lstroke Lstroke w W lstroke Lstroke
 ! Altgr+S genera $
 keycode  39 = s S s S dollar section ssharp section s S ssharp section s S ssharp section
 
-! Altgr+D genera _
-keycode  40 = d D d D underscore ETH backslash ETH d D backslash ETH
+! Mayúsculas+espacio genera _
+keycode  65 = space underscore space NoSymbol space space
 
+! Altgr+espacio genera \
+keycode  40 = d D d D backslash ETH backslash ETH d D backslash ETH
 ! Altgr+F genera /.
 keycode  41 = f F f F slash ordfeminine slash ordfeminine f F slash ordfeminine
-! AltGr+G genera \
-keycode  42 = g G g G backslash ENG eng ENG g G eng ENG g G eng ENG
+! AltGr+G genera |
+keycode  42 = g G g G bar ENG eng ENG g G eng ENG g G eng ENG
 
 ! Paréntesis con Altgr+E y Altgr+R, dejando el € para Altgr+T
 keycode  26 = e E e E parenleft cent EuroSign cent e E EuroSign cent e E EuroSign cent

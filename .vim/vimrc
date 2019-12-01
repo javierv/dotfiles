@@ -402,7 +402,7 @@ endfunction
 let g:coc_snippet_next = "<tab>"
 
 " Ir a la definición (AltGr+D)
-nmap _ <Plug>(coc-definition)
+nmap \ <Plug>(coc-definition)
 " Usos de la palabra actual
 nm <Leader>re <Plug>(coc-references)
 " Refactorizaciones
