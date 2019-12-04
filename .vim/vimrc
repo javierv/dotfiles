@@ -174,10 +174,9 @@ nnoremap <silent> <Plug>PasteIndent p=`]<C-o> :call repeat#set("\<Plug>PasteInde
 nnoremap <silent> <Plug>PasteAbove P=`]<C-o> :call repeat#set("\<Plug>PasteAbove")<CR>
 autocmd FileType ruby nm <buffer> p <Plug>PasteIndent
 autocmd FileType ruby nm <buffer> P <Plug>PasteAbove
-" Pegar a y del sistema con C-c y C-w
-nnoremap <Leader>w <C-w>
+" Pegar a y del sistema
 vm <C-c> "+y
-nm <C-w> "+gp
+nm <C-y> "+gp
 inoremap <C-r> <C-r><C-p>
 " Pegar texto copiado en la línea de órdenes
 cm <C-v> <C-r>"
@@ -198,8 +197,9 @@ cm ñ <C-c>
 inoremap <C-c> <Esc>
 
 " ###### ABRIR, CERRAR Y GUARDAR ######
-" Grabar archivo en modo normal
+" Grabar archivo tanto en modo normal como en edición
 nm s :w<CR>
+im <C-s> <Esc>:w<CR>a
 " Salir del buffer actual, dejando la ventana usando bufkill
 nm <Leader>z :BD<CR>
 " Cierra la ventana.
@@ -242,14 +242,14 @@ nnoremap <tab> <C-w>w
 " y abajo en vez de arriba
 set splitright
 set splitbelow
+" Navegación entre buffers
+nm <C-n> ]b
 " Editar el buffer que se editaba justo antes de cambiar al actual
 nm <Leader><Leader> <C-^>
 
 " Saltos
-" <C-o> lo coge tmux
-nnoremap ( <C-o>
 " Vim no distinque entre Ctrl-i y TAB, y uso tab para cambiar de ventana
-nnoremap ) <C-i>
+nnoremap <C-l> <C-i>
 
 " C-] en algunos terminales se interpreta como C-+ y además es difícil de
 " teclear.

@@ -39,15 +39,14 @@ main = do
     , focusedBorderColor = "#444444"
     }
     `additionalKeysP`
-    [ ("M-c", spawn "konsole")
+    [ ("M-s", spawn "konsole")
     , ("M-b", spawn "firefox")
-    , ("M-n", spawn "thunderbird")
-    , ("M-r", spawn "xmonad --restart")
-    , ("M-f", spawn "xsel | iconv -f UTF8 -t UTF16 | xvkbd -utf -file -")
+    , ("M-e", spawn "thunderbird")
     , ("M-w", spawn "xrandr | grep '900x1440+0+0 left' > /dev/null && xrandr --output VGA1 --rotate normal --mode 1440x900 || xrandr --output VGA1 --rotate left --mode 1440x900")
     , ("M-x", spawn "lyx")
-    , ("M-o", spawn "okular")
-    , ("M-d", spawn "dolphin")
+    , ("M-p", spawn "okular")
+    , ("M-r", spawn "krunner")
+    , ("M-g", spawn "dolphin")
     , ("M-<Return>", sendMessage NextLayout)
     , ("M-<Space>", windows W.focusDown)
     , ("M-<Backspace>", windows W.focusUp)
@@ -68,7 +67,7 @@ main = do
     , ((mod4Mask, xK_p), spawn "kquitapp5 plasmashell ; /usr/bin/plasmashell --shut-up ; /usr/bin/plasmashell")
     ]
     `removeKeysP`
-    [ "M-j", "M-k" ]
+    [ "M-j", "M-k", "M-n" ]
 
 kdeOverride :: Query Bool
 kdeOverride = ask >>= \w -> liftX $ do
