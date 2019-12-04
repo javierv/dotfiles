@@ -53,6 +53,7 @@ main = do
     , ("M-<Backspace>", windows W.focusUp)
     , ("M-m", windows $ W.greedyView "dev")
     , ("M-,", windows $ W.greedyView "mail")
+    , ("M-.", kill)
     ]
     `additionalKeys`
     [ ((mod4Mask, xK_c), spawn "mpc pause")
