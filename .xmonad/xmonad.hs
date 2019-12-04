@@ -8,8 +8,10 @@ import XMonad.Hooks.ManageHelpers
 import XMonad.Util.WindowProperties (getProp32s)
 import XMonad.Util.EZConfig(additionalKeysP)
 import XMonad.Util.EZConfig(additionalKeys)
+import XMonad.Util.EZConfig(removeKeysP)
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
+import qualified XMonad.StackSet as W
 
 main = do
   xmonad $ docks $ ewmh $ kde4Config {
@@ -46,6 +48,9 @@ main = do
     , ("M-x", spawn "lyx")
     , ("M-o", spawn "okular")
     , ("M-d", spawn "dolphin")
+    , ("M-<Return>", sendMessage NextLayout)
+    , ("M-<Space>", windows W.focusDown)
+    , ("M-<Backspace>", windows W.focusUp)
     ]
     `additionalKeys`
     [ ((mod4Mask, xK_c), spawn "mpc pause")
@@ -59,6 +64,8 @@ main = do
     , ((mod4Mask, xK_r), spawn "mpc update && mpc clear && mpc add / && mpc random on && mpc play")
     , ((mod4Mask, xK_p), spawn "kquitapp5 plasmashell ; /usr/bin/plasmashell --shut-up ; /usr/bin/plasmashell")
     ]
+    `removeKeysP`
+    [ "M-j", "M-k" ]
 
 kdeOverride :: Query Bool
 kdeOverride = ask >>= \w -> liftX $ do
