@@ -59,6 +59,9 @@ keycode  46 = l L l L equal Lstroke lstroke Lstroke l L lstroke Lstroke l L lstr
 ! El : se genera tanto con AltGr como con mayúscula
 keycode  60 = period colon period colon colon division periodcentered division period colon periodcentered division period colon periodcentered division
 
+keycode  17 = 0 parenleft 0 parenleft bracketleft trademark bracketleft trademark 0 parenleft bracketleft trademark 0 parenleft bracketleft trademark
+keycode  19 = 8 equal 8 equal braceright degree braceright degree 8 equal braceright degree 8 equal braceright degree
+
 ! Recuperamos menor y mayor que, que no van con teclado español.
 keycode 172 = less greater less greater bar brokenbar bar
 

@@ -54,7 +54,7 @@ main = do
     , ("M-a", spawn "mpc pause")
     , ("M-w", spawn "mpc play")
     , ("M-7", spawn "mpc prev")
-    , ("M-8", spawn "mpc next")
+    , ("M-0", spawn "mpc next")
     , ("M-<", spawn "mpc seek -10")
     , ("M-z", spawn "mpc seek +10")
     , ("M-+", spawn "mpc volume +5")
