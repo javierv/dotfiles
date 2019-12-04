@@ -7,7 +7,6 @@ import XMonad.Hooks.SetWMName
 import XMonad.Hooks.ManageHelpers
 import XMonad.Util.WindowProperties (getProp32s)
 import XMonad.Util.EZConfig(additionalKeysP)
-import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Util.EZConfig(removeKeysP)
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
@@ -42,7 +41,6 @@ main = do
     [ ("M-s", spawn "konsole")
     , ("M-b", spawn "firefox")
     , ("M-e", spawn "thunderbird")
-    , ("M-w", spawn "xrandr | grep '900x1440+0+0 left' > /dev/null && xrandr --output VGA1 --rotate normal --mode 1440x900 || xrandr --output VGA1 --rotate left --mode 1440x900")
     , ("M-x", spawn "lyx")
     , ("M-p", spawn "okular")
     , ("M-r", spawn "krunner")
@@ -53,17 +51,15 @@ main = do
     , ("M-m", windows $ W.greedyView "dev")
     , ("M-,", windows $ W.greedyView "mail")
     , ("M-.", kill)
-    ]
-    `additionalKeys`
-    [ ((mod4Mask, xK_c), spawn "mpc pause")
-    , ((mod4Mask, xK_b), spawn "mpc next")
-    , ((mod4Mask, xK_z), spawn "mpc prev")
-    , ((mod4Mask, xK_v), spawn "mpc play")
-    , ((mod4Mask, xK_l), spawn "mpc seek +10")
-    , ((mod4Mask, xK_h), spawn "mpc seek -10")
-    , ((mod4Mask, xK_plus), spawn "mpc volume +5")
-    , ((mod4Mask, xK_minus), spawn "mpc volume -5")
-    , ((mod4Mask, xK_r), spawn "mpc update && mpc clear && mpc add / && mpc random on && mpc play")
+    , ("M-a", spawn "mpc pause")
+    , ("M-w", spawn "mpc play")
+    , ("M-7", spawn "mpc prev")
+    , ("M-8", spawn "mpc next")
+    , ("M-<", spawn "mpc seek -10")
+    , ("M-z", spawn "mpc seek +10")
+    , ("M-+", spawn "mpc volume +5")
+    , ("M--", spawn "mpc volume -5")
+    , ("M-9", spawn "mpc update && mpc clear && mpc add / && mpc random on && mpc play")
     ]
     `removeKeysP`
     [ "M-j", "M-k", "M-n" ]
