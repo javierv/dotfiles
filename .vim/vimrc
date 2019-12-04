@@ -88,8 +88,7 @@ set noesckeys
 set nrformats=hex
 
 " La tecla leader por defecto es la \, que está muy lejos.
-let mapleader = ","
-noremap \ ,
+let mapleader = "\<Space>"
 
 " Por defecto sólo se recuerdan las últimas 20 órdenes. Subimos.
 set history=10000
@@ -188,7 +187,7 @@ nm gV `[v`]
 
 " ###### PASAR DE UN MODO A OTRO ######
 " Pasar más fácilmente a la línea de órdenes
-nnoremap <Space> :
+nnoremap , :
 " Salir con la ñ de modo visual.
 vm ñ <C-c>
 " Y lo mismo en la línea de órdenes
@@ -253,7 +252,7 @@ nnoremap <C-l> <C-i>
 
 " C-] en algunos terminales se interpreta como C-+ y además es difícil de
 " teclear.
-nm <Leader><Space> <C-]>
+nm <Leader>, <C-]>
 
 " Si el nombre del fichero incluye número de línea, vamos a esa línea con gf
 set isfname-=:
