@@ -200,7 +200,7 @@ inoremap <C-c> <Esc>
 nm s :w<CR>
 im <C-s> <Esc>:w<CR>a
 " Salir del buffer actual, dejando la ventana usando bufkill
-nm <Leader>z :BD<CR>
+nm <Leader>w :BD<CR>
 " Cierra la ventana.
 nm <Leader>d :q<CR>
 nm <Leader>x :x<CR>
