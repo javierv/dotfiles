@@ -469,7 +469,7 @@ let g:targets_pairs = '() {} [] <>'
 
 " ####### VARIOS #######
 " Firma con la canción que se está escuchando
-nm <Leader>k G:r!nowplaying<cr>O--<Esc>0k
+nm <Leader>p G:r!nowplaying<cr>O--<Esc>0k
 
 " Insetar punto de ruptura en Ruby
 autocmd FileType eruby nm <buffer> <Leader>p O<% binding.pry %><Esc>
