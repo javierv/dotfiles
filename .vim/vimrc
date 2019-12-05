@@ -296,6 +296,9 @@ nm S :<C-u>exec "normal a".RepeatChar(nr2char(getchar()), v:count1)<CR>
 " Introducir líneas en blanco antes y después de la actual en modo normal
 nmap <C-k> [<Space>
 nmap <C-j> ]<Space>
+" Subir y bajar la línea actual
+nmap <leader>k [e
+nmap <leader>j ]e
 
 " o y O no añaden comentario cuando se usan en línea con comentario
 autocmd FileType * setlocal formatoptions-=o
@@ -436,7 +439,7 @@ nm <Leader>u :UndotreeToggle<CR>
 " FZF
 nnoremap <Leader>f :<C-u>FZF<CR>
 nnoremap <Leader>h :History:<CR>
-nnoremap <Leader>j :Tags<CR>
+nnoremap <Leader>l :Tags<CR>
 
 " Smartwords
 nmap w  <Plug>(smartword-w)
