@@ -340,7 +340,7 @@ let g:rails_projections = {
 
 " ######## GIT ########
 " atajos para Git
-nm gs :Gstatus<cr>
+nm gs :tab Gstatus<cr>
 nm gc :Gcommit<cr>
 nm ga :Gcommit --amend<cr>
 nm gw :Gwrite<cr>
@@ -353,7 +353,7 @@ nm gl :Gitv!<cr>
 vm gl :Gitv!<cr>
 nm gv :Gitv<cr>
 nm gh :Gitv -S
-nm gS :call Gitv_OpenGitCommand("diff", 'vnew')<cr>
+nm gS :call Gitv_OpenGitCommand("diff", "tabedit")<cr>
 " Cierra los buffers de fugitive automáticamente.
 autocmd BufReadPost fugitive://* set bufhidden=delete
 set tags^=.git/tags
