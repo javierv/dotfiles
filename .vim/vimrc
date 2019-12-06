@@ -291,7 +291,8 @@ function! RepeatChar(char, count)
   return repeat(a:char, a:count)
 endfunction
 nm ñ :<C-u>exec "normal i".RepeatChar(nr2char(getchar()), v:count1)<CR>
-nm S :<C-u>exec "normal a".RepeatChar(nr2char(getchar()), v:count1)<CR>
+nm X :<C-u>exec "normal a".RepeatChar(nr2char(getchar()), v:count1)<CR>
+nnoremap <BS> X
 
 " Introducir líneas en blanco antes y después de la actual en modo normal
 nmap <C-k> [<Space>
@@ -473,6 +474,11 @@ nmap <Leader>a :GrepperRg<space>
 nmap K <plug>(GrepperOperator)
 nmap KK Kiw
 vmap K <plug>(GrepperOperator)
+
+" Splitjoin
+let g:splitjoin_join_mapping = "J"
+let g:splitjoin_split_mapping = "r\<cr>"
+nmap S r<cr>
 
 " Switch
 let g:switch_mapping = "-"
