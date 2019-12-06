@@ -66,7 +66,7 @@ call minpac#add("neoclide/coc.nvim", { "branch": "release"})
 
 " Varios.
 call minpac#add("mbbill/undotree")
-call minpac#add("qpkorr/vim-bufkill")
+call minpac#add("moll/vim-bbye")
 call minpac#add("tpope/vim-rsi")
 
 " Aumenta el poder del % para if-else-end y más cosas (activa por defecto).
@@ -198,8 +198,8 @@ inoremap <C-c> <Esc>
 " Grabar archivo tanto en modo normal como en edición
 nm s :w<CR>
 im <C-s> <Esc>:w<CR>a
-" Salir del buffer actual, dejando la ventana usando bufkill
-nm <Leader>w :BD<CR>
+" Salir del buffer actual, dejando la ventana
+nm <Leader>w :Bdelete<CR>
 " Cierra la ventana.
 nm <Leader>d :q<CR>
 nm <Leader>x :x<CR>
