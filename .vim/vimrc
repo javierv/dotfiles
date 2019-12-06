@@ -361,7 +361,7 @@ autocmd FileType floggraph nm <buffer> q gq
 cnoremap %% <C-r>=expand('%:h').'/'<CR>
 cnoremap %<Tab> <C-r>=expand('%:p')<CR>
 
-nm <Leader>sc :SlimuxShellRun
+nm <Leader>sc :SlimuxShellRun<space>
 nm <Leader>sr :SlimuxREPLSendLine<CR>
 vm <Leader>sr :SlimuxREPLSendSelection<CR>
 
