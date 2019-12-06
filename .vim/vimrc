@@ -34,7 +34,7 @@ call minpac#add("tpope/vim-endwise")
 call minpac#add("nelstrom/vim-textobj-rubyblock")
 
 " Git.
-call minpac#add("gregsexton/gitv")
+call minpac#add("rbong/vim-flog")
 call minpac#add("tpope/vim-fugitive")
 
 " Otros lenguages.
@@ -349,14 +349,15 @@ nm gd :Gdiff<cr>
 nm gD :diffoff!<cr><c-w>h:bd<cr>
 nm ge :Gedit<cr>
 nm gb :Gblame<cr>
-nm gl :Gitv!<cr>
-vm gl :Gitv!<cr>
-nm gv :Gitv<cr>
-nm gh :Gitv -S
+nm gl :Flogsplit -path=%<cr>
+vm gl :Flogsplit<cr>
+nm gv :Flog<cr>
+nm gh :Flog -patch-search=
 nm gS :call Gitv_OpenGitCommand("diff", "tabedit")<cr>
 " Cierra los buffers de fugitive automáticamente.
 autocmd BufReadPost fugitive://* set bufhidden=delete
 set tags^=.git/tags
+autocmd FileType floggraph nm <buffer> q gq
 
 " ##### INTEGRACIÓN CON TMUX #####
 " Simplifica localizar el directorio del fichero actual.
