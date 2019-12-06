@@ -246,8 +246,8 @@ nm <Leader><Leader> <C-^>
 nnoremap <C-l> <C-i>
 
 " C-] en algunos terminales se interpreta como C-+ y además es difícil de
-" teclear.
-nm <Leader>, <C-]>
+" teclear. _ es <S-space>, que no se se puede asignar directamente.
+nmap _ <C-]>
 
 " Si el nombre del fichero incluye número de línea, vamos a esa línea con gf
 set isfname-=:
@@ -399,8 +399,8 @@ endfunction
 " Tabulador para pasar de un lugar clave de snippet a otro
 let g:coc_snippet_next = "<tab>"
 
-" Ir a la definición (AltGr+D)
-nmap \ <Plug>(coc-definition)
+" Ir a la definición (<C-space>, que no se puede asignar directamente)
+nmap <nul> <Plug>(coc-definition)
 " Usos de la palabra actual
 nm <Leader>re <Plug>(coc-references)
 " Refactorizaciones
