@@ -470,6 +470,7 @@ nmap <Leader>a :GrepperRg<space>
 
 " Búsqueda del texto seleccionado
 nmap K <plug>(GrepperOperator)
+nmap KK Kiw
 vmap K <plug>(GrepperOperator)
 
 " Switch
