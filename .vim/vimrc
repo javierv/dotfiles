@@ -42,7 +42,7 @@ call minpac#add("thomd/vim-jasmine")
 call minpac#add("elixir-editors/vim-elixir")
 
 " Apoyo a varios lenguajes.
-call minpac#add("tomtom/tcomment_vim")
+call minpac#add("tpope/vim-commentary")
 call minpac#add("scrooloose/syntastic")
 call minpac#add("AndrewRadev/splitjoin.vim")
 call minpac#add("AndrewRadev/switch.vim")
@@ -424,7 +424,7 @@ vm <Leader>t, :Tabularize /,\zs<CR>
 autocmd FileType eruby let b:surround_45 = "<% \r %>" " 45 es el ASCII de -
 autocmd FileType eruby let b:surround_61 = "<%= \r %>" " 61 es el ASCII de =
 
-" Tcomment
+" Comentar código
 nm <Leader>c gcc
 vm <Leader>c gc
 
