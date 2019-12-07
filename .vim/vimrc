@@ -161,7 +161,6 @@ set ruler
 " Por defecto, no contrae las líneas cuando carga un nuevo buffer
 set nofoldenable
 
-
 " ####### COPIAR Y PEGAR ######
 " Autoindentado al pegar
 nnoremap <silent> <Plug>PasteIndent p=`]<C-o> :call repeat#set("\<Plug>PasteIndent", v:count)<CR>
@@ -169,6 +168,8 @@ nnoremap <silent> <Plug>PasteAbove P=`]<C-o> :call repeat#set("\<Plug>PasteAbove
 autocmd FileType ruby nm <buffer> p <Plug>PasteIndent
 autocmd FileType ruby nm <buffer> P <Plug>PasteAbove
 " Pegar a y del sistema
+nm Y "+y
+nm YY "+yy
 vm <C-c> "+y
 nm <C-p> "+gp
 inoremap <C-r> <C-r><C-p>
