@@ -170,7 +170,7 @@ autocmd FileType ruby nm <buffer> p <Plug>PasteIndent
 autocmd FileType ruby nm <buffer> P <Plug>PasteAbove
 " Pegar a y del sistema
 vm <C-c> "+y
-nm <C-y> "+gp
+nm <C-p> "+gp
 inoremap <C-r> <C-r><C-p>
 " Pegar texto copiado en la línea de órdenes
 cm <C-v> <C-r>"

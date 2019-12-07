@@ -42,7 +42,7 @@ main = do
     , ("M-b", spawn "firefox")
     , ("M-e", spawn "thunderbird")
     , ("M-x", spawn "lyx")
-    , ("M-p", spawn "okular")
+    , ("M-u", spawn "okular")
     , ("M-r", spawn "krunner")
     , ("M-g", spawn "dolphin")
     , ("M-<Return>", sendMessage NextLayout)
@@ -62,7 +62,7 @@ main = do
     , ("M-9", spawn "mpc update && mpc clear && mpc add / && mpc random on && mpc play")
     ]
     `removeKeysP`
-    [ "M-j", "M-k", "M-n" ]
+    [ "M-j", "M-k", "M-n", "M-p" ]
 
 kdeOverride :: Query Bool
 kdeOverride = ask >>= \w -> liftX $ do
