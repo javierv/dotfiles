@@ -231,6 +231,13 @@ vnoremap ^ 0
 nnoremap ' `
 nnoremap ` '
 
+" Navegación por métodos
+nmap { [m
+nmap } ]m
+" Pero no en archivos de texto normal
+autocmd Filetype text,help,gitcommit,mail,markdown nnoremap <buffer> { {
+autocmd Filetype text,help,gitcommit,mail,markdown nnoremap <buffer> } }
+
 " Navegación entre ventanas
 nnoremap <tab> <C-w>w
 " Abrir ventanas a la derecha en vez de a la izquierda
