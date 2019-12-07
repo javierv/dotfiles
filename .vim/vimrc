@@ -335,6 +335,8 @@ let g:rails_projections = {
   \ "spec/factories/*.rb": {"command": "factory"},
   \ "spec/requests/support/*.rb": {"command": "support"}}
 
+" Bundler
+nm <Leader>b :Bopen<Space>
 
 " ######## GIT ########
 " atajos para Git
