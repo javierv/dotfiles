@@ -196,10 +196,10 @@ inoremap <C-c> <Esc>
 nmap s :w<CR>
 imap <C-s> <Esc>:w<CR>a
 " Salir del buffer actual, dejando la ventana
-nmap <Leader>w :Bdelete<CR>
+nmap <Leader>d :Bdelete<CR>
 " Cierra la ventana.
-nmap <Leader>d :q<CR>
-nmap <Leader>x :x<CR>
+nnoremap - q
+nmap q :q<CR>
 "Dejar sólo el buffer actual
 nmap <Leader>o :on<CR>
 " Abrir ficheros
@@ -214,7 +214,6 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " Cerrar quickfix y loclist
-autocmd FileType qf nmap <buffer> q :q<CR>
 nmap <Leader>c :lclose<CR>:cclose<CR>
 
 " ###### NAVEGACIÓN ######
@@ -507,7 +506,7 @@ let g:splitjoin_split_mapping = "r\<cr>"
 nmap S r<cr>
 
 " Switch
-let g:switch_mapping = "-"
+let g:switch_mapping = "\<leader>w"
 
 " Targets
 let g:targets_separators = ', . ; : + - = ~ _ * # | \ & $'
