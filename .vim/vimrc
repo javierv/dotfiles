@@ -122,7 +122,10 @@ augroup usespaces
   autocmd!
   " Sintaxis con espacios
   autocmd FileType * setlocal ts=2 sts=2 sw=2 tw=0 expandtab
+
+  " Mensajes de git con límite a 72 caracteres
   autocmd FileType gitcommit set tw=72
+  autocmd FileType gitcommit nnoremap <buffer> == gqap
 
   " Resaltado de espacios a fin de línea y tabuladores
   set list listchars=trail:^,tab:^^
