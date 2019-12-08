@@ -163,8 +163,8 @@ set nofoldenable
 
 " ####### COPIAR Y PEGAR ######
 " Autoindentado al pegar
-nnoremap <silent> <Plug>PasteIndent p=`]<C-o> :call repeat#set("\<Plug>PasteIndent", v:count)<CR>
-nnoremap <silent> <Plug>PasteAbove P=`]<C-o> :call repeat#set("\<Plug>PasteAbove")<CR>
+nnoremap <silent> <Plug>PasteIndent p=`]<C-o> :call repeat#set("\<Plug>PasteIndent", v:count)<cr>
+nnoremap <silent> <Plug>PasteAbove P=`]<C-o> :call repeat#set("\<Plug>PasteAbove")<cr>
 autocmd FileType ruby nmap <buffer> p <Plug>PasteIndent
 autocmd FileType ruby nmap <buffer> P <Plug>PasteAbove
 " Pegar a y del sistema
@@ -193,17 +193,17 @@ inoremap <C-c> <Esc>
 
 " ###### ABRIR, CERRAR Y GUARDAR ######
 " Grabar archivo tanto en modo normal como en edición
-nmap s :w<CR>
-imap <C-s> <Esc>:w<CR>a
+nmap s :w<cr>
+imap <C-s> <Esc>:w<cr>a
 " Salir del buffer actual, dejando la ventana
-nmap <Leader>d :Bdelete<CR>
+nmap <Leader>d :Bdelete<cr>
 " Cierra la ventana.
 nnoremap - q
-nmap q :q<CR>
+nmap q :q<cr>
 "Dejar sólo el buffer actual
-nmap <Leader>o :on<CR>
+nmap <Leader>o :on<cr>
 " Abrir ficheros
-nmap <Leader>v :vsplit<CR>
+nmap <Leader>v :vsplit<cr>
 "
 " Recupera la línea del fichero en la que estaba la última vez que se editó
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
@@ -214,7 +214,7 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " Cerrar quickfix y loclist
-nmap <Leader>c :lclose<CR>:cclose<CR>
+nmap <Leader>c :lclose<cr>:cclose<cr>
 
 " ###### NAVEGACIÓN ######
 " Navegación por líneas.
@@ -290,7 +290,7 @@ set incsearch
 set hlsearch
 " Quita el resaltado de las coincidencias (lo vuelve a poner en la siguiente
 " búsqueda)
-nmap ç :nohlsearch<CR>
+nmap ç :nohlsearch<cr>
 " No diferencia buscar mayúsculas y minúsculas salvo que se escriba alguna
 " mayúscula set ignorecase
 set ignorecase
@@ -300,8 +300,8 @@ nnoremap / /\V
 
 " ##### SUSTITUCIONES #####
 " Repetir la última sustutición conserva los modificadores (:help &)
-nnoremap & :&&<CR>
-vnoremap & :&&<CR>
+nnoremap & :&&<cr>
+vnoremap & :&&<cr>
 
 
 " ##### LÍNEA DE ÓRDENES #####
@@ -387,22 +387,22 @@ autocmd FileType floggraph nmap <buffer> q gq
 
 " ##### INTEGRACIÓN CON TMUX #####
 " Simplifica localizar el directorio del fichero actual.
-cnoremap %% <C-r>=expand('%:h').'/'<CR>
-cnoremap %<Tab> <C-r>=expand('%:p')<CR>
+cnoremap %% <C-r>=expand('%:h').'/'<cr>
+cnoremap %<Tab> <C-r>=expand('%:p')<cr>
 
 nmap <Leader>sc :SlimuxShellRun<space>
-nmap <Leader>sr :SlimuxREPLSendLine<CR>
-vmap <Leader>sr :SlimuxREPLSendSelection<CR>
+nmap <Leader>sr :SlimuxREPLSendLine<cr>
+vmap <Leader>sr :SlimuxREPLSendSelection<cr>
 
 " Ejecutar tests
 let test#strategy = "slimux"
 let test#preserve_screen = 1
 let test#ruby#bundle_exec = 0
 let test#ruby#use_binstubs = 0
-nmap <Leader>sl :TestNearest<CR>
-nmap <Leader>ss :TestFile<CR>
-nmap <Leader>sp :TestLast<CR>
-nmap <Leader>sv :TestVisit<CR>
+nmap <Leader>sl :TestNearest<cr>
+nmap <Leader>ss :TestFile<cr>
+nmap <Leader>sp :TestLast<cr>
+nmap <Leader>sv :TestVisit<cr>
 
 " ###### AUTOCOMPLETADO ######
 " Con la opción por defecto, los mensajes de diagnóstico dan problemas
@@ -417,7 +417,7 @@ inoremap <C-k> <C-p>
 " Tabulador saca menú, navega por él, completa snippets, o indenta, dependiendo del contexto
 inoremap <silent><expr> <tab>
   \ pumvisible() ? "\<C-n>" :
-  \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+  \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<cr>" :
   \ <SID>check_back_space() ? "\<tab>" :
   \ coc#refresh()
 function! s:check_back_space() abort
@@ -439,12 +439,12 @@ nmap <Leader>rf <Plug>(coc-refactor)
 " ###### OTROS PLUGINS ######
 " Tabularize
 " (requiere tabular, pero si pongo esta condición, no funciona)
-nmap <Leader>t> :Tabularize /=><CR>
-vmap <Leader>t> :Tabularize /=><CR>
-nmap <Leader>t: :Tabularize /:\zs<CR>
-vmap <Leader>t: :Tabularize /:\zs<CR>
-nmap <Leader>t, :Tabularize /,\zs<CR>
-vmap <Leader>t, :Tabularize /,\zs<CR>
+nmap <Leader>t> :Tabularize /=><cr>
+vmap <Leader>t> :Tabularize /=><cr>
+nmap <Leader>t: :Tabularize /:\zs<cr>
+vmap <Leader>t: :Tabularize /:\zs<cr>
+nmap <Leader>t, :Tabularize /,\zs<cr>
+vmap <Leader>t, :Tabularize /,\zs<cr>
 
 " Surround con ERB
 autocmd FileType eruby let b:surround_45 = "<% \r %>" " 45 es el ASCII de -
@@ -470,12 +470,12 @@ let g:syntastic_javascript_checkers = ["eslint"]
 let g:syntastic_javascript_eslint_exe = "eslint --quiet"
 
 " Undotree
-nmap <leader>u :UndotreeToggle<CR>
+nmap <leader>u :UndotreeToggle<cr>
 
 " FZF
-nnoremap <Leader>f :<C-u>FZF<CR>
-nnoremap <Leader>h :History:<CR>
-nnoremap <Leader>l :Tags<CR>
+nnoremap <Leader>f :<C-u>FZF<cr>
+nnoremap <Leader>h :History:<cr>
+nnoremap <Leader>l :Tags<cr>
 
 " Smartwords
 nmap w <Plug>(smartword-w)
