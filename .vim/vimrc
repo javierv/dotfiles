@@ -225,10 +225,9 @@ nnoremap ^ 0
 vnoremap 0 ^
 vnoremap ^ 0
 
-" Marcas
-" ' es más útil que ` porque te lleva también a la columna, no sólo a la línea
-nnoremap ' `
-nnoremap ` '
+" Ir a marcas
+" ` es más útil que ' porque te lleva también a la columna, no sólo a la línea
+nnoremap ñ `
 
 " Navegación por métodos
 nmap { [m
@@ -313,9 +312,7 @@ cnoremap <C-j> <Down>
 function! RepeatChar(char, count)
   return repeat(a:char, a:count)
 endfunction
-nm ñ :<C-u>exec "normal i".RepeatChar(nr2char(getchar()), v:count1)<CR>
-nm X :<C-u>exec "normal a".RepeatChar(nr2char(getchar()), v:count1)<CR>
-nnoremap <BS> X
+nm <bs> :<C-u>exec "normal i".RepeatChar(nr2char(getchar()), v:count1)<CR>
 
 " Introducir líneas en blanco antes y después de la actual en modo normal
 nmap <C-k> [<Space>
