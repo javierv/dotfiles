@@ -165,45 +165,45 @@ set nofoldenable
 " Autoindentado al pegar
 nnoremap <silent> <Plug>PasteIndent p=`]<C-o> :call repeat#set("\<Plug>PasteIndent", v:count)<CR>
 nnoremap <silent> <Plug>PasteAbove P=`]<C-o> :call repeat#set("\<Plug>PasteAbove")<CR>
-autocmd FileType ruby nm <buffer> p <Plug>PasteIndent
-autocmd FileType ruby nm <buffer> P <Plug>PasteAbove
+autocmd FileType ruby nmap <buffer> p <Plug>PasteIndent
+autocmd FileType ruby nmap <buffer> P <Plug>PasteAbove
 " Pegar a y del sistema
-nm Y "+y
-nm YY "+yy
-vm <C-c> "+y
-nm <C-p> "+gp
+nmap Y "+y
+nmap YY "+yy
+vmap <C-c> "+y
+nmap <C-p> "+gp
 inoremap <C-r> <C-r><C-p>
 " Pegar texto copiado en la línea de órdenes
-cm <C-v> <C-r>"
-im <C-v> <C-r>"
+cmap <C-v> <C-r>"
+imap <C-v> <C-r>"
 
 " Seleccionar el último texto copiado o pegado
-nm gV `[v`]
+nmap gV `[v`]
 
 
 " ###### PASAR DE UN MODO A OTRO ######
 " Pasar más fácilmente a la línea de órdenes
 nnoremap , :
 " Salir con la ñ de modo visual.
-vm ñ <C-c>
+vmap ñ <C-c>
 " Y lo mismo en la línea de órdenes
-cm ñ <C-c>
+cmap ñ <C-c>
 " C-c genera InsertLeave
 inoremap <C-c> <Esc>
 
 " ###### ABRIR, CERRAR Y GUARDAR ######
 " Grabar archivo tanto en modo normal como en edición
-nm s :w<CR>
-im <C-s> <Esc>:w<CR>a
+nmap s :w<CR>
+imap <C-s> <Esc>:w<CR>a
 " Salir del buffer actual, dejando la ventana
-nm <Leader>w :Bdelete<CR>
+nmap <Leader>w :Bdelete<CR>
 " Cierra la ventana.
-nm <Leader>d :q<CR>
-nm <Leader>x :x<CR>
+nmap <Leader>d :q<CR>
+nmap <Leader>x :x<CR>
 "Dejar sólo el buffer actual
-nm <Leader>o :on<CR>
+nmap <Leader>o :on<CR>
 " Abrir ficheros
-nm <Leader>v :vsplit<CR>
+nmap <Leader>v :vsplit<CR>
 "
 " Recupera la línea del fichero en la que estaba la última vez que se editó
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
@@ -214,8 +214,8 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " Cerrar quickfix y loclist
-autocmd FileType qf nm <buffer> q :q<CR>
-nm <Leader>c :lclose<CR>:cclose<CR>
+autocmd FileType qf nmap <buffer> q :q<CR>
+nmap <Leader>c :lclose<CR>:cclose<CR>
 
 " ###### NAVEGACIÓN ######
 " Navegación por líneas.
@@ -245,9 +245,9 @@ nnoremap <tab> <C-w>w
 set splitright
 set splitbelow
 " Navegación entre buffers
-nm <C-n> ]b
+nmap <C-n> ]b
 " Editar el buffer que se editaba justo antes de cambiar al actual
-nm <Leader><Leader> <C-^>
+nmap <Leader><Leader> <C-^>
 " Anterior y siguiente de quickfix y loclist
 function! PrevInList()
   if get(getloclist(0, {'winid':0}), 'winid', 0)
@@ -289,7 +289,7 @@ set incsearch
 set hlsearch
 " Quita el resaltado de las coincidencias (lo vuelve a poner en la siguiente
 " búsqueda)
-nm ç :nohlsearch<CR>
+nmap ç :nohlsearch<CR>
 " No diferencia buscar mayúsculas y minúsculas salvo que se escriba alguna
 " mayúscula set ignorecase
 set ignorecase
@@ -330,27 +330,27 @@ autocmd FileType * setlocal formatoptions-=o
 
 
 " ######### RAILS #########
-nm <Leader>em :Emodel<Space>
-nm <Leader>ec :Econtroller<Space>
-nm <Leader>ev :Eview<Space>
-nm <Leader>eh :Ehelper<Space>
-nm <Leader>ej :Ejavascript<Space>
-nm <Leader>ed :Edecorator<Space>
-nm <Leader>ep :Epdf<Space>
-nm <Leader>ea :A<cr>
-nm <Leader>er :R<cr>
-nm <Leader>el :Elib<Space>
-nm <Leader>es :Espec<Space>
-nm <Leader>esm :Espec models/
-nm <Leader>esf :Espec features/
-nm <Leader>ess :Espec system/
-nm <Leader>esl :Espec lib/
-nm <Leader>esc :Espec controllers/
-nm <Leader>esv :Espec views/
-nm <Leader>ef :Efactory<Space>
-nm <Leader>ee :Eenvironment<Space>
-nm <Leader>ei :Einitializer<Space>
-nm <Leader>et :Elocale<Space>
+nmap <Leader>em :Emodel<Space>
+nmap <Leader>ec :Econtroller<Space>
+nmap <Leader>ev :Eview<Space>
+nmap <Leader>eh :Ehelper<Space>
+nmap <Leader>ej :Ejavascript<Space>
+nmap <Leader>ed :Edecorator<Space>
+nmap <Leader>ep :Epdf<Space>
+nmap <Leader>ea :A<cr>
+nmap <Leader>er :R<cr>
+nmap <Leader>el :Elib<Space>
+nmap <Leader>es :Espec<Space>
+nmap <Leader>esm :Espec models/
+nmap <Leader>esf :Espec features/
+nmap <Leader>ess :Espec system/
+nmap <Leader>esl :Espec lib/
+nmap <Leader>esc :Espec controllers/
+nmap <Leader>esv :Espec views/
+nmap <Leader>ef :Efactory<Space>
+nmap <Leader>ee :Eenvironment<Space>
+nmap <Leader>ei :Einitializer<Space>
+nmap <Leader>et :Elocale<Space>
 " Atajos para tipos de ficheros.
 let g:rails_projections = {
   \ "app/decorators/*_decorator.rb": { "command": "decorator" },
@@ -363,37 +363,37 @@ let g:rails_projections = {
   \ "spec/requests/support/*.rb": {"command": "support"}}
 
 " Bundler
-nm <Leader>b :Bopen<Space>
+nmap <Leader>b :Bopen<Space>
 
 " ######## GIT ########
 " atajos para Git
-nm gs :tab Gstatus<cr>
-nm gc :Gcommit<cr>
-nm ga :Gcommit --amend<cr>
-nm gw :Gwrite<cr>
-nm gr :Gread<cr>
-nm gd :Gdiff<cr>
-nm gD :diffoff!<cr><c-w>h:bd<cr>
-nm ge :Gedit<cr>
-nm gb :Gblame<cr>
-nm gl :Flogsplit -path=%<cr>
-vm gl :Flogsplit<cr>
-nm gv :Flog<cr>
-nm gh :Flog -patch-search=
-nm gS :call Gitv_OpenGitCommand("diff", "tabedit")<cr>
+nmap gs :tab Gstatus<cr>
+nmap gc :Gcommit<cr>
+nmap ga :Gcommit --amend<cr>
+nmap gw :Gwrite<cr>
+nmap gr :Gread<cr>
+nmap gd :Gdiff<cr>
+nmap gD :diffoff!<cr><c-w>h:bd<cr>
+nmap ge :Gedit<cr>
+nmap gb :Gblame<cr>
+nmap gl :Flogsplit -path=%<cr>
+vmap gl :Flogsplit<cr>
+nmap gv :Flog<cr>
+nmap gh :Flog -patch-search=
+nmap gS :call Gitv_OpenGitCommand("diff", "tabedit")<cr>
 " Cierra los buffers de fugitive automáticamente.
 autocmd BufReadPost fugitive://* set bufhidden=delete
 set tags^=.git/tags
-autocmd FileType floggraph nm <buffer> q gq
+autocmd FileType floggraph nmap <buffer> q gq
 
 " ##### INTEGRACIÓN CON TMUX #####
 " Simplifica localizar el directorio del fichero actual.
 cnoremap %% <C-r>=expand('%:h').'/'<CR>
 cnoremap %<Tab> <C-r>=expand('%:p')<CR>
 
-nm <Leader>sc :SlimuxShellRun<space>
-nm <Leader>sr :SlimuxREPLSendLine<CR>
-vm <Leader>sr :SlimuxREPLSendSelection<CR>
+nmap <Leader>sc :SlimuxShellRun<space>
+nmap <Leader>sr :SlimuxREPLSendLine<CR>
+vmap <Leader>sr :SlimuxREPLSendSelection<CR>
 
 " Ejecutar tests
 let test#strategy = "slimux"
@@ -432,20 +432,20 @@ let g:coc_snippet_next = "<tab>"
 " Ir a la definición (<C-space>, que no se puede asignar directamente)
 nmap <nul> <Plug>(coc-definition)
 " Usos de la palabra actual
-nm <Leader>re <Plug>(coc-references)
+nmap <Leader>re <Plug>(coc-references)
 " Refactorizaciones
-nm <Leader>rn <Plug>(coc-rename)
-nm <Leader>rf <Plug>(coc-refactor)
+nmap <Leader>rn <Plug>(coc-rename)
+nmap <Leader>rf <Plug>(coc-refactor)
 
 " ###### OTROS PLUGINS ######
 " Tabularize
 " (requiere tabular, pero si pongo esta condición, no funciona)
-nm <Leader>t> :Tabularize /=><CR>
-vm <Leader>t> :Tabularize /=><CR>
-nm <Leader>t: :Tabularize /:\zs<CR>
-vm <Leader>t: :Tabularize /:\zs<CR>
-nm <Leader>t, :Tabularize /,\zs<CR>
-vm <Leader>t, :Tabularize /,\zs<CR>
+nmap <Leader>t> :Tabularize /=><CR>
+vmap <Leader>t> :Tabularize /=><CR>
+nmap <Leader>t: :Tabularize /:\zs<CR>
+vmap <Leader>t: :Tabularize /:\zs<CR>
+nmap <Leader>t, :Tabularize /,\zs<CR>
+vmap <Leader>t, :Tabularize /,\zs<CR>
 
 " Surround con ERB
 autocmd FileType eruby let b:surround_45 = "<% \r %>" " 45 es el ASCII de -
@@ -471,7 +471,7 @@ let g:syntastic_javascript_checkers = ["eslint"]
 let g:syntastic_javascript_eslint_exe = "eslint --quiet"
 
 " Undotree
-nm U :UndotreeToggle<CR>
+nmap U :UndotreeToggle<CR>
 
 " FZF
 nnoremap <Leader>f :<C-u>FZF<CR>
@@ -515,11 +515,11 @@ let g:targets_pairs = '() {} [] <>'
 
 " ####### VARIOS #######
 " Firma con la canción que se está escuchando
-nm <Leader>p G:r!nowplaying<cr>O--<Esc>0k
+nmap <Leader>p G:r!nowplaying<cr>O--<Esc>0k
 
 " Insetar punto de ruptura en Ruby
-autocmd FileType eruby nm <buffer> <Leader>p O<% binding.pry %><Esc>
-autocmd FileType ruby nm <buffer> <Leader>p Obinding.pry<Esc>
+autocmd FileType eruby nmap <buffer> <Leader>p O<% binding.pry %><Esc>
+autocmd FileType ruby nmap <buffer> <Leader>p Obinding.pry<Esc>
 
 " Configuración local
 let fichero_configuracion_local='~/.vimrc.local'
