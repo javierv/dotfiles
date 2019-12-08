@@ -280,6 +280,9 @@ set isfname-=:
 nnoremap gf gF
 nnoremap gF gf
 
+" Saltar por historial de cambios
+nnoremap U g;
+
 " ###### BÚSQUEDAS ######
 " Resalta el primer resultado de la búsqueda según tecleas
 set incsearch
@@ -467,7 +470,7 @@ let g:syntastic_javascript_checkers = ["eslint"]
 let g:syntastic_javascript_eslint_exe = "eslint --quiet"
 
 " Undotree
-nmap U :UndotreeToggle<CR>
+nmap <leader>u :UndotreeToggle<CR>
 
 " FZF
 nnoremap <Leader>f :<C-u>FZF<CR>
