@@ -25,11 +25,41 @@ keycode  94 = Shift_L NoSymbol Shift_L NoSymbol Shift_L
 ! Altgr+W genera ".
 keycode  25 = w W w W quotedbl Lstroke lstroke Lstroke w W lstroke Lstroke
 
-! Altgr+D genera \.
-keycode  40 = d D d D backslash ETH backslash ETH d D backslash ETH
+! Altgr+S genera '
+keycode  39 = s S s S apostrophe section ssharp section s S ssharp section s S ssharp section
 
+! Mayúsculas+espacio genera _
+keycode  65 = space underscore space NoSymbol space space
+
+! Altgr+D genera \
+keycode  40 = d D d D backslash ETH backslash ETH d D backslash ETH
 ! Altgr+F genera /.
 keycode  41 = f F f F slash ordfeminine slash ordfeminine f F slash ordfeminine
+! AltGr+A genera |
+keycode  38 = a A a A bar AE ae AE a A ae AE a A ae AE
+
+! Menor y mayor que con Altgr+E y Altgr+R, dejando el € para Altgr+T
+keycode  26 = e E e E less cent EuroSign cent e E EuroSign cent e E EuroSign cent
+keycode  27 = r R r R greater registered paragraph registered r R
+keycode  28 = t T t T EuroSign Tslash tslash Tslash t T tslash Tslash t T tslash Tslash
+! Corchetes con Altgr+J y Altgr+K
+keycode  44 = j J j J bracketleft dead_horn dead_hook dead_horn j J dead_hook dead_horn j J dead_hook dead_horn
+keycode  45 = k K k K bracketright ampersand kra ampersand k K kra ampersand k K kra ampersand
+! Llaves con Altgr+C y Altgr+V
+keycode  54 = c C c C braceleft copyright cent copyright c C cent copyright c C cent copyright
+keycode  55 = v V v V braceright leftsinglequotemark leftdoublequotemark leftsinglequotemark v V leftdoublequotemark leftsinglequotemark v V leftdoublequotemark leftsinglequotemark
+
+! Interrogantes con Altgr+U y Altgr+I
+keycode  30 = u U u U questiondown uparrow downarrow uparrow u U downarrow uparrow u U downarrow uparrow
+keycode  31 = i I i I question idotless rightarrow idotless i I rightarrow idotless i I rightarrow idotless
+! Exclamaciones con Altgr+M y Altgr+,
+keycode  58 = m M m M exclamdown masculine mu masculine m M mu masculine m M mu masculine
+keycode  59 = comma semicolon comma semicolon exclam multiply horizconnector multiply comma semicolon horizconnector multiply comma semicolon horizconnector multiply
+
+! AltGr+O genera *
+keycode  32 = o O o O asterisk Oslash oslash Oslash o O oslash Oslash o O oslash Oslash
+! Altgr+L genera =
+keycode  46 = l L l L equal Lstroke lstroke Lstroke l L lstroke Lstroke l L lstroke Lstroke
 
 !!!!! CARACTERES DEL ALEMÁN !!!!!
 ! Altgr+b genera ß.

@@ -293,7 +293,7 @@ set incsearch
 set hlsearch
 " Quita el resaltado de las coincidencias (lo vuelve a poner en la siguiente
 " búsqueda)
-nmap ç :nohlsearch<cr>
+nmap + :nohlsearch<cr>
 " No diferencia buscar mayúsculas y minúsculas salvo que se escriba alguna
 " mayúscula set ignorecase
 set ignorecase
