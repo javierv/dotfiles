@@ -51,18 +51,18 @@ main = do
     , ("M-m", windows $ W.greedyView "dev")
     , ("M-,", windows $ W.greedyView "mail")
     , ("M-.", kill)
-    , ("M-a", spawn "mpc pause")
-    , ("M-w", spawn "mpc play")
-    , ("M-7", spawn "mpc prev")
-    , ("M-8", spawn "mpc next")
-    , ("M-<", spawn "mpc seek -10")
-    , ("M-z", spawn "mpc seek +10")
-    , ("M-+", spawn "mpc volume +5")
-    , ("M--", spawn "mpc volume -5")
+    , ("<XF86AudioStop>", spawn "mpc pause")
+    , ("<XF86AudioPlay>", spawn "mpc play")
+    , ("<XF86AudioPrev>", spawn "mpc prev")
+    , ("<XF86AudioNext>", spawn "mpc next")
+    , ("<XF86AudioRaiseVolume>", spawn "mpc volume +5")
+    , ("<XF86AudioLowerVolume>", spawn "mpc volume -5")
+    , ("M--", spawn "mpc seek -10")
+    , ("M-+", spawn "mpc seek +10")
     , ("M-9", spawn "mpc update && mpc clear && mpc add / && mpc random on && mpc play")
     ]
     `removeKeysP`
-    [ "M-j", "M-k", "M-n", "M-p" ]
+    [ "M-j", "M-k", "M-n", "M-p", "M-w" ]
 
 kdeOverride :: Query Bool
 kdeOverride = ask >>= \w -> liftX $ do
