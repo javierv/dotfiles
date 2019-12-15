@@ -1,4 +1,6 @@
 .xmonad/*
+!.xmonad/xmonad.hs
+!.xmonad/xmobarrc
 .vim/.netrwhist
 tags
 .vim/spell/
