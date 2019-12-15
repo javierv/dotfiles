@@ -16,7 +16,7 @@ main = do
   xmonad $ docks $ ewmh $ kde4Config {
       startupHook = do
         setWMName "LG3D"
-        spawn "ibus-daemon -drx"
+        spawn "fcitx"
         spawn "xkbset sticky -twokey -latchlock"
     , workspaces = ["dev", "mail", "misc", "music"]
     , manageHook = composeAll . concat $ [
