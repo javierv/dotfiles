@@ -1,3 +1,12 @@
 !!!!! TECLAS AUXILIARES MUY USADAS !!!!!
 ! Una sola pulsación para `.
 keycode 34 = grave asciicircum grave asciicircum bracketleft dead_abovering bracketleft
+
+! Acentos con altgr, dejando el € para Altgr+t
+keycode  26 = e E e E eacute Eacute EuroSign
+keycode  30 = u U u U uacute Uacute downarrow
+keycode  31 = i I i I iacute Iacute rightarrow
+keycode  32 = o O o O oacute Oacute oslash
+keycode  38 = a A a A aacute Aacute ae
+
+keycode  28 = t T t T EuroSign Tslash tslash Tslash t T tslash Tslash t T tslash Tslash
