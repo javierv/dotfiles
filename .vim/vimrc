@@ -67,7 +67,6 @@ call minpac#add("neoclide/coc.nvim", { "branch": "release"})
 " Varios.
 call minpac#add("mbbill/undotree")
 call minpac#add("moll/vim-bbye")
-call minpac#add("tpope/vim-rsi")
 
 " Aumenta el poder del % para if-else-end y más cosas (activa por defecto).
 runtime macros/matchit.vim
@@ -312,6 +311,9 @@ vnoremap & :&&<cr>
 cnoremap <C-k> <Up>
 cnoremap <C-j> <Down>
 
+" Atajos de readline
+cnoremap <C-a> <Home>
+cnoremap <C-b> <Left>
 
 " #### INTRODUCIR CARACTERES Y LÍNEAS EN MODO NORMAL ####
 " Introducir un carácter antes/después del cursor y volver a modo normal
