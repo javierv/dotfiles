@@ -252,22 +252,23 @@ nmap <Leader><Leader> <C-^>
 function! PrevInList()
   if get(getloclist(0, {'winid':0}), 'winid', 0)
     exec "normal [l"
-  else
+  elseif len(getqflist())
     exec "normal [q"
+  else
+    exec "normal! ("
   endif
 endfunction
 function! NextInList()
   if get(getloclist(0, {'winid':0}), 'winid', 0)
     exec "normal ]l"
-  else
+  elseif len(getqflist())
     exec "normal ]q"
+  else
+    exec "normal! )"
   endif
 endfunction
 nmap ( :call PrevInList()<cr>
 nmap ) :call NextInList()<cr>
-" Pero no en archivos de texto normal
-autocmd Filetype text,help,gitcommit,mail,markdown nnoremap <buffer> ( (
-autocmd Filetype text,help,gitcommit,mail,markdown nnoremap <buffer> ) )
 
 " Saltos
 " Vim no distinque entre Ctrl-i y TAB, y uso tab para cambiar de ventana
