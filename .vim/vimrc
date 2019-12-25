@@ -164,11 +164,6 @@ set ruler
 set nofoldenable
 
 " ####### COPIAR Y PEGAR ######
-" Autoindentado al pegar
-nnoremap <silent> <Plug>PasteIndent p=`]<C-o> :call repeat#set("\<Plug>PasteIndent", v:count)<cr>
-nnoremap <silent> <Plug>PasteAbove P=`]<C-o> :call repeat#set("\<Plug>PasteAbove")<cr>
-autocmd FileType ruby nmap <buffer> p <Plug>PasteIndent
-autocmd FileType ruby nmap <buffer> P <Plug>PasteAbove
 " Pegar a y del sistema
 nmap Y "+y
 nmap YY "+yy
@@ -230,13 +225,6 @@ vnoremap ^ 0
 " Ir a marcas
 " ` es más útil que ' porque te lleva también a la columna, no sólo a la línea
 nnoremap ñ `
-
-" Navegación por métodos
-nmap { [m
-nmap } ]m
-" Pero no en archivos de texto normal
-autocmd Filetype text,help,gitcommit,mail,markdown nnoremap <buffer> { {
-autocmd Filetype text,help,gitcommit,mail,markdown nnoremap <buffer> } }
 
 " Navegación entre ventanas
 nnoremap <tab> <C-w>w
@@ -518,13 +506,27 @@ let g:switch_mapping = "\<leader>w"
 let g:targets_separators = ', . ; : + - = ~ _ * # | \ & $'
 let g:targets_pairs = '() {} [] <>'
 
+" ####### PROGRAMACIÓN #######
+autocmd Filetype ruby,javascript call SetProgrammingOptions()
+function SetProgrammingOptions()
+  " Navegación por métodos
+  nmap <buffer> { [m
+  nmap <buffer> } ]m
+
+  " Autoindentado al pegar
+  nnoremap <silent> <Plug>PasteIndent p=`]<C-o> :call repeat#set("\<Plug>PasteIndent", v:count)<cr>
+  nnoremap <silent> <Plug>PasteAbove P=`]<C-o> :call repeat#set("\<Plug>PasteAbove")<cr>
+  nmap <buffer> p <Plug>PasteIndent
+  nmap <buffer> P <Plug>PasteAbove
+endfunction
+
+" Insertar punto de ruptura
+autocmd FileType eruby nmap <buffer> <Leader>p O<% binding.pry %><Esc>
+autocmd FileType ruby nmap <buffer> <Leader>p Obinding.pry<Esc>
+
 " ####### VARIOS #######
 " Firma con la canción que se está escuchando
 nmap <Leader>p G:r!nowplaying<cr>O--<Esc>0k
-
-" Insetar punto de ruptura en Ruby
-autocmd FileType eruby nmap <buffer> <Leader>p O<% binding.pry %><Esc>
-autocmd FileType ruby nmap <buffer> <Leader>p Obinding.pry<Esc>
 
 " Configuración local
 let fichero_configuracion_local='~/.vimrc.local'
