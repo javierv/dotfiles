@@ -31,6 +31,7 @@ bindkey '\EOR' autosuggest-execute # F3
 quit() { exit }
 zle -N quit
 bindkey '^D' quit
+bindkey -M vicmd "q" quit
 
 ##### HISTORY #####
 # Lines of history to keep in ~/.zhistory:
