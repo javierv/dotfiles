@@ -3,7 +3,9 @@ $if mode=vi
   set keymap vi-insert
   "\C-k": history-search-backward
   "\C-j": history-search-forward
-  "ñ": vi-movement-mode
+  "\eOR": vi-movement-mode
+  "ñ": "["
+  "Ñ": "]"
   "í": "{"
   "ó": "}"
   "é": "="

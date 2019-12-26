@@ -524,6 +524,8 @@ function SetProgrammingChars()
   map! <buffer> ó }
   imap <buffer> ú \
   map! <buffer> é =
+  imap <buffer> ñ [
+  map! <buffer> Ñ ]
 endfunction
 
 " Mapas en modos de vim iguales que al programar
