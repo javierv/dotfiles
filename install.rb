@@ -85,7 +85,7 @@ private
   end
 
   def symlinked_files
-    %w[.asdfrc bin .default_gems .inputrc .irbrc .pryrc .tmux.conf .vim .vimrc .Xmodmap .xmonad .zsh .zshenv .zshrc .git_template]
+    %w[.asdfrc bin .default_gems .inputrc .irbrc .lesskey .pryrc .tmux.conf .vim .vimrc .Xmodmap .xmonad .zsh .zshenv .zshrc .git_template]
   end
 
   def absolute_path(file)
