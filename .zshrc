@@ -27,6 +27,11 @@ bindkey '^@' autosuggest-accept # Ctrl-space
 bindkey '^J' autosuggest-accept # Shift-enter
 bindkey '\EOR' autosuggest-execute # F3
 
+# Exit even if there's text on the current line
+quit() { exit }
+zle -N quit
+bindkey '^D' quit
+
 ##### HISTORY #####
 # Lines of history to keep in ~/.zhistory:
 HISTSIZE=1000000
