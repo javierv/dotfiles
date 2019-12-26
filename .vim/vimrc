@@ -430,12 +430,12 @@ nmap <Leader>rf <Plug>(coc-refactor)
 " ###### OTROS PLUGINS ######
 " Tabularize
 " (requiere tabular, pero si pongo esta condición, no funciona)
-nmap <Leader>t> :Tabularize /=><cr>
-vmap <Leader>t> :Tabularize /=><cr>
-nmap <Leader>t: :Tabularize /:\zs<cr>
-vmap <Leader>t: :Tabularize /:\zs<cr>
-nmap <Leader>t, :Tabularize /,\zs<cr>
-vmap <Leader>t, :Tabularize /,\zs<cr>
+nmap <Leader>l> :Tabularize /=><cr>
+vmap <Leader>l> :Tabularize /=><cr>
+nmap <Leader>l: :Tabularize /:\zs<cr>
+vmap <Leader>l: :Tabularize /:\zs<cr>
+nmap <Leader>l, :Tabularize /,\zs<cr>
+vmap <Leader>l, :Tabularize /,\zs<cr>
 
 " Surround con ERB
 autocmd FileType eruby let b:surround_45 = "<% \r %>" " 45 es el ASCII de -
@@ -466,7 +466,7 @@ nmap <leader>u :UndotreeToggle<cr>
 " FZF
 nnoremap <Leader>f :<C-u>FZF<cr>
 nnoremap <Leader>h :History:<cr>
-nnoremap <Leader>l :Tags<cr>
+nnoremap <Leader>t :Tags<cr>
 
 " Smartwords
 nmap w <Plug>(smartword-w)
