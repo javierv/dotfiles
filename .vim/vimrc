@@ -182,8 +182,8 @@ nnoremap , :
 vmap ñ <C-c>
 " Y lo mismo en la línea de órdenes
 cmap ñ <C-c>
-" C-c genera InsertLeave
-inoremap <C-c> <Esc>
+" Salir del modo inserción
+inoremap <F3> <Esc>
 
 " ###### ABRIR, CERRAR Y GUARDAR ######
 " Grabar archivo tanto en modo normal como en edición

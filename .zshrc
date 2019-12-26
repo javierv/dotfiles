@@ -22,8 +22,7 @@ bindkey 'ñ' vi-cmd-mode
 # Use shortcuts to handle autosuggestions
 bindkey '^@' autosuggest-accept # Ctrl-space
 bindkey '^J' autosuggest-accept # Shift-enter
-# Can't use Ctrl-Enter because my terminal doesn't distinguish it from Enter.
-bindkey '^F' autosuggest-execute
+bindkey '\EOR' autosuggest-execute # F3
 
 ##### HISTORY #####
 # Lines of history to keep in ~/.zhistory:
