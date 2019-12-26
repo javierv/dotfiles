@@ -223,6 +223,9 @@ vnoremap ^ 0
 " ` es más útil que ' porque te lleva también a la columna, no sólo a la línea
 nnoremap ñ `
 
+" Desplazamientos
+nnoremap <C-t> <C-f>
+
 " Navegación entre ventanas
 nnoremap <tab> <C-w>w
 " Abrir ventanas a la derecha en vez de a la izquierda
@@ -381,19 +384,19 @@ autocmd FileType floggraph nmap <buffer> q gq
 cnoremap %% <C-r>=expand('%:h').'/'<cr>
 cnoremap %<Tab> <C-r>=expand('%:p')<cr>
 
-nmap <Leader>sc :SlimuxShellRun<space>
-nmap <Leader>sr :SlimuxREPLSendLine<cr>
-vmap <Leader>sr :SlimuxREPLSendSelection<cr>
+nmap <Leader>tc :SlimuxShellRun<space>
+nmap <Leader>td :SlimuxREPLSendLine<cr>
+vmap <Leader>td :SlimuxREPLSendSelection<cr>
 
 " Ejecutar tests
 let test#strategy = "slimux"
 let test#preserve_screen = 1
 let test#ruby#bundle_exec = 0
 let test#ruby#use_binstubs = 0
-nmap <Leader>sl :TestNearest<cr>
-nmap <Leader>ss :TestFile<cr>
-nmap <Leader>sp :TestLast<cr>
-nmap <Leader>sv :TestVisit<cr>
+nmap <Leader>tl :TestNearest<cr>
+nmap <Leader>tt :TestFile<cr>
+nmap <Leader>tp :TestLast<cr>
+nmap <Leader>tv :TestVisit<cr>
 
 " ###### AUTOCOMPLETADO ######
 " Con la opción por defecto, los mensajes de diagnóstico dan problemas
@@ -462,9 +465,9 @@ let g:syntastic_javascript_eslint_exe = "eslint --quiet"
 nmap <leader>u :UndotreeToggle<cr>
 
 " FZF
-nnoremap <Leader>f :<C-u>FZF<cr>
+nnoremap <Leader>s :Files<cr>
 nnoremap <Leader>h :History:<cr>
-nnoremap <Leader>t :Tags<cr>
+nnoremap <Leader>g :Tags<cr>
 
 " Smartwords
 nmap w <Plug>(smartword-w)

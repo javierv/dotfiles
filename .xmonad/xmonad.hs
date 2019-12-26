@@ -38,13 +38,14 @@ main = do
     , focusedBorderColor = "#444444"
     }
     `additionalKeysP`
-    [ ("M-s", spawn "konsole")
+    [ ("M-t", spawn "konsole")
     , ("M-b", spawn "firefox")
     , ("M-e", spawn "thunderbird")
     , ("M-x", spawn "lyx")
     , ("M-u", spawn "okular")
     , ("M-r", spawn "krunner")
     , ("M-g", spawn "dolphin")
+    , ("M-f", withFocused $ windows . W.sink)
     , ("M-<Return>", sendMessage NextLayout)
     , ("M-<Space>", windows W.focusDown)
     , ("M-<Backspace>", windows W.focusUp)
