@@ -15,6 +15,9 @@ bindkey -M emacs '\C-n' history-substring-search-down # Can't bind C-j
 bindkey -M vicmd "k" history-substring-search-up
 bindkey -M vicmd "j" history-substring-search-down
 
+# Search history backwards
+bindkey "," history-incremental-search-backward
+
 # Use mixed emacs-vi keybindings
 bindkey -e
 bindkey 'ñ' vi-cmd-mode
