@@ -121,7 +121,7 @@ augroup usespaces
 
   " Mensajes de git con límite a 72 caracteres
   autocmd FileType gitcommit set tw=72
-  autocmd FileType gitcommit nnoremap <buffer> == gqap
+  autocmd FileType gitcommit nnoremap <buffer> é gqap
 
   " Resaltado de espacios a fin de línea y tabuladores
   set list listchars=trail:^,tab:^^
@@ -472,11 +472,11 @@ nnoremap <Leader>l :Tags<cr>
 nmap w <Plug>(smartword-w)
 nmap b <Plug>(smartword-b)
 nmap e <Plug>(smartword-e)
-nmap é <Plug>(smartword-ge)
+nmap ! <Plug>(smartword-ge)
 vmap w <Plug>(smartword-w)
 vmap b <Plug>(smartword-b)
 vmap e <Plug>(smartword-e)
-vmap é <Plug>(smartword-ge)
+vmap ! <Plug>(smartword-ge)
 
 " Búsquedas en ficheros
 let g:grepper = {}
@@ -516,6 +516,27 @@ function SetProgrammingOptions()
   nmap <buffer> p <Plug>PasteIndent
   nmap <buffer> P <Plug>PasteAbove
 endfunction
+
+autocmd Filetype css,scss,elixir,html,javascript,readline,ruby,eruby,tmux,zsh call SetProgrammingChars()
+function SetProgrammingChars()
+  " Al programar, los acentos se convierten en caracteres que solo se escriben al programar
+  map! <buffer> í {
+  map! <buffer> ó }
+  imap <buffer> ú \
+  map! <buffer> é =
+endfunction
+
+" Mapas en modos de vim iguales que al programar
+cmap ú \
+map í {
+map ó }
+
+autocmd Filetype * if index(["gitcommit"], &ft) < 0
+                      \| nmap é =
+                      \| endif
+autocmd Filetype * if index(["fugitive","gitcommit"], &ft) < 0
+                      \| nmap <buffer> éé ==
+                      \| endif
 
 " Insertar punto de ruptura
 autocmd FileType eruby nmap <buffer> <Leader>p O<% binding.pry %><Esc>
