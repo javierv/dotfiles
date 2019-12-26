@@ -259,9 +259,9 @@ nmap ) :call NextInList()<cr>
 " Vim no distinque entre Ctrl-i y TAB, y uso tab para cambiar de ventana
 nnoremap <C-l> <C-i>
 
-" C-] en algunos terminales se interpreta como C-+ y además es difícil de
-" teclear. _ es <S-space>, que no se se puede asignar directamente.
+" Ir a definición, con o sin coc
 nmap _ <C-]>
+autocmd FileType ruby nmap <buffer> _ <Plug>(coc-definition)
 
 " Si el nombre del fichero incluye número de línea, vamos a esa línea con gf
 set isfname-=:
@@ -419,8 +419,6 @@ endfunction
 " Tabulador para pasar de un lugar clave de snippet a otro
 let g:coc_snippet_next = "<tab>"
 
-" Ir a la definición (<C-space>, que no se puede asignar directamente)
-nmap <nul> <Plug>(coc-definition)
 " Usos de la palabra actual
 nmap <Leader>re <Plug>(coc-references)
 " Refactorizaciones
