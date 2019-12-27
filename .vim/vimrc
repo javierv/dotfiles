@@ -219,6 +219,9 @@ nnoremap ^ 0
 vnoremap 0 ^
 vnoremap ^ 0
 
+noremap m j
+noremap j m
+
 " Ir a marcas
 " ` es más útil que ' porque te lleva también a la columna, no sólo a la línea
 nnoremap ñ `
@@ -298,7 +301,7 @@ vnoremap & :&&<cr>
 " ##### LÍNEA DE ÓRDENES #####
 " Buscar el historial de forma incremental sin las flechas
 cnoremap <C-k> <Up>
-cnoremap <C-j> <Down>
+cnoremap <C-n> <Down>
 
 " Atajos de readline
 cnoremap <C-a> <Home>
@@ -313,10 +316,12 @@ nm <bs> :<C-u>exec "normal i".RepeatChar(nr2char(getchar()), v:count1)<CR>
 
 " Introducir líneas en blanco antes y después de la actual en modo normal
 nmap <C-k> [<Space>
-nmap <C-j> ]<Space>
+" C-m y <cr> son equivalentes en vim, así que no puedo asignar C-m en ciertos ficheros
+autocmd FileType * if index(['qf','floggraph','fugitive','fugitiveblame','git'], &ft) < 0 | nmap <buffer> <C-m> ]<Space>
+
 " Subir y bajar la línea actual
 nmap <leader>k [e
-nmap <leader>j ]e
+nmap <leader>m ]e
 
 " o y O no añaden comentario cuando se usan en línea con comentario
 autocmd FileType * setlocal formatoptions-=o
@@ -405,7 +410,7 @@ set updatetime=300
 set shortmess+=c
 
 " Mismos atajos que en la línea de órdenes
-inoremap <silent><expr> <C-j> pumvisible() ? "\<C-n>" : coc#refresh()
+inoremap <silent><expr> <C-n> pumvisible() ? "\<C-n>" : coc#refresh()
 inoremap <C-k> <C-p>
 
 " Tabulador saca menú, navega por él, completa snippets, o indenta, dependiendo del contexto

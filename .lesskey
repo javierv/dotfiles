@@ -1,2 +1,4 @@
 #command
 \177 back-screen
+m forw-line
+j set-mark

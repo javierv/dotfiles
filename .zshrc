@@ -11,9 +11,9 @@ source "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 ##### SHORTCUTS #####
 # Use similar shortcuts for substring matching
 bindkey -M emacs '\C-k' history-substring-search-up
-bindkey -M emacs '\C-n' history-substring-search-down # Can't bind C-j
+bindkey -M emacs '\C-n' history-substring-search-down
 bindkey -M vicmd "k" history-substring-search-up
-bindkey -M vicmd "j" history-substring-search-down
+bindkey -M vicmd "m" history-substring-search-down
 
 # Search history backwards
 bindkey "," history-incremental-search-backward
@@ -24,7 +24,6 @@ bindkey 'ñ' vi-cmd-mode
 
 # Use shortcuts to handle autosuggestions
 bindkey '^@' autosuggest-accept # Ctrl-space
-bindkey '^J' autosuggest-accept # Shift-enter
 bindkey '\EOR' autosuggest-execute # F3
 
 # Exit even if there's text on the current line
