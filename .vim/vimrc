@@ -22,6 +22,7 @@ call minpac#add("kana/vim-textobj-entire")
 call minpac#add("kana/vim-textobj-line")
 call minpac#add("wellle/targets.vim")
 call minpac#add("kana/vim-smartword")
+call minpac#add("justinmk/vim-sneak")
 call minpac#add("nelstrom/vim-visual-star-search")
 
 " Ruby.
@@ -483,6 +484,13 @@ vmap w <Plug>(smartword-w)
 vmap b <Plug>(smartword-b)
 vmap e <Plug>(smartword-e)
 vmap ! <Plug>(smartword-ge)
+
+" Sneak
+let g:sneak#s_next = 1
+nmap t <Plug>Sneak_s
+nmap T <Plug>Sneak_S
+vmap t <Plug>Sneak_s
+vmap T <Plug>Sneak_S
 
 " Búsquedas en ficheros
 let g:grepper = {}
