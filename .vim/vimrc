@@ -208,7 +208,7 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " Cerrar quickfix y loclist
-nmap <Leader>c :lclose<cr>:cclose<cr>
+nmap cs :lclose<cr>:cclose<cr>
 
 " ###### NAVEGACIÓN ######
 " Navegación por líneas.
@@ -443,8 +443,8 @@ autocmd FileType eruby let b:surround_45 = "<% \r %>" " 45 es el ASCII de -
 autocmd FileType eruby let b:surround_61 = "<%= \r %>" " 61 es el ASCII de =
 
 " Comentar código
-nmap <Leader>m <Plug>CommentaryLine
-vmap <Leader>m <Plug>Commentary
+nmap <Leader>c <Plug>CommentaryLine
+vmap <Leader>c <Plug>Commentary
 nmap gm <Plug>Commentary
 " Sobreescribo mapas por defecto, aunque no los uso
 nmap gmu <Plug>Commentary<Plug>Commentary
