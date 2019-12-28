@@ -24,6 +24,7 @@ call minpac#add("wellle/targets.vim")
 call minpac#add("kana/vim-smartword")
 call minpac#add("justinmk/vim-sneak")
 call minpac#add("nelstrom/vim-visual-star-search")
+call minpac#add("kana/vim-submode")
 
 " Ruby.
 call minpac#add("vim-ruby/vim-ruby")
@@ -132,7 +133,6 @@ augroup usespaces
   autocmd InsertLeave * setlocal list
 augroup END
 
-
 " Incluye el título en la ventana (gvim lo hace automáticamente)
 set title
 " Incluye siempre la ruta del fichero que se edita
@@ -228,7 +228,21 @@ noremap j m
 nnoremap ñ `
 
 " Desplazamientos
-nnoremap <C-t> <C-f>
+set rtp+=~/.vim/pack/minpac/start/vim-submode/
+let g:submode_timeout = 0
+let g:submode_always_show_submode = 1
+let g:submode_keep_leaving_key = 1
+call submode#enter_with("nav", "n", "", "<bs>")
+call submode#map("nav", "n", "", "e", "<C-e>")
+call submode#map("nav", "n", "", "u", "<C-u>")
+call submode#map("nav", "n", "", "s", "<C-d>")
+call submode#map("nav", "n", "", "b", "<C-b>")
+call submode#map("nav", "n", "", "f", "<C-f>")
+call submode#map("nav", "n", "", "<bs>", "<C-o>")
+call submode#map("nav", "n", "", "l", "<C-i>")
+call submode#map("nav", "n", "", "r", "{")
+call submode#map("nav", "n", "", "v", "}")
+call submode#map("nav", "n", "r", "<Tab>", "<Tab>")
 
 " Navegación entre ventanas
 nnoremap <tab> <C-w>w
@@ -309,12 +323,6 @@ cnoremap <C-a> <Home>
 cnoremap <C-b> <Left>
 
 " #### INTRODUCIR CARACTERES Y LÍNEAS EN MODO NORMAL ####
-" Introducir un carácter antes/después del cursor y volver a modo normal
-function! RepeatChar(char, count)
-  return repeat(a:char, a:count)
-endfunction
-nm <bs> :<C-u>exec "normal i".RepeatChar(nr2char(getchar()), v:count1)<CR>
-
 " Introducir líneas en blanco antes y después de la actual en modo normal
 nmap <C-k> [<Space>
 " C-m y <cr> son equivalentes en vim, así que no puedo asignar C-m en ciertos ficheros
