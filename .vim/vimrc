@@ -367,7 +367,7 @@ nmap <Leader>b :Bopen<Space>
 " ######## GIT ########
 " atajos para Git
 nmap gs :tab Gstatus<cr>
-nmap gc :Gcommit<cr>
+nmap gc :Gcommit<cr>i
 nmap ga :Gcommit --amend<cr>
 nmap gw :Gwrite<cr>
 nmap gr :Gread<cr>
