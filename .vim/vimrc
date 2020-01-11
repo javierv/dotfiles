@@ -315,6 +315,7 @@ vnoremap & :&&<cr>
 
 " ##### LÍNEA DE ÓRDENES #####
 " Buscar el historial de forma incremental sin las flechas
+cnoremap <C-p> <Up>
 cnoremap <C-k> <Up>
 cnoremap <C-n> <Down>
 
