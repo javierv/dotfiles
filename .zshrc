@@ -11,7 +11,6 @@ source "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 ##### SHORTCUTS #####
 # Use similar shortcuts for substring matching
 bindkey -M emacs '\C-p' history-substring-search-up
-bindkey -M emacs '\C-k' history-substring-search-up
 bindkey -M emacs '\C-n' history-substring-search-down
 bindkey -M vicmd ' ' history-substring-search-down # Space
 bindkey -M vicmd '^?' history-substring-search-up # Backspace

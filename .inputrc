@@ -1,7 +1,7 @@
 set editing-mode vi
 $if mode=vi
   set keymap vi-insert
-  "\C-k": history-search-backward
+  "\C-p": history-search-backward
   "\C-n": history-search-forward
   "\eOR": vi-movement-mode
   "ñ": "["

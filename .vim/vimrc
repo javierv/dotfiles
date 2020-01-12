@@ -316,7 +316,6 @@ vnoremap & :&&<cr>
 " ##### LÍNEA DE ÓRDENES #####
 " Buscar el historial de forma incremental sin las flechas
 cnoremap <C-p> <Up>
-cnoremap <C-k> <Up>
 cnoremap <C-n> <Down>
 
 " Atajos de readline
@@ -421,7 +420,6 @@ set shortmess+=c
 
 " Mismos atajos que en la línea de órdenes
 inoremap <silent><expr> <C-n> pumvisible() ? "\<C-n>" : coc#refresh()
-inoremap <C-k> <C-p>
 
 " Tabulador saca menú, navega por él, completa snippets, o indenta, dependiendo del contexto
 inoremap <silent><expr> <tab>
