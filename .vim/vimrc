@@ -74,6 +74,15 @@ call minpac#add("moll/vim-bbye")
 runtime macros/matchit.vim
 
 
+" ######## TECLADO #######
+noremap m j
+noremap j m
+noremap o k
+noremap k o
+noremap O K
+noremap K O
+noremap <C-k> <C-o>
+
 " ######## ENTORNO ########
 set shell=/bin/zsh
 
@@ -220,9 +229,6 @@ nnoremap ^ 0
 vnoremap 0 ^
 vnoremap ^ 0
 
-noremap m j
-noremap j m
-
 " Ir a marcas
 " ` es más útil que ' porque te lleva también a la columna, no sólo a la línea
 nnoremap ñ `
@@ -324,12 +330,12 @@ cnoremap <C-b> <Left>
 
 " #### INTRODUCIR CARACTERES Y LÍNEAS EN MODO NORMAL ####
 " Introducir líneas en blanco antes y después de la actual en modo normal
-nmap <C-k> [<Space>
+nmap <C-o> [<Space>
 " C-m y <cr> son equivalentes en vim, así que no puedo asignar C-m en ciertos ficheros
 autocmd FileType * if index(['qf','floggraph','fugitive','fugitiveblame','git'], &ft) < 0 | nmap <buffer> <C-m> ]<Space>
 
 " Subir y bajar la línea actual
-nmap <leader>k [e
+nmap <leader>o [e
 nmap <leader>m ]e
 
 " o y O no añaden comentario cuando se usan en línea con comentario
@@ -508,9 +514,9 @@ let g:grepper.rg = { "grepprg": "rg --vimgrep --hidden -S" }
 nmap <Leader>a :GrepperRg<space>
 
 " Búsqueda del texto seleccionado
-nmap K <plug>(GrepperOperator)
-nmap KK Kiw
-vmap K <plug>(GrepperOperator)
+nmap O <plug>(GrepperOperator)
+nmap OO Oiw
+vmap O <plug>(GrepperOperator)
 
 " Splitjoin
 let g:splitjoin_join_mapping = "J"
@@ -567,7 +573,7 @@ autocmd FileType ruby nmap <buffer> <Leader>p Obinding.pry<Esc>
 
 " ####### VARIOS #######
 " Firma con la canción que se está escuchando
-nmap <Leader>p G:r!nowplaying<cr>O--<Esc>0k
+nnoremap <Leader>p G:r!nowplaying<cr>O--<Esc>0k
 
 " Configuración local
 let fichero_configuracion_local='~/.vimrc.local'

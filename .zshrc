@@ -9,6 +9,11 @@ source "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 
 ##### SHORTCUTS #####
+# Keyboard changes
+bindkey -M vicmd 'o' up-line-or-history
+bindkey -M vicmd 'k' vi-open-line-below
+bindkey -M vicmd 'K' vi-open-line-above
+
 # Use similar shortcuts for substring matching
 bindkey -M emacs '\C-p' history-substring-search-up
 bindkey -M emacs '\C-n' history-substring-search-down
