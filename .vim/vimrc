@@ -82,6 +82,10 @@ noremap k o
 noremap O K
 noremap K O
 noremap <C-k> <C-o>
+noremap e l
+noremap E L
+noremap l e
+noremap L E
 
 " ######## ENTORNO ########
 set shell=/bin/zsh
@@ -491,11 +495,11 @@ nnoremap <Leader>g :Tags<cr>
 " Smartwords
 nmap w <Plug>(smartword-w)
 nmap b <Plug>(smartword-b)
-nmap e <Plug>(smartword-e)
+nmap l <Plug>(smartword-e)
 nmap ! <Plug>(smartword-ge)
 vmap w <Plug>(smartword-w)
 vmap b <Plug>(smartword-b)
-vmap e <Plug>(smartword-e)
+vmap l <Plug>(smartword-e)
 vmap ! <Plug>(smartword-ge)
 
 " Sneak

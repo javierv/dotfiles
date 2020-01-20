@@ -13,6 +13,9 @@ source "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 bindkey -M vicmd 'o' up-line-or-history
 bindkey -M vicmd 'k' vi-open-line-below
 bindkey -M vicmd 'K' vi-open-line-above
+bindkey -M vicmd 'e' vi-forward-char
+bindkey -M vicmd 'l' vi-forward-word-end
+bindkey -M vicmd 'L' vi-forward-blank-word-end
 
 # Use similar shortcuts for substring matching
 bindkey -M emacs '\C-p' history-substring-search-up
