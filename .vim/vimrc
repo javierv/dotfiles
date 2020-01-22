@@ -136,7 +136,7 @@ augroup usespaces
 
   " Mensajes de git con límite a 72 caracteres
   autocmd FileType gitcommit set tw=72
-  autocmd FileType gitcommit nnoremap <buffer> é gqap
+  autocmd FileType gitcommit nnoremap <buffer> ó gqap
 
   " Resaltado de espacios a fin de línea y tabuladores
   set list listchars=trail:^,tab:^^
@@ -551,24 +551,24 @@ endfunction
 autocmd Filetype css,scss,elixir,html,javascript,readline,ruby,eruby,tmux,zsh call SetProgrammingChars()
 function SetProgrammingChars()
   " Al programar, los acentos se convierten en caracteres que solo se escriben al programar
-  map! <buffer> í {
-  map! <buffer> ó }
+  map! <buffer> é {
+  map! <buffer> í }
   imap <buffer> ú \
-  map! <buffer> é =
+  map! <buffer> ó =
   imap <buffer> ñ [
   map! <buffer> Ñ ]
 endfunction
 
 " Mapas en modos de vim iguales que al programar
 cmap ú \
-map í {
-map ó }
+map é {
+map í }
 
 autocmd Filetype * if index(["gitcommit"], &ft) < 0
-                      \| nmap é =
+                      \| nmap ó =
                       \| endif
 autocmd Filetype * if index(["fugitive","gitcommit"], &ft) < 0
-                      \| nmap <buffer> éé ==
+                      \| nmap <buffer> óó ==
                       \| endif
 
 " Insertar punto de ruptura
