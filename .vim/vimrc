@@ -13,6 +13,7 @@ call minpac#add("godlygeek/tabular")
 call minpac#add("tpope/vim-unimpaired")
 call minpac#add("inkarkat/vim-ReplaceWithRegister")
 call minpac#add("tommcdo/vim-exchange")
+call minpac#add("vim-latex/vim-latex")
 
 " Navegación por conjuntos de texto.
 call minpac#add("kana/vim-textobj-user")
@@ -570,6 +571,15 @@ autocmd Filetype * if index(["gitcommit"], &ft) < 0
 autocmd Filetype * if index(["fugitive","gitcommit"], &ft) < 0
                       \| nmap <buffer> óó ==
                       \| endif
+
+" Abreviaciones en inglés
+iab h he
+iab s she
+iab t the
+
+" Abreviaciones en español
+iab d de
+iab q que
 
 " Insertar punto de ruptura
 autocmd FileType eruby nmap <buffer> <Leader>p O<% binding.pry %><Esc>
