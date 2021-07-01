@@ -18,7 +18,7 @@ main = do
         setWMName "LG3D"
         spawn "fcitx"
         spawn "xkbset sticky -twokey -latchlock"
-    , workspaces = ["dev", "mail", "misc", "music"]
+    , workspaces = ["dev", "mail"]
     , manageHook = composeAll . concat $ [
           [className   =? c --> doShift "dev" | c <- ["Firefox"]]
         , [className   =? c --> doShift "mail" | c <- ["Thunderbird"]]
