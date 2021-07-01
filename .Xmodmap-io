@@ -2,6 +2,9 @@
 ! Una sola pulsación para `.
 keycode 34 = grave asciicircum grave asciicircum bracketleft dead_abovering bracketleft
 
+! Mayúsculas+espacio genera _
+! keycode  65 = space underscore space NoSymbol space space
+
 ! Acentos con altgr, dejando el € para Altgr+t
 keycode  26 = e E e E eacute Eacute EuroSign
 keycode  30 = u U u U uacute Uacute downarrow
