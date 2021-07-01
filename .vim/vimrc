@@ -568,15 +568,6 @@ autocmd Filetype * if index(["fugitive","gitcommit"], &ft) < 0
                       \| nmap <buffer> óó ==
                       \| endif
 
-" Abreviaciones en inglés
-iab h he
-iab s she
-iab t the
-
-" Abreviaciones en español
-iab d de
-iab q que
-
 " Insertar punto de ruptura
 autocmd FileType eruby nmap <buffer> <Leader>p O<% binding.pry %><Esc>
 autocmd FileType ruby nmap <buffer> <Leader>p Obinding.pry<Esc>
