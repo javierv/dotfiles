@@ -14,6 +14,14 @@ bindkey -M vicmd 'o' up-line-or-history
 bindkey -M vicmd 'k' vi-open-line-below
 bindkey -M vicmd 'K' vi-open-line-above
 
+# Fix default keys
+bindkey -M emacs "^[[1~" beginning-of-line
+bindkey -M vicmd "^[[1~" beginning-of-line
+bindkey -M emacs "^[[4~" end-of-line
+bindkey -M vicmd "^[[4~" end-of-line
+bindkey -M emacs "^[[3~" delete-char
+bindkey -M vicmd "^[[3~" delete-char
+
 # Use similar shortcuts for substring matching
 bindkey -M emacs '\C-p' history-substring-search-up
 bindkey -M emacs '\C-n' history-substring-search-down
