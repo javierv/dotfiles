@@ -52,6 +52,7 @@ main = do
     , ("M-m", windows $ W.greedyView "dev")
     , ("M-,", windows $ W.greedyView "mail")
     , ("M-.", kill)
+    , ("<Print>", spawn "spectacle")
     , ("<XF86AudioStop>", spawn "mpc pause")
     , ("<XF86AudioPlay>", spawn "mpc play")
     , ("<XF86AudioPrev>", spawn "mpc prev")
