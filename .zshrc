@@ -21,7 +21,8 @@ bindkey -M vicmd ' ' history-substring-search-down # Space
 bindkey -M vicmd '^?' history-substring-search-up # Backspace
 
 # Search history backwards
-bindkey "," history-incremental-search-backward
+bindkey -M emacs "," history-incremental-search-backward
+bindkey -M vicmd "," history-incremental-search-backward
 
 # Use mixed emacs-vi keybindings
 bindkey -e
