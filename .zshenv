@@ -3,6 +3,9 @@ cdpath=(
   $HOME/dev
 )
 
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
+
 path=(
   /usr/local/{bin,sbin}
   /usr/{bin,sbin,games}
