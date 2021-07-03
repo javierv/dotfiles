@@ -545,7 +545,7 @@ function SetProgrammingOptions()
   nmap <buffer> P <Plug>PasteAbove
 endfunction
 
-autocmd Filetype css,scss,elixir,html,javascript,readline,ruby,eruby,tmux,zsh call SetProgrammingChars()
+autocmd Filetype css,scss,elixir,html,javascript,readline,ruby,eruby,tmux,vim,zsh call SetProgrammingChars()
 function SetProgrammingChars()
   " Al programar, los acentos se convierten en caracteres que solo se escriben al programar
   map! <buffer> é {
